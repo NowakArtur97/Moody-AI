@@ -16,7 +16,7 @@ public class PlayerInputManager : MonoBehaviour
         _currentMousePosition = Mouse.current.position;
     }
 
-    public void Movement(InputAction.CallbackContext context) => MovementInput = context.ReadValue<Vector3>();
+    public void Movement(InputAction.CallbackContext context) => MovementInput = context.ReadValue<Vector2>();
 
     private void Update() => ReadMousePosition();
 
