@@ -6,8 +6,8 @@ public class RotationController : MonoBehaviour
     private Vector3 _rotationVector;
     private float _angle;
     private Quaternion _targetRotation;
+    private Vector3 _position;
 
-    [SerializeField] private Vector3 _position;
     [SerializeField] private float _rotationSpeed = 250.0f;
 
     private void Update() => RotateTowardsPosition();
