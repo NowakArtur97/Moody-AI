@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class SpaceshipController : MonoBehaviour
+public class SpaceMovementController : MonoBehaviour
 {
     [SerializeField] private float _accelerationFactor = 30.0f;
 
-    private Vector2 _movementInput;
+    private Vector2 _movementVector;
     private Vector2 _movementForceVector;
 
     private Rigidbody2D _myRigidbody2D;
@@ -15,9 +15,9 @@ public class SpaceshipController : MonoBehaviour
 
     private void ApplyMovementForces()
     {
-        _movementForceVector = Vector2.one * _accelerationFactor * _movementInput;
+        _movementForceVector = Vector2.one * _accelerationFactor * _movementVector;
         _myRigidbody2D.AddForce(_movementForceVector, ForceMode2D.Force);
     }
 
-    public void SetMovementInput(Vector2 movementInput) => _movementInput = movementInput;
+    public void SetMovementVector(Vector2 movementVector) => _movementVector = movementVector;
 }
