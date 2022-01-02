@@ -133,49 +133,14 @@ GameObject:
   m_Component:
   - component: {fileID: 50088064}
   - component: {fileID: 50088063}
-  - component: {fileID: 50088062}
-  - component: {fileID: 50088061}
+  - component: {fileID: 50088065}
   m_Layer: 0
   m_Name: Stingray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!50 &50088061
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 50088060}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &50088062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 50088060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetTransform: {fileID: 905609202}
+  m_IsActive: 1
 --- !u!114 &50088063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +170,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &50088065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50088060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68c7d398c0695474185cae6838e3a94c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementVelocity: 10
+  _distanceWhenShouldFindNewPosition: 3
 --- !u!1 &107447745
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,7 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcb97dce91d2bd6419e90d406495fbe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 905609202}
+  _targetTransform: {fileID: 905609202}
   _movementVelocity: 10
   _distanceWhenShouldStop: 5
 --- !u!1 &642371652
@@ -641,7 +620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642371652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.34, y: 3.17, z: 0.00020249421}
+  m_LocalPosition: {x: -14.57, y: 8.05, z: 0.00020249421}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -661,10 +640,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 919185f5d1d20714a8493dc2f7e046d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 905609202}
+  _targetTransform: {fileID: 905609202}
   _movementVelocity: 10
   _rotatingVelocity: 100
-  _distanceWhenShouldStop: 4
+  _distanceWhenShouldRotateAround: 8
 --- !u!1 &666646022
 GameObject:
   m_ObjectHideFlags: 0

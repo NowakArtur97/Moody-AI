@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TransformPositionRotationHandler : MonoBehaviour
+public class TargetTransformPositionRotationHandler : MonoBehaviour
 {
     [SerializeField] private Transform _targetTransform;
 

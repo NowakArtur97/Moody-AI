@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GettingCloserAndRotatingAroundTarget : MonoBehaviour
 {
-    [SerializeField] private Transform _target;
+    [SerializeField] private Transform _targetTransform;
     [SerializeField] private float _movementVelocity = 10.0f;
     [SerializeField] private float _rotatingVelocity = 50.0f;
     [SerializeField] private float _distanceWhenShouldRotateAround = 8.0f;
@@ -18,17 +18,17 @@ public class GettingCloserAndRotatingAroundTarget : MonoBehaviour
 
         if (_shouldRotateAround)
         {
-            transform.RotateAround(_target.position, _zAxis, -_rotatingVelocity * Time.deltaTime);
+            transform.RotateAround(_targetTransform.position, _zAxis, -_rotatingVelocity * Time.deltaTime);
         }
         else
         {
-            transform.position = Vector2.MoveTowards(transform.position, _target.position, _movementVelocity * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, _targetTransform.position, _movementVelocity * Time.deltaTime);
         }
     }
 
     private void CheckIfDistanceReached()
     {
-        if (Vector2.Distance(transform.position, _target.position) <= _distanceWhenShouldRotateAround)
+        if (Vector2.Distance(transform.position, _targetTransform.position) <= _distanceWhenShouldRotateAround)
         {
             GetComponent<RotationController>().SetRotationMode(RotationController.RotationMode.PERPEDICULAR);
             _shouldRotateAround = true;
