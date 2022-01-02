@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class RotationController : MonoBehaviour
 {
-    private Vector3 _direction;
     private Vector3 _rotationVector;
     private float _angle;
     private Quaternion _targetRotation;
@@ -10,16 +9,35 @@ public class RotationController : MonoBehaviour
 
     [SerializeField] private float _rotationSpeed = 250.0f;
 
-    private void Update() => RotateTowardsPosition();
+    public enum RotationMode { TOWARDS, PERPEDICULAR }
+    private RotationMode _rotationMode = RotationMode.TOWARDS;
 
-    private void RotateTowardsPosition()
+    private void Update()
     {
-        _direction = _position - transform.position;
-        _angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
+        switch (_rotationMode)
+        {
+            case RotationMode.TOWARDS:
+                RotateTowardsPosition();
+                break;
+            case RotationMode.PERPEDICULAR:
+                RotatePerpendicularToPosition();
+                break;
+        }
+    }
+
+    private void RotateTowardsPosition() => RotateToPosition(_position - transform.position);
+
+    private void RotatePerpendicularToPosition() => RotateToPosition(Vector2.Perpendicular(_position - transform.position));
+
+    private void RotateToPosition(Vector2 direction)
+    {
+        _angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         _rotationVector.Set(0, 0, _angle);
         _targetRotation = Quaternion.Euler(_rotationVector);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, _targetRotation, _rotationSpeed * Time.deltaTime);
     }
 
     public void SetTarget(Vector3 position) => _position = position;
+
+    public void SetRotationMode(RotationMode rotationMode) => _rotationMode = rotationMode;
 }
