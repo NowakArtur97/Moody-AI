@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ZigZagMovementTowardTarget : MonoBehaviour
+public class ZigZagMovementTowardsTarget : MonoBehaviour
 {
     [SerializeField] private Transform _targetTransform;
     [SerializeField] private float _speedOfSinMovement = 3.0f;

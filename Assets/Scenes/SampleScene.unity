@@ -533,7 +533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &555314242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,7 +609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &642371654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,8 +1025,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35084489b73ae6f459b1ffc9dd8cb785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _accelerationFactor: 30
-  _maxVelocityMagnitude: 40
+  _accelerationFactor: 350
+  _maxVelocityMagnitude: 35
 --- !u!114 &1013747243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1036,10 +1036,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1013747240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29ce993dceb965b4ab318928cae3257b, type: 3}
+  m_Script: {fileID: 11500000, guid: 15cdfd22f21b28b47a822bb8a54017b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _targetTransform: {fileID: 905609202}
+  _distanceWhenShouldFindChangePosition: 2
+  _randomPositionAccelerationFactor: 350
+  _targetPositionAccelerationFactor: 30
 --- !u!1 &1392826558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,7 +1229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1461754541
 Rigidbody2D:
   serializedVersion: 4
@@ -1537,7 +1540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1666820131
 Rigidbody2D:
   serializedVersion: 4
@@ -1711,7 +1714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1974077336
 MonoBehaviour:
   m_ObjectHideFlags: 0

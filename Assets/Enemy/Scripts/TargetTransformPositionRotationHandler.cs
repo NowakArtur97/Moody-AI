@@ -8,5 +8,7 @@ public class TargetTransformPositionRotationHandler : MonoBehaviour
 
     private void Start() => _rotationController = GetComponentInChildren<RotationController>();
 
-    private void Update() => _rotationController.SetTarget(_targetTransform.position);
+    private void Update() => HandleRotation();
+
+    private void HandleRotation() => _rotationController.SetTarget(_targetTransform.position);
 }

@@ -26,4 +26,6 @@ public class SpaceMovementController : MonoBehaviour
     }
 
     public void SetMovementVector(Vector2 movementVector) => _movementVector = movementVector;
+
+    public void SetAccelerationFactor(float accelerationFactor) => _accelerationFactor = accelerationFactor;
 }

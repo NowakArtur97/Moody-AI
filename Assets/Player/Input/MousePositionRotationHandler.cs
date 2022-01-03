@@ -11,5 +11,7 @@ public class MousePositionRotationHandler : MonoBehaviour
         _rotationController = GetComponentInChildren<RotationController>();
     }
 
-    private void Update() => _rotationController.SetTarget(_playerInputManager.MouseWorldPosition);
+    private void Update() => HandleRotation();
+
+    private void HandleRotation() => _rotationController.SetTarget(_playerInputManager.MouseWorldPosition);
 }
