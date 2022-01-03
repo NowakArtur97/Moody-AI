@@ -21,5 +21,6 @@ public class MousePositionRotationHandler : MonoBehaviour
 
     private void HandleRotation() => _rotationController.SetTarget(_playerInputManager.MouseWorldPosition);
 
-    private void HandleProjectileDirection() => _weapon.SetProjectileDirection((_playerInputManager.MouseWorldPosition - transform.position).normalized);
+    private void HandleProjectileDirection() => _weapon.SetProjectileDirection((_playerInputManager.MouseWorldPosition -
+        transform.position).normalized);
 }

@@ -4,12 +4,9 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] private float _movementVelocity = 20.0f;
 
-    private Rigidbody2D _myRigidbody2D;
+    private Vector3 _projectileDirection;
 
-    private void Awake()
-    {
-        _myRigidbody2D = GetComponent<Rigidbody2D>();
+    private void Update() => transform.position += _projectileDirection * Time.deltaTime * _movementVelocity;
 
-        _myRigidbody2D.velocity = transform.forward * _movementVelocity;
-    }
+    public void SetDirection(Vector3 projectileDirection) => _projectileDirection = projectileDirection;
 }

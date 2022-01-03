@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour
 
     private bool _canShoot;
     private bool _isShooting;
-    private Quaternion _projectileRotation;
+    private Vector3 _projectileDirection;
 
     private void Awake() => _canShoot = true;
 
@@ -25,7 +25,8 @@ public class Weapon : MonoBehaviour
 
     private IEnumerator ShotingCoroutine()
     {
-        Instantiate(_projectile, _projectileSpawnPosition.position, _projectileRotation);
+        GameObject projectile = Instantiate(_projectile, _projectileSpawnPosition.position, Quaternion.identity);
+        projectile.GetComponent<Projectile>().SetDirection(_projectileDirection);
 
         _canShoot = false;
 
@@ -36,5 +37,5 @@ public class Weapon : MonoBehaviour
 
     public void IsShooting(bool isShooting) => _isShooting = isShooting;
 
-    public void SetProjectileDirection(Vector3 directionVector) => _projectileRotation = Quaternion.LookRotation(directionVector, Vector3.up);
+    public void SetProjectileDirection(Vector3 projectileDirection) => _projectileDirection = projectileDirection;
 }
