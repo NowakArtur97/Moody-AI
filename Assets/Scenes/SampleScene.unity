@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 347058311}
   - component: {fileID: 347058315}
   - component: {fileID: 347058316}
+  - component: {fileID: 347058317}
   - component: {fileID: 347058313}
   m_Layer: 0
   m_Name: Player Spaceship
@@ -416,6 +417,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aeaf521967f991d4a91054291e1ec32f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &347058317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347058310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5583ce844a6e43740a32912407b87312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &519420028
