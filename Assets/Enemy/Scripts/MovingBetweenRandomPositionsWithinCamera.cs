@@ -2,33 +2,31 @@ using UnityEngine;
 
 public class MovingBetweenRandomPositionsWithinCamera : MonoBehaviour
 {
-    [SerializeField] private float _movementVelocity = 10.0f;
     [SerializeField] private float _distanceWhenShouldFindNewPosition = 3.0f;
 
     private Vector3 _randomPosition;
 
     private Camera _mainCamera;
     private RotationController _rotationController;
+    private SpaceMovementController _spaceMovementController;
 
     private void Start()
     {
         _mainCamera = Camera.main;
 
-        _rotationController = GetComponentInChildren<RotationController>();
+        _rotationController = GetComponentInParent<RotationController>();
+        _spaceMovementController = GetComponent<SpaceMovementController>();
 
         FindRandomPositionInCameraBounds();
     }
 
     private void Update()
     {
-        if (Vector2.Distance(transform.position, _randomPosition) > _distanceWhenShouldFindNewPosition)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, _randomPosition, _movementVelocity * Time.deltaTime);
-        }
-        else
+        if (Vector2.Distance(transform.position, _randomPosition) <= _distanceWhenShouldFindNewPosition)
         {
             FindRandomPositionInCameraBounds();
         }
+        HandleMovementVector();
     }
 
     private void FindRandomPositionInCameraBounds()
@@ -38,4 +36,6 @@ public class MovingBetweenRandomPositionsWithinCamera : MonoBehaviour
 
         _rotationController.SetTarget(_randomPosition);
     }
+
+    private void HandleMovementVector() => _spaceMovementController.SetMovementVector((_randomPosition - transform.position).normalized);
 }
