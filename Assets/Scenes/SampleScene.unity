@@ -162,8 +162,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50088060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.24, y: 4.85, z: 0.00020249421}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.1379, y: 4.85, z: 0.00020249421}
+  m_LocalScale: {x: 0.9916, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1588141378}
@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _accelerationFactor: 30
+  _maxVelocityMagnitude: 30
 --- !u!114 &107447749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,7 +377,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -546,8 +547,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555314240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 20.1, z: 0.00020249421}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.2057, y: 20.1, z: 0.00020249421}
+  m_LocalScale: {x: 0.9916, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1450702053}
@@ -622,8 +623,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642371652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.57, y: 8.05, z: 0.00020249421}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -14.3564, y: 8.05, z: 0.00020249421}
+  m_LocalScale: {x: 0.9916, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1392826559}
@@ -787,7 +788,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -943,7 +944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35084489b73ae6f459b1ffc9dd8cb785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _accelerationFactor: 10
+  _accelerationFactor: 30
+  _maxVelocityMagnitude: 40
 --- !u!114 &1013747243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,7 +1159,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -1199,8 +1201,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461754540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.46, y: 12.04, z: 0.00020249421}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -29.122, y: 12.04, z: 0.00020249421}
+  m_LocalScale: {x: 0.9916, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 196151489}
@@ -1253,7 +1255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35084489b73ae6f459b1ffc9dd8cb785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _accelerationFactor: 10
+  _accelerationFactor: 30
+  _maxVelocityMagnitude: 40
 --- !u!114 &1506992201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1467,7 +1470,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -1509,8 +1512,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666820130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.88, y: 3.17, z: 0.00020249421}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -5.7391, y: 3.17, z: 0.00020249421}
+  m_LocalScale: {x: 0.9916, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1664307584}
@@ -1663,7 +1666,7 @@ Transform:
   m_GameObject: {fileID: 1974077334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.98, y: 10.14, z: 0.00020249421}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9916, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 666646023}

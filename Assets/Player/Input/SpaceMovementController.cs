@@ -3,6 +3,7 @@ using UnityEngine;
 public class SpaceMovementController : MonoBehaviour
 {
     [SerializeField] private float _accelerationFactor = 30.0f;
+    [SerializeField] private float _maxVelocityMagnitude = 30.0f;
 
     private Vector2 _movementVector;
     private Vector2 _movementForceVector;
@@ -15,6 +16,11 @@ public class SpaceMovementController : MonoBehaviour
 
     private void ApplyMovementForces()
     {
+        if (_maxVelocityMagnitude < _myRigidbody2D.velocity.magnitude)
+        {
+            return;
+        }
+
         _movementForceVector = Vector2.one * _accelerationFactor * _movementVector;
         _myRigidbody2D.AddForce(_movementForceVector, ForceMode2D.Force);
     }
