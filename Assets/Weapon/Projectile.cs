@@ -8,5 +8,9 @@ public class Projectile : MonoBehaviour
 
     private void Update() => transform.position += _projectileDirection * Time.deltaTime * _movementVelocity;
 
-    public void SetDirection(Vector3 projectileDirection) => _projectileDirection = projectileDirection;
+    public void SetDirection(Vector3 projectileDirection)
+    {
+        _projectileDirection = projectileDirection;
+        _projectileDirection = new Vector3(_projectileDirection.x, _projectileDirection.y, 0.0f);
+    }
 }
