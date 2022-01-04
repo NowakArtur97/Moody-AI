@@ -6,6 +6,7 @@ public class PlayerInputManager : MonoBehaviour
     public Vector2 MovementInput { get; private set; }
     public bool MouseInput { get; private set; }
     public Vector3 MouseWorldPosition { get; private set; }
+    public Vector3 MouseWorldPositionWithoutZ { get; private set; }
 
     private Camera _mainCamera;
     private Mouse _currentMouse;
@@ -32,5 +33,9 @@ public class PlayerInputManager : MonoBehaviour
 
     private void Update() => ReadMousePosition();
 
-    private void ReadMousePosition() => MouseWorldPosition = _mainCamera.ScreenToWorldPoint(_currentMouse.position.ReadValue());
+    private void ReadMousePosition()
+    {
+        MouseWorldPosition = _mainCamera.ScreenToWorldPoint(_currentMouse.position.ReadValue());
+        MouseWorldPositionWithoutZ = new Vector3(MouseWorldPosition.x, MouseWorldPosition.y, 0.0f);
+    }
 }
