@@ -12,5 +12,7 @@ public class Projectile : MonoBehaviour
     {
         _projectileDirection = projectileDirection;
         _projectileDirection = new Vector3(_projectileDirection.x, _projectileDirection.y, 0.0f);
+        float angleCorrection = Mathf.Atan2(_projectileDirection.y, _projectileDirection.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angleCorrection, Vector3.forward);
     }
 }
