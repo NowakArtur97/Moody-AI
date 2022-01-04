@@ -534,7 +534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &555314242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,7 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e915ff31d726dfa4f8effdc65d10349b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectile: {fileID: 7120018407457122070, guid: 11a0fa221e2ac1b4fac569449ade11f8, type: 3}
+  _projectilePrefab: {fileID: 7120018407457122070, guid: 2f7a9738aa51e5145bf7f24baca31344, type: 3}
   _projectileSpawnPosition: {fileID: 1622868839}
   _offsetBetweenBullets: 0.15
 --- !u!1 &642371652
@@ -673,7 +673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &642371654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e915ff31d726dfa4f8effdc65d10349b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectile: {fileID: 7120018407457122070, guid: 11a0fa221e2ac1b4fac569449ade11f8, type: 3}
+  _projectilePrefab: {fileID: 7120018407457122070, guid: 2f7a9738aa51e5145bf7f24baca31344, type: 3}
   _projectileSpawnPosition: {fileID: 945843424}
   _offsetBetweenBullets: 0.15
 --- !u!114 &1066789600
@@ -1497,7 +1497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e915ff31d726dfa4f8effdc65d10349b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectile: {fileID: 7120018407457122070, guid: 11a0fa221e2ac1b4fac569449ade11f8, type: 3}
+  _projectilePrefab: {fileID: 7120018407457122070, guid: 11a0fa221e2ac1b4fac569449ade11f8, type: 3}
   _projectileSpawnPosition: {fileID: 2041750440}
   _offsetBetweenBullets: 0.15
 --- !u!1 &1506992198

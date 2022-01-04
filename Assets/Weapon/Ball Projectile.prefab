@@ -74,12 +74,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 596030192, guid: 019901db77074904caf02f956ca170b1, type: 3}
+  m_Sprite: {fileID: -1711809866, guid: d67b4969c234a0a44b30cb83084805e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.5416667, y: 0.25}
+  m_Size: {x: 0.29166666, y: 0.29166666}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 2062609287546808695}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 007b5de6267ea1c45ad6ddcdb92d1b96, type: 2}
+  m_Controller: {fileID: 9100000, guid: b6246fbe8cfef6044b8d1a5dcfeef8bb, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 8490004211585157602}
   - component: {fileID: -3211875818297443015}
   m_Layer: 0
-  m_Name: Default Bullet
+  m_Name: Ball Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

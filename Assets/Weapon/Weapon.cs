@@ -3,13 +3,14 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] GameObject _projectile;
+    [SerializeField] GameObject _projectilePrefab;
     [SerializeField] Transform _projectileSpawnPosition;
     [SerializeField] float _offsetBetweenBullets = 0.2f;
 
     private bool _canShoot;
     private bool _isShooting;
     private Vector3 _projectileDirection;
+    private GameObject _projectile;
 
     private void Awake() => _canShoot = true;
 
@@ -25,8 +26,8 @@ public class Weapon : MonoBehaviour
 
     private IEnumerator ShotingCoroutine()
     {
-        GameObject projectile = Instantiate(_projectile, _projectileSpawnPosition.position, Quaternion.identity);
-        projectile.GetComponent<Projectile>().SetDirection(_projectileDirection);
+        _projectile = Instantiate(_projectilePrefab, _projectileSpawnPosition.position, Quaternion.identity);
+        _projectile.GetComponent<Projectile>().SetDirection(_projectileDirection);
 
         _canShoot = false;
 
