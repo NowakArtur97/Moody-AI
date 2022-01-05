@@ -9,7 +9,8 @@ public class Weapon : MonoBehaviour
 
     private bool _canShoot;
     private bool _isShooting;
-    private Vector3 _projectileDirection;
+    private Vector3 _projectileDirectionVector;
+    private Quaternion _projectileDirectionQuaternion;
     private GameObject _projectile;
 
     private void Awake() => _canShoot = true;
@@ -26,8 +27,9 @@ public class Weapon : MonoBehaviour
 
     private IEnumerator ShotingCoroutine()
     {
-        _projectile = Instantiate(_projectilePrefab, _projectileSpawnPosition.position, Quaternion.identity);
-        _projectile.GetComponent<Projectile>().SetDirection(_projectileDirection);
+        _projectile = Instantiate(_projectilePrefab, _projectileSpawnPosition.position,
+            _projectileDirectionQuaternion != null ? _projectileDirectionQuaternion : Quaternion.identity);
+        _projectile.GetComponent<Projectile>().SetDirection(_projectileDirectionVector);
 
         _canShoot = false;
 
@@ -38,5 +40,7 @@ public class Weapon : MonoBehaviour
 
     public void IsShooting(bool isShooting) => _isShooting = isShooting;
 
-    public void SetProjectileDirection(Vector3 projectileDirection) => _projectileDirection = projectileDirection;
+    public void SetProjectileDirection(Vector3 projectileDirection) => _projectileDirectionVector = projectileDirection;
+
+    public void SetProjectileDirection(Quaternion projectileDirection) => _projectileDirectionQuaternion = projectileDirection;
 }
