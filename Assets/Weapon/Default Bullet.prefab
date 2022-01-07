@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5675746862477486253}
   - component: {fileID: 7129464863289464590}
   - component: {fileID: 3867349863780274775}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8490004211585157602}
   - component: {fileID: -3211875818297443015}
-  m_Layer: 0
+  - component: {fileID: 5060884676757528521}
+  - component: {fileID: 4150004441287333363}
+  m_Layer: 8
   m_Name: Default Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,3 +153,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementVelocity: 40
+  _damage: 10
+--- !u!70 &5060884676757528521
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7120018407457122070}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5460065, y: 0.122042015}
+  m_Direction: 1
+--- !u!50 &4150004441287333363
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7120018407457122070}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

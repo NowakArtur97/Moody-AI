@@ -1,8 +1,10 @@
 using UnityEngine;
+using static ProjectileObjectPool;
 
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private float _movementVelocity = 20.0f;
+    [SerializeField] private float _damage = 10.0f;
 
     private Vector3 _projectileDirection;
 
@@ -14,5 +16,15 @@ public class Projectile : MonoBehaviour
         _projectileDirection = new Vector3(_projectileDirection.x, _projectileDirection.y, 0.0f);
         float angleCorrection = Mathf.Atan2(_projectileDirection.y, _projectileDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angleCorrection, Vector3.forward);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        IDamagable damagable = collision.GetComponentInChildren<IDamagable>();
+        if (damagable != null)
+        {
+            damagable.DealDamage(_damage);
+            ProjectileObjectPoolInstance.ReleaseProjectile(gameObject);
+        }
     }
 }

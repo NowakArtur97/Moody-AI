@@ -73,4 +73,6 @@ public class ProjectileObjectPool : MonoBehaviour
         _projectileDirectionVector = projectileDirectionVector;
         return _projectileObjectPool.Get();
     }
+
+    public void ReleaseProjectile(GameObject projectile) => _projectileObjectPool.Release(projectile);
 }
