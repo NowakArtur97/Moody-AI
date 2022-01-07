@@ -56,7 +56,14 @@ public class ProjectileObjectPool : MonoBehaviour
                     projectile.GetComponent<Projectile>().SetDirection(_projectileDirectionVector);
                     return projectile;
                 },
-                projectile => projectile.gameObject.SetActive(true),
+                projectile =>
+                {
+                    projectile.gameObject.SetActive(true);
+                    projectile.transform.position = _projectileSpawnPosition.position;
+                    projectile.transform.rotation = _projectileRotation;
+                    projectile.transform.rotation = _projectileRotation;
+                    projectile.GetComponent<Projectile>().SetDirection(_projectileDirectionVector);
+                },
                 projectile => projectile.gameObject.SetActive(false),
                 projectile => Destroy(projectile.gameObject),
                 true,
