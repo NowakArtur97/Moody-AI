@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movementVelocity: 40
   _damage: 10
+  _projectileType: 1
 --- !u!58 &1971431543668059938
 CircleCollider2D:
   m_ObjectHideFlags: 0

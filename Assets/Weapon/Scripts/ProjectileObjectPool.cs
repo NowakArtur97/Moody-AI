@@ -7,20 +7,6 @@ public class ProjectileObjectPool : MonoBehaviour
     [SerializeField] private GameObject _defaultBulletPrefab;
     [SerializeField] private GameObject _ballProjectilePrefab;
 
-    private GameObject _projectilePrefab
-    {
-        get
-        {
-            switch (_projectileType)
-            {
-                case ProjectileType.DEFAULT_BULLET:
-                    return _defaultBulletPrefab;
-                case ProjectileType.BALL_PROJECTILE:
-                    return _ballProjectilePrefab;
-                default: return _defaultBulletPrefab;
-            }
-        }
-    }
     private Transform _projectileSpawnPosition;
     private Quaternion _projectileRotation;
     private Vector2 _projectileDirectionVector;
@@ -29,9 +15,8 @@ public class ProjectileObjectPool : MonoBehaviour
 
     public enum ProjectileType { DEFAULT_BULLET, BALL_PROJECTILE }
 
-    private ObjectPool<GameObject> _projectileObjectPool;
-
-    private ProjectileType _projectileType;
+    private ObjectPool<GameObject> _defaultBulletObjectPool;
+    private ObjectPool<GameObject> _ballProjectileObjectPool;
 
     private void Awake()
     {
@@ -44,15 +29,19 @@ public class ProjectileObjectPool : MonoBehaviour
             ProjectileObjectPoolInstance = this;
         }
 
-        SetupProjectileObjectPool();
+        SetupProjectileObjectPools();
     }
 
-    private void SetupProjectileObjectPool()
+    private void SetupProjectileObjectPools()
     {
-        _projectileObjectPool = new ObjectPool<GameObject>(
+        _defaultBulletObjectPool = CreateProjectileObjectPool(_defaultBulletPrefab);
+        _ballProjectileObjectPool = CreateProjectileObjectPool(_ballProjectilePrefab);
+    }
+
+    private ObjectPool<GameObject> CreateProjectileObjectPool(GameObject projectilePrefab) => new ObjectPool<GameObject>(
                 () =>
                 {
-                    GameObject projectile = Instantiate(_projectilePrefab, _projectileSpawnPosition.position, _projectileRotation);
+                    GameObject projectile = Instantiate(projectilePrefab, _projectileSpawnPosition.position, _projectileRotation);
                     projectile.GetComponent<Projectile>().SetDirection(_projectileDirectionVector);
                     return projectile;
                 },
@@ -69,17 +58,32 @@ public class ProjectileObjectPool : MonoBehaviour
                 true,
                 _spawnAmount
             );
-    }
 
     public GameObject InstantiateProjectile(ProjectileType projectileType, Transform projectileSpawnPosition, Quaternion projectileRotation,
         Vector2 projectileDirectionVector)
     {
-        _projectileType = projectileType;
         _projectileSpawnPosition = projectileSpawnPosition;
         _projectileRotation = projectileRotation;
         _projectileDirectionVector = projectileDirectionVector;
-        return _projectileObjectPool.Get();
+        switch (projectileType)
+        {
+            case ProjectileType.BALL_PROJECTILE:
+                return _ballProjectileObjectPool.Get();
+            default:
+                return _defaultBulletObjectPool.Get();
+        }
     }
 
-    public void ReleaseProjectile(GameObject projectile) => _projectileObjectPool.Release(projectile);
+    public void ReleaseProjectile(GameObject projectile, ProjectileType projectileType)
+    {
+        switch (projectileType)
+        {
+            case ProjectileType.BALL_PROJECTILE:
+                _ballProjectileObjectPool.Release(projectile);
+                break;
+            default:
+                _defaultBulletObjectPool.Release(projectile);
+                break;
+        }
+    }
 }
