@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static ProjectileObjectPool;
 
 public class Weapon : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Weapon : MonoBehaviour
     private bool _isShooting;
     private Vector3 _projectileDirectionVector;
     private Quaternion _projectileDirectionQuaternion;
-    private GameObject _projectile;
+    private ProjectileType _projectileType;
 
     private void Awake() => _canShoot = true;
 
@@ -27,9 +28,8 @@ public class Weapon : MonoBehaviour
 
     private IEnumerator ShotingCoroutine()
     {
-        _projectile = Instantiate(_projectilePrefab, _projectileSpawnPosition.position,
-            _projectileDirectionQuaternion != null ? _projectileDirectionQuaternion : Quaternion.identity);
-        _projectile.GetComponent<Projectile>().SetDirection(_projectileDirectionVector);
+        ProjectileObjectPoolInstance.InstantiateProjectile(_projectileType, _projectileSpawnPosition,
+            _projectileDirectionQuaternion != null ? _projectileDirectionQuaternion : Quaternion.identity, _projectileDirectionVector);
 
         _canShoot = false;
 
@@ -43,4 +43,6 @@ public class Weapon : MonoBehaviour
     public void SetProjectileDirection(Vector3 projectileDirection) => _projectileDirectionVector = projectileDirection;
 
     public void SetProjectileDirection(Quaternion projectileDirection) => _projectileDirectionQuaternion = projectileDirection;
+
+    public void SetProjectileType(ProjectileType projectileType) => _projectileType = projectileType;
 }
