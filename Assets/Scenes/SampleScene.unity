@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 347058316}
   - component: {fileID: 347058317}
   - component: {fileID: 347058313}
+  - component: {fileID: 347058318}
   m_Layer: 6
   m_Name: Player Spaceship
   m_TagString: Untagged
@@ -433,6 +434,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5583ce844a6e43740a32912407b87312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &347058318
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347058310}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.10454321, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.3954568
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &555314242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,7 +691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectilePrefab: {fileID: 7120018407457122070, guid: 2f7a9738aa51e5145bf7f24baca31344, type: 3}
   _projectileSpawnPosition: {fileID: 1622868839}
-  _offsetBetweenBullets: 0.15
+  _offsetBetweenBullets: 1
 --- !u!114 &576964654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,7 +784,7 @@ MonoBehaviour:
   _targetTransform: {fileID: 905609202}
   _movementVelocity: 10
   _rotatingVelocity: 100
-  _distanceWhenShouldRotateAround: 8
+  _distanceWhenShouldRotateAround: 12
 --- !u!60 &642371658
 PolygonCollider2D:
   m_ObjectHideFlags: 0

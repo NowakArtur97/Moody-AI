@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movementVelocity: 40
   _damage: 10
+  _projectileType: 0
 --- !u!70 &5060884676757528521
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

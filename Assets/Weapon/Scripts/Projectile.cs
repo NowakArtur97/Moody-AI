@@ -21,11 +21,8 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        IDamagable damagable = collision.GetComponentInChildren<IDamagable>();
-        if (damagable != null)
-        {
-            damagable.DealDamage(_damage);
-            ProjectileObjectPoolInstance.ReleaseProjectile(gameObject, _projectileType);
-        }
+        collision.GetComponentInChildren<IDamagable>()?.DealDamage(_damage);
+
+        ProjectileObjectPoolInstance.ReleaseProjectile(gameObject, _projectileType);
     }
 }
