@@ -705,6 +705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 1
+  _projectileLayerName: Enemy Projectile
 --- !u!1 &642371652
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,6 +1363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 1
+  _projectileLayerName: Enemy Projectile
 --- !u!1 &1392826558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,6 +1677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 0
+  _projectileLayerName: Player Projectile
 --- !u!1 &1506992198
 GameObject:
   m_ObjectHideFlags: 0

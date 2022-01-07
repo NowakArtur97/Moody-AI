@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     private Vector3 _projectileDirectionVector;
     private Quaternion _projectileDirectionQuaternion;
     private ProjectileType _projectileType;
+    private string _projectileLayerName;
 
     private void Awake() => _canShoot = true;
 
@@ -29,7 +30,8 @@ public class Weapon : MonoBehaviour
     private IEnumerator ShotingCoroutine()
     {
         ProjectileObjectPoolInstance.InstantiateProjectile(_projectileType, _projectileSpawnPosition,
-            _projectileDirectionQuaternion != null ? _projectileDirectionQuaternion : Quaternion.identity, _projectileDirectionVector);
+            _projectileDirectionQuaternion != null ? _projectileDirectionQuaternion : Quaternion.identity, _projectileDirectionVector,
+            _projectileLayerName);
 
         _canShoot = false;
 
@@ -45,4 +47,6 @@ public class Weapon : MonoBehaviour
     public void SetProjectileDirection(Quaternion projectileDirection) => _projectileDirectionQuaternion = projectileDirection;
 
     public void SetProjectileType(ProjectileType projectileType) => _projectileType = projectileType;
+
+    public void SetProjectileLayerName(string projectileLayerName) => _projectileLayerName = projectileLayerName;
 }

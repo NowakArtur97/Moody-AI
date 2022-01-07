@@ -10,6 +10,7 @@ public class ProjectileObjectPool : MonoBehaviour
     private Transform _projectileSpawnPosition;
     private Quaternion _projectileRotation;
     private Vector2 _projectileDirectionVector;
+    private int _projectileLayer;
 
     public static ProjectileObjectPool ProjectileObjectPoolInstance { get; private set; }
 
@@ -42,6 +43,7 @@ public class ProjectileObjectPool : MonoBehaviour
                 () =>
                 {
                     GameObject projectile = Instantiate(projectilePrefab, _projectileSpawnPosition.position, _projectileRotation);
+                    gameObject.layer = _projectileLayer;
                     projectile.GetComponent<Projectile>().SetDirection(_projectileDirectionVector);
                     return projectile;
                 },
@@ -51,6 +53,7 @@ public class ProjectileObjectPool : MonoBehaviour
                     projectile.transform.position = _projectileSpawnPosition.position;
                     projectile.transform.rotation = _projectileRotation;
                     projectile.transform.rotation = _projectileRotation;
+                    projectile.layer = _projectileLayer;
                     projectile.GetComponent<Projectile>().SetDirection(_projectileDirectionVector);
                 },
                 projectile => projectile.gameObject.SetActive(false),
@@ -60,11 +63,12 @@ public class ProjectileObjectPool : MonoBehaviour
             );
 
     public GameObject InstantiateProjectile(ProjectileType projectileType, Transform projectileSpawnPosition, Quaternion projectileRotation,
-        Vector2 projectileDirectionVector)
+        Vector2 projectileDirectionVector, string projectileLayerName)
     {
         _projectileSpawnPosition = projectileSpawnPosition;
         _projectileRotation = projectileRotation;
         _projectileDirectionVector = projectileDirectionVector;
+        _projectileLayer = LayerMask.NameToLayer(projectileLayerName);
         switch (projectileType)
         {
             case ProjectileType.BALL_PROJECTILE:
