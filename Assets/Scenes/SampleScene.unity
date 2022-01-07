@@ -604,6 +604,7 @@ GameObject:
   - component: {fileID: 576964651}
   - component: {fileID: 576964653}
   - component: {fileID: 576964652}
+  - component: {fileID: 576964654}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -655,6 +656,19 @@ MonoBehaviour:
   _projectilePrefab: {fileID: 7120018407457122070, guid: 2f7a9738aa51e5145bf7f24baca31344, type: 3}
   _projectileSpawnPosition: {fileID: 1622868839}
   _offsetBetweenBullets: 0.15
+--- !u!114 &576964654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576964650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72da1d2a6394cee408d1776491a785b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectileType: 1
 --- !u!1 &642371652
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,6 +1164,7 @@ GameObject:
   - component: {fileID: 1066789598}
   - component: {fileID: 1066789599}
   - component: {fileID: 1066789600}
+  - component: {fileID: 1066789601}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -1201,6 +1216,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetTransform: {fileID: 905609202}
+--- !u!114 &1066789601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066789597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72da1d2a6394cee408d1776491a785b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectileType: 1
 --- !u!1 &1392826558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,6 +1490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1482485148}
   - component: {fileID: 1482485149}
+  - component: {fileID: 1482485150}
   m_Layer: 0
   m_Name: Weapon System
   m_TagString: Untagged
@@ -1500,6 +1529,19 @@ MonoBehaviour:
   _projectilePrefab: {fileID: 7120018407457122070, guid: 11a0fa221e2ac1b4fac569449ade11f8, type: 3}
   _projectileSpawnPosition: {fileID: 2041750440}
   _offsetBetweenBullets: 0.15
+--- !u!114 &1482485150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482485147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72da1d2a6394cee408d1776491a785b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectileType: 0
 --- !u!1 &1506992198
 GameObject:
   m_ObjectHideFlags: 0
