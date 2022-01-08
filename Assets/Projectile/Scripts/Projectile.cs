@@ -4,7 +4,7 @@ using static ProjectileObjectPool;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private float _movementVelocity = 20.0f;
-    [SerializeField] private float _damage = 10.0f;
+    [SerializeField] private float _damageAmount = 10.0f;
     [SerializeField] private ProjectileType _projectileType;
 
     private Vector3 _projectileDirection;
@@ -21,7 +21,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.GetComponentInChildren<IDamagable>()?.DealDamage(_damage);
+        collision.GetComponentInChildren<IDamagable>()?.DealDamage(_damageAmount);
 
         ProjectileObjectPoolInstance.ReleaseProjectile(gameObject, _projectileType);
     }
