@@ -2,11 +2,14 @@ using System.Collections;
 using UnityEngine;
 using static ProjectileObjectPool;
 
+[RequireComponent(typeof(AudioSource))]
 public class Weapon : MonoBehaviour
 {
     [SerializeField] GameObject _projectilePrefab;
     [SerializeField] Transform _projectileSpawnPosition;
     [SerializeField] float _offsetBetweenBullets = 0.2f;
+    [SerializeField] float _minSoundPitch = 0.95f;
+    [SerializeField] float _maxSoundPitch = 1.05f;
 
     private bool _canShoot;
     private bool _isShooting;
@@ -15,7 +18,13 @@ public class Weapon : MonoBehaviour
     private ProjectileType _projectileType;
     private string _projectileLayerName;
 
-    private void Awake() => _canShoot = true;
+    private AudioSource _myAudioSource;
+
+    private void Awake()
+    {
+        _canShoot = true;
+        _myAudioSource = GetComponent<AudioSource>();
+    }
 
     private void Update() => HandleShooting();
 
@@ -34,6 +43,9 @@ public class Weapon : MonoBehaviour
             _projectileLayerName);
 
         _canShoot = false;
+
+        _myAudioSource.pitch = Random.Range(_minSoundPitch, _maxSoundPitch);
+        _myAudioSource.Play();
 
         yield return new WaitForSeconds(_offsetBetweenBullets);
 
