@@ -3,6 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class Tentacle : MonoBehaviour
 {
+    [SerializeField] private TentacleMode _tentacleMode;
+
     [SerializeField] private int _numberOfSegments = 30;
     [SerializeField] private Transform _tentacleTargetRotation;
     [SerializeField] private float _targetDistance = 0.2f;
@@ -14,10 +16,13 @@ public class Tentacle : MonoBehaviour
     [SerializeField] private Transform _wigglingDirection;
 
     [SerializeField] private Transform[] _bodyParts;
+    [SerializeField] private Transform _tail;
 
     private LineRenderer _myLineRenderer;
     private Vector3[] _segmentsPositions;
     private Vector3[] _segmentsVelocitites;
+
+    private enum TentacleMode { TENTACLE, BODY_PART }
 
     private void Awake()
     {
@@ -39,15 +44,28 @@ public class Tentacle : MonoBehaviour
 
         for (int i = 1; i < _numberOfSegments; i++)
         {
-            _segmentsPositions[i] = Vector3.SmoothDamp(_segmentsPositions[i],
-                _segmentsPositions[i - 1] + _tentacleTargetRotation.right * _targetDistance,
-                ref _segmentsVelocitites[i], _timeToReachTarget + i / _trailSpeed);
-
-            if (_bodyParts?.Length > 0)
+            switch (_tentacleMode)
             {
-                _bodyParts[i - 1].transform.position = _segmentsPositions[i];
+                case TentacleMode.TENTACLE:
+                    _segmentsPositions[i] = Vector3.SmoothDamp(_segmentsPositions[i],
+                        _segmentsPositions[i - 1] + _tentacleTargetRotation.right * _targetDistance,
+                        ref _segmentsVelocitites[i], _timeToReachTarget + i / _trailSpeed);
+                    break;
+
+                case TentacleMode.BODY_PART:
+                    _segmentsPositions[i] = Vector3.SmoothDamp(_segmentsPositions[i],
+                   _segmentsPositions[i - 1] + (_segmentsPositions[i] - _segmentsPositions[i - 1]).normalized * _targetDistance,
+                        ref _segmentsVelocitites[i], _timeToReachTarget);
+
+                    _bodyParts[i - 1].transform.position = _segmentsPositions[i];
+                    break;
             }
         }
         _myLineRenderer.SetPositions(_segmentsPositions);
+
+        if (_tail)
+        {
+            _tail.position = _segmentsPositions[_numberOfSegments - 1];
+        }
     }
 }
