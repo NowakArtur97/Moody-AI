@@ -8,6 +8,7 @@ public class Tentacle : MonoBehaviour
     [SerializeField] private int _numberOfSegments = 30;
     [SerializeField] private Transform _tentacleTargetRotation;
     [SerializeField] private float _targetDistance = 0.2f;
+    [SerializeField] private float _lastTargetDistance = 0.4f;
     [SerializeField] private float _timeToReachTarget = 0.02f;
     [SerializeField] private float _trailSpeed = 350f;
 
@@ -42,22 +43,26 @@ public class Tentacle : MonoBehaviour
 
         _segmentsPositions[0] = _tentacleTargetRotation.position;
 
-        for (int i = 1; i < _numberOfSegments; i++)
+        for (int index = 1; index < _numberOfSegments; index++)
         {
             switch (_tentacleMode)
             {
                 case TentacleMode.TENTACLE:
-                    _segmentsPositions[i] = Vector3.SmoothDamp(_segmentsPositions[i],
-                        _segmentsPositions[i - 1] + _tentacleTargetRotation.right * _targetDistance,
-                        ref _segmentsVelocitites[i], _timeToReachTarget + i / _trailSpeed);
+                    _segmentsPositions[index] = SetSegmentPosition(index, _segmentsPositions[index - 1] + _tentacleTargetRotation.right * _targetDistance,
+                         _timeToReachTarget + index / _trailSpeed);
                     break;
 
                 case TentacleMode.BODY_PART:
-                    _segmentsPositions[i] = Vector3.SmoothDamp(_segmentsPositions[i],
-                   _segmentsPositions[i - 1] + (_segmentsPositions[i] - _segmentsPositions[i - 1]).normalized * _targetDistance,
-                        ref _segmentsVelocitites[i], _timeToReachTarget);
+                    if (index == _numberOfSegments - 1)
+                    {
+                        _segmentsPositions[index] = SetSegmentPosition(index, _segmentsPositions[index - 1] + (_segmentsPositions[index] - _segmentsPositions[index - 1]).normalized * _lastTargetDistance, _timeToReachTarget);
+                    }
+                    else
+                    {
+                        _segmentsPositions[index] = SetSegmentPosition(index, _segmentsPositions[index - 1] + (_segmentsPositions[index] - _segmentsPositions[index - 1]).normalized * _targetDistance, _timeToReachTarget);
+                    }
 
-                    _bodyParts[i - 1].transform.position = _segmentsPositions[i];
+                    _bodyParts[index - 1].transform.position = _segmentsPositions[index];
                     break;
             }
         }
@@ -68,4 +73,7 @@ public class Tentacle : MonoBehaviour
             _tail.position = _segmentsPositions[_numberOfSegments - 1];
         }
     }
+
+    private Vector3 SetSegmentPosition(int index, Vector3 targetPosition, float smoothTime) =>
+        Vector3.SmoothDamp(_segmentsPositions[index], targetPosition, ref _segmentsVelocitites[index], smoothTime);
 }
