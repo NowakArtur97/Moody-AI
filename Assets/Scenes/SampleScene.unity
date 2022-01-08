@@ -2187,7 +2187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1461754541
 Rigidbody2D:
   serializedVersion: 4
@@ -2595,6 +2595,7 @@ MonoBehaviour:
   _wigglingSpeed: 10
   _wigglingMagnitude: 20
   _wigglingDirection: {fileID: 325671509}
+  _bodyParts: []
 --- !u!1 &1506992198
 GameObject:
   m_ObjectHideFlags: 0
@@ -3280,6 +3281,7 @@ MonoBehaviour:
   _wigglingSpeed: 10
   _wigglingMagnitude: 20
   _wigglingDirection: {fileID: 381519987}
+  _bodyParts: []
 --- !u!1 &1800029220
 GameObject:
   m_ObjectHideFlags: 0
@@ -3725,6 +3727,7 @@ MonoBehaviour:
   _wigglingSpeed: 10
   _wigglingMagnitude: 20
   _wigglingDirection: {fileID: 449657043}
+  _bodyParts: []
 --- !u!1 &2041750439
 GameObject:
   m_ObjectHideFlags: 0

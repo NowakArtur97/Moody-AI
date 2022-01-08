@@ -13,6 +13,8 @@ public class Tentacle : MonoBehaviour
     [SerializeField] private float _wigglingMagnitude = 20.0f;
     [SerializeField] private Transform _wigglingDirection;
 
+    [SerializeField] private Transform[] _bodyParts;
+
     private LineRenderer _myLineRenderer;
     private Vector3[] _segmentsPositions;
     private Vector3[] _segmentsVelocitites;
@@ -40,6 +42,11 @@ public class Tentacle : MonoBehaviour
             _segmentsPositions[i] = Vector3.SmoothDamp(_segmentsPositions[i],
                 _segmentsPositions[i - 1] + _tentacleTargetRotation.right * _targetDistance,
                 ref _segmentsVelocitites[i], _timeToReachTarget + i / _trailSpeed);
+
+            if (_bodyParts?.Length > 0)
+            {
+                _bodyParts[i - 1].transform.position = _segmentsPositions[i];
+            }
         }
         _myLineRenderer.SetPositions(_segmentsPositions);
     }
