@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] float _minSoundPitch = 0.95f;
     [SerializeField] float _maxSoundPitch = 1.05f;
 
-    private bool _canShoot;
+    public bool CanShoot { get; private set; }
     private bool _isShooting;
     private Vector3 _projectileDirectionVector;
     private Quaternion _projectileDirectionQuaternion;
@@ -22,7 +22,7 @@ public class Weapon : MonoBehaviour
 
     private void Awake()
     {
-        _canShoot = true;
+        CanShoot = true;
         _myAudioSource = GetComponent<AudioSource>();
     }
 
@@ -30,7 +30,7 @@ public class Weapon : MonoBehaviour
 
     private void HandleShooting()
     {
-        if (_canShoot && _isShooting)
+        if (CanShoot && _isShooting)
         {
             StartCoroutine(ShotingCoroutine());
         }
@@ -42,14 +42,14 @@ public class Weapon : MonoBehaviour
             _projectileDirectionQuaternion != null ? _projectileDirectionQuaternion : Quaternion.identity, _projectileDirectionVector,
             _projectileLayerName);
 
-        _canShoot = false;
+        CanShoot = false;
 
         _myAudioSource.pitch = Random.Range(_minSoundPitch, _maxSoundPitch);
         _myAudioSource.Play();
 
         yield return new WaitForSeconds(_offsetBetweenBullets);
 
-        _canShoot = true;
+        CanShoot = true;
     }
 
     public void IsShooting(bool isShooting) => _isShooting = isShooting;
