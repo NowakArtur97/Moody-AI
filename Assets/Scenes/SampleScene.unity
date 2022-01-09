@@ -1414,8 +1414,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6705d4700f7547e40b30bee593692577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _starPrefab: {fileID: 5995930974350464166, guid: 0965188cf61c3344292b1589e932f1e6, type: 3}
-  _numberOfStars: 200
+  _starPrefabs:
+  - {fileID: 5995930974350464166, guid: 0965188cf61c3344292b1589e932f1e6, type: 3}
+  - {fileID: 5995930974350464166, guid: dbb9dbc80ccf03747a09014e15b517af, type: 3}
+  _numberOfStars: 600
 --- !u!1 &555314240
 GameObject:
   m_ObjectHideFlags: 0

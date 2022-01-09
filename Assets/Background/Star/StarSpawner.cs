@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class StarSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _starPrefab;
+    [SerializeField] private GameObject[] _starPrefabs;
     [SerializeField] private int _numberOfStars = 100;
 
     private void Start() => SpawnStars();
@@ -24,7 +24,7 @@ public class StarSpawner : MonoBehaviour
             float spawnY = Random.Range(mainCamera.ScreenToWorldPoint(minPosition).y, mainCamera.ScreenToWorldPoint(maxYPosition).y);
 
             spawnPosition.Set(spawnX, spawnY);
-            star = Instantiate(_starPrefab, spawnPosition, Quaternion.identity);
+            star = Instantiate(_starPrefabs[Random.Range(0, _starPrefabs.Length)], spawnPosition, Quaternion.identity);
             star.transform.parent = gameObject.transform;
         }
     }
