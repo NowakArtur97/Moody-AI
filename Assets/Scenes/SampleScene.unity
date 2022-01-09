@@ -290,6 +290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 50088064}
   - component: {fileID: 50088063}
+  - component: {fileID: 50088067}
   - component: {fileID: 50088065}
   - component: {fileID: 50088066}
   m_Layer: 7
@@ -367,6 +368,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0.026945405, y: 0}
   m_Size: {x: 0.4461081, y: 0.8388994}
   m_Direction: 0
+--- !u!114 &50088067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50088060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2feafd62d868cc44abffea884949c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageAmount: 10
 --- !u!1 &107447745
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +770,7 @@ GameObject:
   - component: {fileID: 347058315}
   - component: {fileID: 347058316}
   - component: {fileID: 347058317}
+  - component: {fileID: 347058319}
   - component: {fileID: 347058313}
   - component: {fileID: 347058318}
   m_Layer: 6
@@ -853,12 +868,25 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.10454321, y: 0}
   serializedVersion: 2
   m_Radius: 0.3954568
+--- !u!114 &347058319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347058310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2feafd62d868cc44abffea884949c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageAmount: 10
 --- !u!1 &381519986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +1085,7 @@ GameObject:
   - component: {fileID: 555314243}
   - component: {fileID: 555314242}
   - component: {fileID: 555314246}
+  - component: {fileID: 555314248}
   - component: {fileID: 555314247}
   m_Layer: 7
   m_Name: Jellyfish
@@ -1141,6 +1170,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.45006323, y: 0.49579823}
   m_Direction: 0
+--- !u!114 &555314248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555314240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2feafd62d868cc44abffea884949c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageAmount: 10
 --- !u!1 &576964650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,7 +1246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectilePrefab: {fileID: 7120018407457122070, guid: 2f7a9738aa51e5145bf7f24baca31344, type: 3}
   _projectileSpawnPosition: {fileID: 1622868839}
-  _offsetBetweenBullets: 0.5
+  _offsetBetweenBullets: 5
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
 --- !u!114 &576964654
@@ -1393,6 +1435,7 @@ GameObject:
   - component: {fileID: 642371655}
   - component: {fileID: 642371654}
   - component: {fileID: 642371657}
+  - component: {fileID: 642371659}
   - component: {fileID: 642371658}
   m_Layer: 7
   m_Name: Bat
@@ -1400,7 +1443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &642371654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1493,6 +1536,19 @@ PolygonCollider2D:
       - {x: 0.25753197, y: -0.38224646}
       - {x: 0.34585252, y: -0.056737244}
       - {x: 0.3447318, y: 0.06615539}
+--- !u!114 &642371659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642371652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2feafd62d868cc44abffea884949c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageAmount: 10
 --- !u!1 &666646022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,7 +1873,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2510,6 +2566,7 @@ GameObject:
   - component: {fileID: 1461754544}
   - component: {fileID: 1461754543}
   - component: {fileID: 1461754542}
+  - component: {fileID: 1461754546}
   - component: {fileID: 1461754541}
   - component: {fileID: 1461754545}
   m_Layer: 7
@@ -2612,6 +2669,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1321764, y: 0.24764809}
   m_EdgeRadius: 0
+--- !u!114 &1461754546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461754540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2feafd62d868cc44abffea884949c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageAmount: 10
 --- !u!1 &1482485147
 GameObject:
   m_ObjectHideFlags: 0
