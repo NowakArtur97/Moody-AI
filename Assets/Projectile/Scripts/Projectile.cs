@@ -28,10 +28,15 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _myAudioSource.pitch = Random.Range(_minSoundPitch, _maxSoundPitch);
-        _myAudioSource.Play();
+        PlayHitSound();
 
         StartCoroutine(ReleaseCoroutine());
+    }
+
+    private void PlayHitSound()
+    {
+        _myAudioSource.pitch = Random.Range(_minSoundPitch, _maxSoundPitch);
+        _myAudioSource.Play();
     }
 
     private IEnumerator ReleaseCoroutine()

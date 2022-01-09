@@ -44,12 +44,17 @@ public class Weapon : MonoBehaviour
 
         CanShoot = false;
 
-        _myAudioSource.pitch = Random.Range(_minSoundPitch, _maxSoundPitch);
-        _myAudioSource.Play();
+        PlayShootingSound();
 
         yield return new WaitForSeconds(_offsetBetweenBullets);
 
         CanShoot = true;
+    }
+
+    private void PlayShootingSound()
+    {
+        _myAudioSource.pitch = Random.Range(_minSoundPitch, _maxSoundPitch);
+        _myAudioSource.Play();
     }
 
     public void IsShooting(bool isShooting) => _isShooting = isShooting;
