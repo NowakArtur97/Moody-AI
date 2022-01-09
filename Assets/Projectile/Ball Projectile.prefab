@@ -153,8 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementVelocity: 1
-  _damage: 10
+  _damageAmount: 10
   _projectileType: 1
+  _minSoundPitch: 0.95
+  _maxSoundPitch: 1.05
 --- !u!58 &1971431543668059938
 CircleCollider2D:
   m_ObjectHideFlags: 0

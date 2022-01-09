@@ -153,8 +153,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementVelocity: 40
-  _damage: 10
+  _damageAmount: 10
   _projectileType: 0
+  _minSoundPitch: 0.95
+  _maxSoundPitch: 1.05
 --- !u!70 &5060884676757528521
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
