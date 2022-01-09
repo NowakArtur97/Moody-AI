@@ -56,7 +56,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Star Animator Controller
+  m_Name: Star_01 Animator Controller
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: twinkle
@@ -64,7 +64,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -148,7 +148,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d832cd4ab496fdc42959ed7bdda9292e, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5ee9d68df5e0ea144a6f50152210949b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
