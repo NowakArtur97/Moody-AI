@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04e0e37f78b19d04588f8853be67e6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minTimeBeforeTwinkle: 1
-  _maxTimeBeforeTwinkle: 6
+  _minTimeBeforeTwinkle: 10
+  _maxTimeBeforeTwinkle: 20
 --- !u!212 &5995930974350464184
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -1379,7 +1379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 551768749}
-  - component: {fileID: 551768750}
+  - component: {fileID: 551768751}
   m_Layer: 0
   m_Name: Stars
   m_TagString: Untagged
@@ -1402,7 +1402,7 @@ Transform:
   m_Father: {fileID: 1239492711}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &551768750
+--- !u!114 &551768751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1411,13 +1411,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 551768748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6705d4700f7547e40b30bee593692577, type: 3}
+  m_Script: {fileID: 11500000, guid: 52bd5f5b596f81c4aaf56bc18f382ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _starPrefabs:
+  _prefabs:
   - {fileID: 5995930974350464166, guid: 0965188cf61c3344292b1589e932f1e6, type: 3}
   - {fileID: 5995930974350464166, guid: dbb9dbc80ccf03747a09014e15b517af, type: 3}
-  _numberOfStars: 600
+  _numberOfPrefabs: 600
 --- !u!1 &555314240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,6 +1735,53 @@ Transform:
   m_Father: {fileID: 325671509}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!1 &627277736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 627277737}
+  - component: {fileID: 627277738}
+  m_Layer: 0
+  m_Name: Shooting Stars
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &627277737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627277736}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1239492711}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &627277738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627277736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52bd5f5b596f81c4aaf56bc18f382ce5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabs:
+  - {fileID: 5995930974350464166, guid: 4171fe9f8030d8647931d163930676f7, type: 3}
+  _numberOfPrefabs: 300
 --- !u!1 &627441806
 GameObject:
   m_ObjectHideFlags: 0
@@ -3027,6 +3074,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 551768749}
+  - {fileID: 627277737}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
