@@ -47,6 +47,9 @@ TagManager:
   - name: Star
     uniqueID: 487781289
     locked: 0
+  - name: Planet
+    uniqueID: 3783084391
+    locked: 0
   - name: Player
     uniqueID: 216341609
     locked: 0
