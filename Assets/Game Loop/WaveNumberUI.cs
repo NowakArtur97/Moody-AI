@@ -16,9 +16,9 @@ public class WaveNumberUI : MonoBehaviour
     {
         _myTextMeshPro = GetComponent<TextMeshProUGUI>();
         _myAnimator = GetComponent<Animator>();
-    }
 
-    private void Start() => FindObjectOfType<WaveManager>().OnStartWave += DisplayNumberOfWave;
+        FindObjectOfType<WaveManager>().OnStartWave += DisplayNumberOfWave;
+    }
 
     private void OnDestroy() => FindObjectOfType<WaveManager>().OnStartWave -= DisplayNumberOfWave;
 
