@@ -18,9 +18,9 @@ public class WaveNumberUI : MonoBehaviour
         _myAnimator = GetComponent<Animator>();
     }
 
-    private void Start() => FindObjectOfType<WaveManager>().OnStartSpawning += DisplayNumberOfWave;
+    private void Start() => FindObjectOfType<WaveManager>().OnStartWave += DisplayNumberOfWave;
 
-    private void OnDestroy() => FindObjectOfType<WaveManager>().OnStartSpawning -= DisplayNumberOfWave;
+    private void OnDestroy() => FindObjectOfType<WaveManager>().OnStartWave -= DisplayNumberOfWave;
 
     private void DisplayNumberOfWave(int numberOfWave) => StartCoroutine(AnimateTextCoroutine(numberOfWave));
 
