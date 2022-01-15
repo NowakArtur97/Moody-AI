@@ -380,6 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _transformWithEnemyTargetTransformHandler: {fileID: 1883743808626040941}
 --- !u!114 &3821861732929374423
 MonoBehaviour:
   m_ObjectHideFlags: 0

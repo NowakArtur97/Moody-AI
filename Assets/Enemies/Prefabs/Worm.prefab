@@ -240,7 +240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cdfd22f21b28b47a822bb8a54017b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetTransform: {fileID: 0}
   _distanceWhenShouldFindChangePosition: 2
   _randomPositionAccelerationFactor: 350
   _targetPositionAccelerationFactor: 30
@@ -581,6 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyTargetTransformHandler: {fileID: 8411009055314306753}
 --- !u!212 &4117220607735368648
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -692,6 +692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyTargetTransformHandler: {fileID: 8411009055314306753}
 --- !u!212 &4117220608061165836
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1026,6 +1027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyTargetTransformHandler: {fileID: 8411009055314306753}
 --- !u!212 &4117220608450934987
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1137,6 +1139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyTargetTransformHandler: {fileID: 8411009055314306753}
 --- !u!212 &4117220608520890321
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1248,6 +1251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyTargetTransformHandler: {fileID: 8411009055314306753}
 --- !u!212 &4117220609000899591
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1378,6 +1382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyTargetTransformHandler: {fileID: 0}
 --- !u!50 &4117220609159550771
 Rigidbody2D:
   serializedVersion: 4
