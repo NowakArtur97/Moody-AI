@@ -7,11 +7,9 @@ public class WaveManager : MonoBehaviour
 
     public Action<int> OnStartWave;
 
-    private void Start()
-    {
-        IncreaseNumberOfWave();
-        FindObjectOfType<WaveSpawner>().OnFinishWave += IncreaseNumberOfWave;
-    }
+    private void Awake() => FindObjectOfType<WaveSpawner>().OnFinishWave += IncreaseNumberOfWave;
+
+    private void Start() => IncreaseNumberOfWave();
 
     private void OnDestroy() => FindObjectOfType<WaveSpawner>().OnFinishWave -= IncreaseNumberOfWave;
 

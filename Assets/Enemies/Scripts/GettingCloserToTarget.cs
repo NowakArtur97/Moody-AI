@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class GettingCloserToTarget : MonoBehaviour
 {
-    [SerializeField] private Transform _targetTransform;
     [SerializeField] private float _movementVelocity = 10.0f;
     [SerializeField] private float _distanceWhenShouldStop = 3.0f;
+
+    private Transform _targetTransform;
+
+    private void Start() => _targetTransform = GetComponent<EnemyTargetTransformHandler>().TargetTransform;
 
     private void Update()
     {

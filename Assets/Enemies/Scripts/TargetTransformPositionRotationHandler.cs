@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class TargetTransformPositionRotationHandler : MonoBehaviour
 {
-    [SerializeField] private Transform _targetTransform;
+    private Transform _targetTransform;
 
     private RotationController _rotationController;
 
-    private void Start() => _rotationController = GetComponentInChildren<RotationController>();
+    private void Awake() => _rotationController = GetComponentInChildren<RotationController>();
+
+    private void Start() => _targetTransform = GetComponent<EnemyTargetTransformHandler>().TargetTransform;
 
     private void Update() => HandleRotation();
 

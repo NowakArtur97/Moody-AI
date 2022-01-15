@@ -25,9 +25,8 @@ public class WaveSpawner : MonoBehaviour
     {
         _spawnedEnemies = new List<GameObject>();
         _isSpawning = true;
+        FindObjectOfType<WaveManager>().OnStartWave += StartSpawning;
     }
-
-    private void Start() => FindObjectOfType<WaveManager>().OnStartWave += StartSpawning;
 
     private void OnDestroy() => FindObjectOfType<WaveManager>().OnStartWave -= StartSpawning;
 

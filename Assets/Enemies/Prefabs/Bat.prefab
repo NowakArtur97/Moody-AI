@@ -57,8 +57,8 @@ AudioSource:
   m_GameObject: {fileID: 2947253300709426850}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 1130551704072923348, guid: 25447cba406f2f14d852b691cb4c0991, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 389e0fc4aea1cfa48a06771ab3c532b3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -237,6 +237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2947253301916820864}
+  - component: {fileID: 1348607801979514920}
   - component: {fileID: 2947253301916820879}
   - component: {fileID: 2947253301916820878}
   - component: {fileID: 2947253301916820865}
@@ -267,6 +268,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1348607801979514920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947253301916820876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e302e060ac3c14b958282bd729bf4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2947253301916820879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetTransform: {fileID: 0}
 --- !u!114 &2947253301916820865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,7 +317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 919185f5d1d20714a8493dc2f7e046d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetTransform: {fileID: 0}
   _movementVelocity: 10
   _rotatingVelocity: 100
   _distanceWhenShouldRotateAround: 12
@@ -419,7 +430,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a37567d8411b9c4aa25a27314ef3672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetTransform: {fileID: 0}
 --- !u!114 &2947253302020366121
 MonoBehaviour:
   m_ObjectHideFlags: 0

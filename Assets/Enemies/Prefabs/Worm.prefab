@@ -435,8 +435,8 @@ AudioSource:
   m_GameObject: {fileID: 4117220607610624244}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 1130551704072923348, guid: 25447cba406f2f14d852b691cb4c0991, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 389e0fc4aea1cfa48a06771ab3c532b3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -581,7 +581,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetTransform: {fileID: 4117220608450934986}
 --- !u!212 &4117220607735368648
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -693,7 +692,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetTransform: {fileID: 4117220609159550766}
 --- !u!212 &4117220608061165836
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1028,7 +1026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetTransform: {fileID: 4117220608061165839}
 --- !u!212 &4117220608450934987
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1140,7 +1137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetTransform: {fileID: 4117220607735368651}
 --- !u!212 &4117220608520890321
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1252,7 +1248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetTransform: {fileID: 4117220608520890320}
 --- !u!212 &4117220609000899591
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1314,6 +1309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4117220609159550766}
+  - component: {fileID: 8411009055314306753}
   - component: {fileID: 4117220609159550769}
   - component: {fileID: 4117220609159550768}
   - component: {fileID: 4117220609159550771}
@@ -1345,6 +1341,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8411009055314306753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4117220609159550770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e302e060ac3c14b958282bd729bf4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4117220609159550769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1370,7 +1378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetTransform: {fileID: 0}
 --- !u!50 &4117220609159550771
 Rigidbody2D:
   serializedVersion: 4

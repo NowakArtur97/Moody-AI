@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TargetToWeaponHandler : MonoBehaviour
 {
-    [SerializeField] private Transform _targetTransform;
+    private Transform _targetTransform;
 
     private Weapon _weapon;
 
@@ -10,6 +10,7 @@ public class TargetToWeaponHandler : MonoBehaviour
     {
         _weapon = GetComponent<Weapon>();
         _weapon.IsShooting(true);
+        _targetTransform = GetComponentInParent<EnemyTargetTransformHandler>().TargetTransform;
     }
 
     private void Update() => HandleShootingDirection();

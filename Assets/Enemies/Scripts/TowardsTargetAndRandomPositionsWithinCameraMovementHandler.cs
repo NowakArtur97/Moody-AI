@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class TowardsTargetAndRandomPositionsWithinCameraMovementHandler : MonoBehaviour
 {
-    [SerializeField] private Transform _targetTransform;
     [SerializeField] private float _distanceWhenShouldFindChangePosition = 2.0f;
     [SerializeField] private float _randomPositionAccelerationFactor = 300.0f;
     [SerializeField] private float _targetPositionAccelerationFactor = 30.0f;
 
+    private Transform _targetTransform;
     private Vector3 _targetPosition;
     private bool _shouldPickRandomPosition;
     private int _screenWidth;
@@ -24,6 +24,8 @@ public class TowardsTargetAndRandomPositionsWithinCameraMovementHandler : MonoBe
 
         _rotationController = GetComponentInParent<RotationController>();
         _spaceMovementController = GetComponent<SpaceMovementController>();
+
+        _targetTransform = GetComponentInParent<EnemyTargetTransformHandler>().TargetTransform;
 
         AimForTarget();
     }
