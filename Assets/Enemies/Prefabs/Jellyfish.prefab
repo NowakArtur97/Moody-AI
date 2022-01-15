@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transformWithEnemyTargetTransformHandler: {fileID: 1883743808626040941}
+  _enemyTargetTransformHandler: {fileID: 0}
 --- !u!114 &3821861732929374423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1008,7 +1008,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 1130551704072923348, guid: 25447cba406f2f14d852b691cb4c0991, type: 2}
   m_audioClip: {fileID: 8300000, guid: 389e0fc4aea1cfa48a06771ab3c532b3, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

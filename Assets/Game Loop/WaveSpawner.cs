@@ -9,7 +9,7 @@ public class WaveSpawner : MonoBehaviour
     [SerializeField] private D_WaveEnemy[] _enemiesData;
     [SerializeField] private int _startingSpawnPoints = 10;
     [SerializeField] private int _spawnPointsMultiplier = 1;
-    [SerializeField] private int _spawningRadius = 10;
+    [SerializeField] private int _spawningRadius = 30;
     [SerializeField] private float _timeBetweenSpawningEnemies = 1;
     [SerializeField] private float _timeBeforeSpawningEnemies = 2;
     [SerializeField] private float _timeAfterSpawningEnemies = 2;
@@ -33,7 +33,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (!_isSpawning && _spawnedEnemies.All(enemy => !enemy.activeInHierarchy))
+        if (!_isSpawning && _spawnedEnemies.Count == 0) // TODO: WaveSpawner: Change to check if inactive
         {
             FinishWave();
         }
@@ -60,16 +60,29 @@ public class WaveSpawner : MonoBehaviour
             if (chosenEnemyData.enemySpawnPoints <= spawnPoints)
             {
                 spawnPoints -= chosenEnemyData.enemySpawnPoints;
-                Vector2 position = Vector2.zero + UnityEngine.Random.insideUnitCircle * _spawningRadius;
 
-                GameObject enemy = Instantiate(chosenEnemyData.enemyPrefab, position, Quaternion.identity);
-                _spawnedEnemies.Add(enemy);
+                SpawnEnemy(chosenEnemyData);
 
                 yield return new WaitForSeconds(_timeBetweenSpawningEnemies);
             }
         }
 
         _isSpawning = false;
+    }
+
+    private void SpawnEnemy(D_WaveEnemy chosenEnemyData)
+    {
+        Vector2 position = GetRandomPositionInRadius();
+
+        GameObject enemy = Instantiate(chosenEnemyData.enemyPrefab, position, Quaternion.identity);
+
+        _spawnedEnemies.Add(enemy);
+    }
+
+    private Vector2 GetRandomPositionInRadius()
+    {
+        float randomAngle = UnityEngine.Random.value * 360;
+        return new Vector2(_spawningRadius * Mathf.Sin(randomAngle * Mathf.Deg2Rad), _spawningRadius * Mathf.Cos(randomAngle * Mathf.Deg2Rad));
     }
 
     private IEnumerator FinishWave()
