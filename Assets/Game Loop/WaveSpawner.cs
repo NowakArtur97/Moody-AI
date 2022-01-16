@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static EnemyObjectPool;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -19,8 +20,6 @@ public class WaveSpawner : MonoBehaviour
     private List<GameObject> _spawnedEnemies;
     private bool _isSpawning;
     [SerializeField] private bool _isFinishingWave;
-
-    public enum EnemyType { JELLYFISH, TEETHER, BAT, STINGRAY, BOOMER, WORM }
 
     private void Awake()
     {
@@ -72,8 +71,7 @@ public class WaveSpawner : MonoBehaviour
         _isSpawning = false;
     }
 
-    private void SpawnEnemy(D_WaveEnemy chosenEnemyData) =>
-        _spawnedEnemies.Add(Instantiate(chosenEnemyData.enemyPrefab, GetRandomPositionInRadius(), Quaternion.identity));
+    private void SpawnEnemy(D_WaveEnemy chosenEnemyData) => EnemyObjectPoolInstance.InstantiateEnemy(chosenEnemyData.enemyType, GetRandomPositionInRadius());
 
     private Vector2 GetRandomPositionInRadius()
     {
@@ -84,11 +82,9 @@ public class WaveSpawner : MonoBehaviour
     private IEnumerator FinishWave()
     {
         _isFinishingWave = true;
-        Debug.Log("FIN0");
 
         yield return new WaitForSeconds(_timeAfterSpawningEnemies);
 
-        Debug.Log("FIN");
         OnFinishWave?.Invoke();
 
         _isFinishingWave = false;

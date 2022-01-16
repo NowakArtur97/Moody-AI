@@ -1,12 +1,15 @@
 using System.Collections;
 using UnityEngine;
+using static EnemyObjectPool;
 
 [RequireComponent(typeof(AudioSource))]
 public class HealthSystem : MonoBehaviour, IDamagable
 {
     [SerializeField] private float _health = 40.0f;
+    [SerializeField] private EnemyType _enemyType;
     [SerializeField] float _minSoundPitch = 0.8f;
     [SerializeField] float _maxSoundPitch = 1.05f;
+    [SerializeField] bool _isEnemy = true;
 
     private AudioSource _myAudioSource;
     private bool _isDying;
@@ -44,7 +47,13 @@ public class HealthSystem : MonoBehaviour, IDamagable
     {
         yield return new WaitForSeconds(_myAudioSource.clip.length);
 
-        // TODO: HeathSystem: Return to pool
-        Destroy(transform.parent.gameObject);
+        if (_isEnemy)
+        {
+            EnemyObjectPoolInstance.ReleaseEnemy(transform.parent.gameObject, _enemyType);
+        }
+        else
+        {
+            Destroy(transform.parent.gameObject);
+        }
     }
 }

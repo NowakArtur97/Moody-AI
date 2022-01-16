@@ -46,8 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 40
+  _enemyType: 2
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  _isEnemy: 1
+  _currentHealth: 0
 --- !u!82 &2947253300709426853
 AudioSource:
   m_ObjectHideFlags: 0
