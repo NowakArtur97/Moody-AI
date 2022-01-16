@@ -18,6 +18,7 @@ public class WaveSpawner : MonoBehaviour
 
     private List<GameObject> _spawnedEnemies;
     private bool _isSpawning;
+    [SerializeField] private bool _isFinishingWave;
 
     public enum EnemyType { JELLYFISH, TEETHER, BAT, STINGRAY, BOOMER, WORM }
 
@@ -25,6 +26,7 @@ public class WaveSpawner : MonoBehaviour
     {
         _spawnedEnemies = new List<GameObject>();
         _isSpawning = true;
+        _isFinishingWave = false;
 
         FindObjectOfType<WaveManager>().OnStartWave += StartSpawning;
     }
@@ -33,9 +35,9 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (!_isSpawning && _spawnedEnemies.Count == 0) // TODO: WaveSpawner: Change to check if inactive
+        if (!_isSpawning && !_isFinishingWave && _spawnedEnemies.All(enemy => enemy == null)) // TODO: WaveSpawner: Change to check if inactive
         {
-            FinishWave();
+            StartCoroutine(FinishWave());
         }
     }
 
@@ -70,14 +72,8 @@ public class WaveSpawner : MonoBehaviour
         _isSpawning = false;
     }
 
-    private void SpawnEnemy(D_WaveEnemy chosenEnemyData)
-    {
-        Vector2 position = GetRandomPositionInRadius();
-
-        GameObject enemy = Instantiate(chosenEnemyData.enemyPrefab, position, Quaternion.identity);
-
-        _spawnedEnemies.Add(enemy);
-    }
+    private void SpawnEnemy(D_WaveEnemy chosenEnemyData) =>
+        _spawnedEnemies.Add(Instantiate(chosenEnemyData.enemyPrefab, GetRandomPositionInRadius(), Quaternion.identity));
 
     private Vector2 GetRandomPositionInRadius()
     {
@@ -87,8 +83,14 @@ public class WaveSpawner : MonoBehaviour
 
     private IEnumerator FinishWave()
     {
+        _isFinishingWave = true;
+        Debug.Log("FIN0");
+
         yield return new WaitForSeconds(_timeAfterSpawningEnemies);
 
+        Debug.Log("FIN");
         OnFinishWave?.Invoke();
+
+        _isFinishingWave = false;
     }
 }

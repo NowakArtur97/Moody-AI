@@ -6,6 +6,7 @@ using UnityEngine;
 public class WaveNumberUI : MonoBehaviour
 {
     [SerializeField] float _timeBetweenRevealingLetters = 0.5f;
+    [SerializeField] private TMP_InputField _myInputField;
 
     private TextMeshProUGUI _myTextMeshPro;
     private Animator _myAnimator;
@@ -27,7 +28,8 @@ public class WaveNumberUI : MonoBehaviour
     private IEnumerator AnimateTextCoroutine(int numberOfWave)
     {
         string text = "Wave " + numberOfWave;
-        _myTextMeshPro.SetText(text);
+
+        _myInputField.text = text;
 
         int totalCharacters = text.Length;
         int counter = 0;

@@ -16,6 +16,7 @@ public class WaveManager : MonoBehaviour
     private void IncreaseNumberOfWave()
     {
         _numberOfWave++;
+
         OnStartWave?.Invoke(_numberOfWave);
     }
 }
