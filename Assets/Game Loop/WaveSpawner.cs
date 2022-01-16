@@ -34,7 +34,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (!_isSpawning && !_isFinishingWave && _spawnedEnemies.All(enemy => enemy == null)) // TODO: WaveSpawner: Change to check if inactive
+        if (!_isSpawning && !_isFinishingWave && _spawnedEnemies.All(enemy => !enemy.activeInHierarchy))
         {
             StartCoroutine(FinishWave());
         }
@@ -71,7 +71,8 @@ public class WaveSpawner : MonoBehaviour
         _isSpawning = false;
     }
 
-    private void SpawnEnemy(D_WaveEnemy chosenEnemyData) => EnemyObjectPoolInstance.InstantiateEnemy(chosenEnemyData.enemyType, GetRandomPositionInRadius());
+    private void SpawnEnemy(D_WaveEnemy chosenEnemyData) => _spawnedEnemies.Add(
+        EnemyObjectPoolInstance.InstantiateEnemy(chosenEnemyData.enemyType, GetRandomPositionInRadius()));
 
     private Vector2 GetRandomPositionInRadius()
     {
