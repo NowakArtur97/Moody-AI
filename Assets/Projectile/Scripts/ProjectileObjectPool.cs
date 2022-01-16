@@ -44,6 +44,7 @@ public class ProjectileObjectPool : MonoBehaviour
                 {
                     GameObject projectile = Instantiate(projectilePrefab, _projectileSpawnPosition.position, _projectileRotation);
                     gameObject.layer = _projectileLayer;
+                    gameObject.transform.parent = transform;
                     projectile.GetComponent<Projectile>().SetDirection(_projectileDirectionVector);
                     return projectile;
                 },
@@ -54,6 +55,7 @@ public class ProjectileObjectPool : MonoBehaviour
                     projectile.transform.rotation = _projectileRotation;
                     projectile.transform.rotation = _projectileRotation;
                     projectile.layer = _projectileLayer;
+                    gameObject.transform.parent = transform;
                     projectile.GetComponent<Projectile>().SetDirection(_projectileDirectionVector);
                 },
                 projectile => projectile.gameObject.SetActive(false),

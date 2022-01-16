@@ -1465,9 +1465,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413307bd3cbdb8343a097397aa3ca2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _helath: 10000
+  _health: 40000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  _currentHealth: 0
 --- !u!82 &807674657
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3262,9 +3263,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413307bd3cbdb8343a097397aa3ca2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _helath: 200
+  _health: 40000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  _currentHealth: 0
 --- !u!82 &1512275515
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3508,7 +3510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1779885966
 Transform:
   m_ObjectHideFlags: 0
@@ -3537,7 +3539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemiesData:
-  - {fileID: 11400000, guid: be1b95a9d22389e4fb36d1ec5a8fc63f, type: 2}
+  - {fileID: 11400000, guid: c875b5ad0ad174b4584ed650480b8816, type: 2}
   _startingSpawnPoints: 1
   _spawnPointsMultiplier: 1
   _spawningRadius: 30

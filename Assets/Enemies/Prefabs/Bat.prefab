@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413307bd3cbdb8343a097397aa3ca2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _helath: 50
+  _health: 40
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
 --- !u!82 &2947253300709426853
@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e302e060ac3c14b958282bd729bf4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetType: 0
 --- !u!114 &2947253301916820879
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -115,7 +115,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8490004211585157602}
   - component: {fileID: -3211875818297443015}
-  - component: {fileID: -7510700321813344933}
   - component: {fileID: 5060884676757528521}
   - component: {fileID: 4150004441287333363}
   - component: {fileID: 1575652498314366418}
@@ -155,23 +154,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementVelocity: 40
+  _damageAmount: 10
   _projectileType: 0
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
   _timeBeforeReleasing: 4
---- !u!114 &-7510700321813344933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7120018407457122070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2feafd62d868cc44abffea884949c57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damageAmount: 10
 --- !u!70 &5060884676757528521
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

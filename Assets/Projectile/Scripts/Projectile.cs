@@ -6,6 +6,7 @@ using static ProjectileObjectPool;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private float _movementVelocity = 20.0f;
+    [SerializeField] private float _damageAmount = 10.0f;
     [SerializeField] private ProjectileType _projectileType;
     [SerializeField] float _minSoundPitch = 0.95f;
     [SerializeField] float _maxSoundPitch = 1.05f;
@@ -31,6 +32,8 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        collision.gameObject.GetComponentInChildren<IDamagable>()?.DealDamage(_damageAmount);
+
         PlayHitSound();
 
         StartCoroutine(ReleaseCoroutine(_myAudioSource.clip.length));

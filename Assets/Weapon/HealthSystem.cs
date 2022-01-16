@@ -4,20 +4,30 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class HealthSystem : MonoBehaviour, IDamagable
 {
-    [SerializeField] private float _helath;
+    [SerializeField] private float _health = 40.0f;
     [SerializeField] float _minSoundPitch = 0.8f;
     [SerializeField] float _maxSoundPitch = 1.05f;
 
     private AudioSource _myAudioSource;
+    private bool _isDying;
+    [SerializeField] private float _currentHealth;
 
     private void Awake() => _myAudioSource = GetComponent<AudioSource>();
 
+    private void OnEnable()
+    {
+        _isDying = false;
+        _currentHealth = _health;
+    }
+
     public void DealDamage(float damageAmount)
     {
-        _helath -= damageAmount;
+        _currentHealth -= damageAmount;
 
-        if (_helath <= 0)
+        if (_currentHealth <= 0 && !_isDying)
         {
+            _isDying = true;
+
             PlayDeathSound();
 
             StartCoroutine(ReleaseCoroutine());

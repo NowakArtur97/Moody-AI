@@ -7,5 +7,5 @@ public class EnemyTargetTransformHandler : MonoBehaviour
 
     public Transform TargetTransform { get; private set; }
 
-    private void Start() => TargetTransform = FindObjectOfType<EnemyRandomTargetTransformManager>().GetRandomTransform(_targetType);
+    private void Awake() => TargetTransform = FindObjectOfType<EnemyRandomTargetTransformManager>().GetRandomTransform(_targetType);
 }
