@@ -9,12 +9,15 @@ public class Projectile : MonoBehaviour
     [SerializeField] private ProjectileType _projectileType;
     [SerializeField] float _minSoundPitch = 0.95f;
     [SerializeField] float _maxSoundPitch = 1.05f;
+    [SerializeField] float _timeBeforeReleasing = 4f;
 
     private Vector3 _projectileDirection;
 
     private AudioSource _myAudioSource;
 
     private void Awake() => _myAudioSource = GetComponent<AudioSource>();
+
+    private void OnEnable() => StartCoroutine(ReleaseCoroutine(_timeBeforeReleasing));
 
     private void Update() => transform.position += _projectileDirection * Time.deltaTime * _movementVelocity;
 
@@ -30,7 +33,7 @@ public class Projectile : MonoBehaviour
     {
         PlayHitSound();
 
-        StartCoroutine(ReleaseCoroutine());
+        StartCoroutine(ReleaseCoroutine(_myAudioSource.clip.length));
     }
 
     private void PlayHitSound()
@@ -39,9 +42,9 @@ public class Projectile : MonoBehaviour
         _myAudioSource.Play();
     }
 
-    private IEnumerator ReleaseCoroutine()
+    private IEnumerator ReleaseCoroutine(float timeToRelease)
     {
-        yield return new WaitForSeconds(_myAudioSource.clip.length);
+        yield return new WaitForSeconds(timeToRelease);
 
         ProjectileObjectPoolInstance.ReleaseProjectile(gameObject, _projectileType);
     }

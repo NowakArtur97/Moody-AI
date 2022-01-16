@@ -2727,7 +2727,7 @@ RectTransform:
   m_Children:
   - {fileID: 996073655}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2767,7 +2767,7 @@ Transform:
   - {fileID: 58461514}
   - {fileID: 169100349}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1272583908
 GameObject:
@@ -3053,7 +3053,7 @@ Transform:
   - {fileID: 1779885966}
   - {fileID: 814407765}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1482485147
 GameObject:
@@ -3490,7 +3490,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1779885965
 GameObject:
@@ -3508,7 +3508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1779885966
 Transform:
   m_ObjectHideFlags: 0
@@ -3537,7 +3537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemiesData:
-  - {fileID: 11400000, guid: a04aa51a291a7b04ebe02153be5be85f, type: 2}
+  - {fileID: 11400000, guid: be1b95a9d22389e4fb36d1ec5a8fc63f, type: 2}
   _startingSpawnPoints: 1
   _spawnPointsMultiplier: 1
   _spawningRadius: 30
