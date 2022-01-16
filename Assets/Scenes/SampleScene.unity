@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 347058318}
   m_Layer: 6
   m_Name: Player Spaceship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1608,6 +1608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dbf5a19be761e949b04f9d5621ccf82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerTag: Player
   _targetTransforms:
   - {fileID: 905609202}
 --- !u!1 &835075087
@@ -3536,12 +3537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemiesData:
-  - {fileID: 11400000, guid: be1b95a9d22389e4fb36d1ec5a8fc63f, type: 2}
-  - {fileID: 11400000, guid: ab75bd1638ca8f74a87225d3c3312f2a, type: 2}
-  - {fileID: 11400000, guid: b4317d78f2848bc4aacad32b54857555, type: 2}
-  - {fileID: 11400000, guid: a332421292aaafb41b1064ec54648c71, type: 2}
   - {fileID: 11400000, guid: a04aa51a291a7b04ebe02153be5be85f, type: 2}
-  - {fileID: 11400000, guid: c875b5ad0ad174b4584ed650480b8816, type: 2}
   _startingSpawnPoints: 1
   _spawnPointsMultiplier: 1
   _spawningRadius: 30
