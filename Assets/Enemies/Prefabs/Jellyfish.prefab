@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 3821861732929374422}
   m_Layer: 7
   m_Name: Jellyfish
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -996,8 +996,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 40
+  _enemyType: 0
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  _isEnemy: 1
+  _currentHealth: 0
 --- !u!82 &3821861733994176880
 AudioSource:
   m_ObjectHideFlags: 0

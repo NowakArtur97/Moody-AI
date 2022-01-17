@@ -5,8 +5,7 @@ using static ProjectileObjectPool;
 [RequireComponent(typeof(AudioSource))]
 public abstract class BaseProjectile : MonoBehaviour
 {
-    [SerializeField]
-    private float _movementVelocity = 20.0f;
+    [SerializeField] private float _movementVelocity = 20.0f;
     protected float MovementVelocity
     {
         get { return _movementVelocity; }
@@ -20,7 +19,7 @@ public abstract class BaseProjectile : MonoBehaviour
 
     private AudioSource _myAudioSource;
 
-    private void Awake() => _myAudioSource = GetComponent<AudioSource>();
+    protected virtual void Awake() => _myAudioSource = GetComponent<AudioSource>();
 
     private void OnEnable() => StartCoroutine(ReleaseCoroutine(_timeBeforeReleasing));
 

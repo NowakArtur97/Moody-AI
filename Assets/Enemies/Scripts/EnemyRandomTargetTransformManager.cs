@@ -23,7 +23,7 @@ public class EnemyRandomTargetTransformManager : MonoBehaviour
     {
         if (_playerTransform == null)
         {
-            _playerTransform = GameObject.FindGameObjectsWithTag(_playerTag)[0].transform;
+            _playerTransform = GameObject.FindGameObjectWithTag(_playerTag).transform;
         }
 
         return _playerTransform;

@@ -5,7 +5,6 @@ using static ProjectileObjectPool;
 [RequireComponent(typeof(AudioSource))]
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] GameObject _projectilePrefab;
     [SerializeField] Transform _projectileSpawnPosition;
     [SerializeField] float _offsetBetweenBullets = 0.2f;
     [SerializeField] float _minSoundPitch = 0.95f;

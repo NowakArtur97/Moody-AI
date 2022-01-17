@@ -3156,9 +3156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e915ff31d726dfa4f8effdc65d10349b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectilePrefab: {fileID: 7120018407457122070, guid: 11a0fa221e2ac1b4fac569449ade11f8, type: 3}
   _projectileSpawnPosition: {fileID: 2041750440}
-  _offsetBetweenBullets: 0.15
+  _offsetBetweenBullets: 1
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
 --- !u!114 &1482485150
@@ -3173,7 +3172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72da1d2a6394cee408d1776491a785b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectileType: 0
+  _projectileType: 2
   _projectileLayerName: Player Projectile
 --- !u!82 &1482485151
 AudioSource:
@@ -3534,7 +3533,7 @@ MonoBehaviour:
   _spawnAmount: 50
   _defaultBulletPrefab: {fileID: 7120018407457122070, guid: 11a0fa221e2ac1b4fac569449ade11f8, type: 3}
   _ballProjectilePrefab: {fileID: 7120018407457122070, guid: 2f7a9738aa51e5145bf7f24baca31344, type: 3}
-  _homingMissilePrefab: {fileID: 0}
+  _homingMissilePrefab: {fileID: 7120018407457122070, guid: dbfbcefeb41c8d94d9dd634d970aeee7, type: 3}
 --- !u!4 &1598980183
 Transform:
   m_ObjectHideFlags: 0
