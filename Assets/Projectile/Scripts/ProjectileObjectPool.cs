@@ -6,6 +6,7 @@ public class ProjectileObjectPool : MonoBehaviour
     [SerializeField] private int _spawnAmount = 50;
     [SerializeField] private GameObject _defaultBulletPrefab;
     [SerializeField] private GameObject _ballProjectilePrefab;
+    [SerializeField] private GameObject _homingMissilePrefab;
 
     private Transform _projectileSpawnPosition;
     private Quaternion _projectileRotation;
@@ -14,10 +15,11 @@ public class ProjectileObjectPool : MonoBehaviour
 
     public static ProjectileObjectPool ProjectileObjectPoolInstance { get; private set; }
 
-    public enum ProjectileType { DEFAULT_BULLET, BALL_PROJECTILE }
+    public enum ProjectileType { DEFAULT_BULLET, BALL_PROJECTILE, HOMING_MISSILE }
 
     private ObjectPool<GameObject> _defaultBulletObjectPool;
     private ObjectPool<GameObject> _ballProjectileObjectPool;
+    private ObjectPool<GameObject> _homingMissileObjectPool;
 
     private void Awake()
     {
@@ -37,6 +39,7 @@ public class ProjectileObjectPool : MonoBehaviour
     {
         _defaultBulletObjectPool = CreateProjectileObjectPool(_defaultBulletPrefab);
         _ballProjectileObjectPool = CreateProjectileObjectPool(_ballProjectilePrefab);
+        _homingMissileObjectPool = CreateProjectileObjectPool(_homingMissilePrefab);
     }
 
     private ObjectPool<GameObject> CreateProjectileObjectPool(GameObject projectilePrefab) => new ObjectPool<GameObject>(
@@ -75,6 +78,8 @@ public class ProjectileObjectPool : MonoBehaviour
         {
             case ProjectileType.BALL_PROJECTILE:
                 return _ballProjectileObjectPool.Get();
+            case ProjectileType.HOMING_MISSILE:
+                return _homingMissileObjectPool.Get();
             default:
                 return _defaultBulletObjectPool.Get();
         }
@@ -86,6 +91,9 @@ public class ProjectileObjectPool : MonoBehaviour
         {
             case ProjectileType.BALL_PROJECTILE:
                 _ballProjectileObjectPool.Release(projectile);
+                break;
+            case ProjectileType.HOMING_MISSILE:
+                _homingMissileObjectPool.Release(projectile);
                 break;
             default:
                 _defaultBulletObjectPool.Release(projectile);

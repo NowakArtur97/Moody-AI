@@ -3534,6 +3534,7 @@ MonoBehaviour:
   _spawnAmount: 50
   _defaultBulletPrefab: {fileID: 7120018407457122070, guid: 11a0fa221e2ac1b4fac569449ade11f8, type: 3}
   _ballProjectilePrefab: {fileID: 7120018407457122070, guid: 2f7a9738aa51e5145bf7f24baca31344, type: 3}
+  _homingMissilePrefab: {fileID: 0}
 --- !u!4 &1598980183
 Transform:
   m_ObjectHideFlags: 0
@@ -3595,11 +3596,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemiesData:
   - {fileID: 11400000, guid: be1b95a9d22389e4fb36d1ec5a8fc63f, type: 2}
-  - {fileID: 11400000, guid: ab75bd1638ca8f74a87225d3c3312f2a, type: 2}
-  - {fileID: 11400000, guid: b4317d78f2848bc4aacad32b54857555, type: 2}
-  - {fileID: 11400000, guid: a332421292aaafb41b1064ec54648c71, type: 2}
-  - {fileID: 11400000, guid: a04aa51a291a7b04ebe02153be5be85f, type: 2}
-  - {fileID: 11400000, guid: c875b5ad0ad174b4584ed650480b8816, type: 2}
   _startingSpawnPoints: 0
   _spawnPointsMultiplier: 1
   _spawningRadius: 30
