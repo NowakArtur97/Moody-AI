@@ -5,6 +5,8 @@ using static ProjectileObjectPool;
 [RequireComponent(typeof(AudioSource))]
 public abstract class BaseProjectile : MonoBehaviour
 {
+    private const string EXPLOSION_TRIGGER = "explode";
+
     [SerializeField] private float _movementVelocity = 20.0f;
     protected float MovementVelocity
     {
@@ -18,8 +20,13 @@ public abstract class BaseProjectile : MonoBehaviour
     [SerializeField] float _timeBeforeReleasing = 30f;
 
     private AudioSource _myAudioSource;
+    private Animator _myAnimator;
 
-    protected virtual void Awake() => _myAudioSource = GetComponent<AudioSource>();
+    protected virtual void Awake()
+    {
+        _myAudioSource = GetComponent<AudioSource>();
+        _myAnimator = GetComponentInChildren<Animator>();
+    }
 
     private void OnEnable() => StartCoroutine(ReleaseCoroutine(_timeBeforeReleasing));
 
@@ -27,9 +34,11 @@ public abstract class BaseProjectile : MonoBehaviour
     {
         collision.gameObject.GetComponentInChildren<IDamagable>()?.DealDamage(_damageAmount);
 
-        PlayHitSound();
+        StopMoving();
 
-        StartCoroutine(ReleaseCoroutine(_myAudioSource.clip.length));
+        _myAnimator.SetTrigger(EXPLOSION_TRIGGER);
+
+        PlayHitSound();
     }
 
     private void PlayHitSound()
@@ -38,10 +47,14 @@ public abstract class BaseProjectile : MonoBehaviour
         _myAudioSource.Play();
     }
 
+    public void ReleaseTrigger() => ProjectileObjectPoolInstance.ReleaseProjectile(gameObject, _projectileType);
+
     private IEnumerator ReleaseCoroutine(float timeToRelease)
     {
         yield return new WaitForSeconds(timeToRelease);
 
         ProjectileObjectPoolInstance.ReleaseProjectile(gameObject, _projectileType);
     }
+
+    protected abstract void StopMoving();
 }
