@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5675746862477486253}
+  - component: {fileID: 6353207954154815002}
   - component: {fileID: 7129464863289464590}
   - component: {fileID: 3867349863780274775}
   m_Layer: 0
@@ -33,6 +34,18 @@ Transform:
   m_Father: {fileID: 8490004211585157602}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6353207954154815002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062609287546808695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4981de543e67e48b26defc876cd3d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &7129464863289464590
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -153,14 +166,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b5632937ee8cfb4587fea2068f92284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementVelocity: 40
+  _movementVelocity: 20
   _damageAmount: 10
   _projectileType: 2
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
   _timeBeforeReleasing: 30
   _enemyTag: Enemy
-  _rotationVelocity: 400
+  _rotationVelocity: 500
 --- !u!61 &3140206210099232256
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,10 +184,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.050363988}
+  m_Offset: {x: 0.0200378, y: 0.13094765}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -185,7 +198,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.123094395, y: 0.52222973}
+  m_Size: {x: 0.30698976, y: 0.6197313}
   m_EdgeRadius: 0
 --- !u!50 &3426246782880023700
 Rigidbody2D:
