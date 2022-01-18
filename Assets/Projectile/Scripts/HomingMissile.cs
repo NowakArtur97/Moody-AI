@@ -22,13 +22,21 @@ public class HomingMissile : BaseProjectile
 
     private void FixedUpdate()
     {
-        if (_target == null)
+        if (IsMoving)
         {
-            FindClosestEnemy();
+            if (_target == null)
+            {
+                FindClosestEnemy();
+            }
+            else
+            {
+                ChaseTarget();
+            }
         }
         else
         {
-            ChaseTarget();
+            _myRigidbody2D.angularVelocity = 0;
+            _myRigidbody2D.velocity = Vector3.zero;
         }
     }
 

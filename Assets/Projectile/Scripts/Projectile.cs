@@ -5,7 +5,13 @@ public class Projectile : BaseProjectile
 {
     private Vector3 _projectileDirection;
 
-    private void Update() => transform.position += _projectileDirection * Time.deltaTime * MovementVelocity;
+    private void Update()
+    {
+        if (IsMoving)
+        {
+            transform.position += _projectileDirection * Time.deltaTime * MovementVelocity;
+        }
+    }
 
     public void SetDirection(Vector3 projectileDirection)
     {

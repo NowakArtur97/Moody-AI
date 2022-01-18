@@ -22,19 +22,25 @@ public abstract class BaseProjectile : MonoBehaviour
     private AudioSource _myAudioSource;
     private Animator _myAnimator;
 
+    protected bool IsMoving { get; private set; }
+
     protected virtual void Awake()
     {
         _myAudioSource = GetComponent<AudioSource>();
         _myAnimator = GetComponentInChildren<Animator>();
     }
 
-    private void OnEnable() => StartCoroutine(ReleaseCoroutine(_timeBeforeReleasing));
+    private void OnEnable()
+    {
+        StartCoroutine(ReleaseCoroutine(_timeBeforeReleasing));
+        IsMoving = true;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         collision.gameObject.GetComponentInChildren<IDamagable>()?.DealDamage(_damageAmount);
 
-        StopMoving();
+        IsMoving = false;
 
         _myAnimator.SetTrigger(EXPLOSION_TRIGGER);
 
@@ -55,6 +61,4 @@ public abstract class BaseProjectile : MonoBehaviour
 
         ProjectileObjectPoolInstance.ReleaseProjectile(gameObject, _projectileType);
     }
-
-    protected abstract void StopMoving();
 }
