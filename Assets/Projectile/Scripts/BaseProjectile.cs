@@ -23,6 +23,7 @@ public abstract class BaseProjectile : MonoBehaviour
     private Animator _myAnimator;
 
     protected bool IsMoving { get; private set; }
+    private float _hitSoundStartTime;
 
     protected virtual void Awake()
     {
@@ -51,9 +52,14 @@ public abstract class BaseProjectile : MonoBehaviour
     {
         _myAudioSource.pitch = Random.Range(_minSoundPitch, _maxSoundPitch);
         _myAudioSource.Play();
+        _hitSoundStartTime = Time.time;
     }
 
-    public void ReleaseTrigger() => ProjectileObjectPoolInstance.ReleaseProjectile(gameObject, _projectileType);
+    public void ReleaseTrigger()
+    {
+        float timeUntillClipEnds = (_hitSoundStartTime + _myAudioSource.clip.length) - Time.time;
+        StartCoroutine(ReleaseCoroutine(timeUntillClipEnds > 0 ? timeUntillClipEnds : 0.0f));
+    }
 
     private IEnumerator ReleaseCoroutine(float timeToRelease)
     {

@@ -283,6 +283,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Ball Projectile_8
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47fdb208af7dfd043ba635bb6944ed40
+      internalID: 146783143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -301,6 +322,7 @@ TextureImporter:
       Ball Projectile_4: 156343149
       Ball Projectile_1: 1397959234
       Ball Projectile_3: -1529940888
+      Ball Projectile_8: 146783143
       Ball Projectile_2: -582870965
   spritePackingTag: 
   pSDRemoveMatte: 0
