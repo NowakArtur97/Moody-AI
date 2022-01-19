@@ -31,13 +31,13 @@ public abstract class BaseProjectile : MonoBehaviour
         _myAnimator = GetComponentInChildren<Animator>();
     }
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         StartCoroutine(ReleaseCoroutine(_timeBeforeReleasing));
         IsMoving = true;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         collision.gameObject.GetComponentInChildren<IDamagable>()?.DealDamage(_damageAmount);
 

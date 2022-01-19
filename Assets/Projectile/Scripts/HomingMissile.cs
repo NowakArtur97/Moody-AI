@@ -12,12 +12,22 @@ public class HomingMissile : BaseProjectile
     private Transform _target;
     private Vector3 _projectileDirection;
     private float _rotateAmount;
+    private AudioSource _flyingAudioSource;
 
     protected override void Awake()
     {
         base.Awake();
 
         _myRigidbody2D = GetComponent<Rigidbody2D>();
+        _flyingAudioSource = GetComponentsInChildren<AudioSource>()
+            .FirstOrDefault(component => component.gameObject != gameObject);
+    }
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+
+        _flyingAudioSource.Play();
     }
 
     private void FixedUpdate()
@@ -38,6 +48,13 @@ public class HomingMissile : BaseProjectile
             _myRigidbody2D.angularVelocity = 0;
             _myRigidbody2D.velocity = Vector3.zero;
         }
+    }
+
+    protected override void OnTriggerEnter2D(Collider2D collision)
+    {
+        _flyingAudioSource.Pause();
+
+        base.OnTriggerEnter2D(collision);
     }
 
     private void ChaseTarget()
