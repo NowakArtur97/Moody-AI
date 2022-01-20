@@ -114,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8490004211585157602}
-  - component: {fileID: -6798587210349755829}
+  - component: {fileID: 22797349831609278}
   - component: {fileID: 3140206210099232256}
   - component: {fileID: 3426246782880023700}
   - component: {fileID: 9153330917164494109}
@@ -141,7 +141,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-6798587210349755829
+--- !u!114 &22797349831609278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,17 +150,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7120018407457122070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b5632937ee8cfb4587fea2068f92284, type: 3}
+  m_Script: {fileID: 11500000, guid: 6348ac5431a518948a79ce1e29ac9d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementVelocity: 40
+  _movementVelocity: 20
   _damageAmount: 10
-  _projectileType: 2
+  _projectileType: 3
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
   _timeBeforeReleasing: 30
-  _enemyTag: Enemy
-  _rotationVelocity: 400
 --- !u!61 &3140206210099232256
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -200,7 +198,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2.5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}

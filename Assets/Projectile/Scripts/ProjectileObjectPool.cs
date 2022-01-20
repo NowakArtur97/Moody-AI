@@ -7,6 +7,7 @@ public class ProjectileObjectPool : MonoBehaviour
     [SerializeField] private GameObject _defaultBulletPrefab;
     [SerializeField] private GameObject _ballProjectilePrefab;
     [SerializeField] private GameObject _homingMissilePrefab;
+    [SerializeField] private GameObject _spikeMinePrefab;
 
     private Transform _projectileSpawnPosition;
     private Quaternion _projectileRotation;
@@ -15,11 +16,12 @@ public class ProjectileObjectPool : MonoBehaviour
 
     public static ProjectileObjectPool ProjectileObjectPoolInstance { get; private set; }
 
-    public enum ProjectileType { DEFAULT_BULLET, BALL_PROJECTILE, HOMING_MISSILE }
+    public enum ProjectileType { DEFAULT_BULLET, BALL_PROJECTILE, HOMING_MISSILE, SPIKE_MINE }
 
     private ObjectPool<GameObject> _defaultBulletObjectPool;
     private ObjectPool<GameObject> _ballProjectileObjectPool;
     private ObjectPool<GameObject> _homingMissileObjectPool;
+    private ObjectPool<GameObject> _spikeMineObjectPool;
 
     private void Awake()
     {
@@ -40,6 +42,7 @@ public class ProjectileObjectPool : MonoBehaviour
         _defaultBulletObjectPool = CreateProjectileObjectPool(_defaultBulletPrefab);
         _ballProjectileObjectPool = CreateProjectileObjectPool(_ballProjectilePrefab);
         _homingMissileObjectPool = CreateProjectileObjectPool(_homingMissilePrefab);
+        _spikeMineObjectPool = CreateProjectileObjectPool(_spikeMinePrefab);
     }
 
     private ObjectPool<GameObject> CreateProjectileObjectPool(GameObject projectilePrefab) => new ObjectPool<GameObject>(
@@ -48,7 +51,7 @@ public class ProjectileObjectPool : MonoBehaviour
                     GameObject projectile = Instantiate(projectilePrefab, _projectileSpawnPosition.position, _projectileRotation);
                     gameObject.layer = _projectileLayer;
                     gameObject.transform.parent = transform;
-                    projectile.GetComponent<Projectile>()?.SetDirection(_projectileDirectionVector);
+                    projectile.GetComponent<BaseProjectile>()?.SetDirection(_projectileDirectionVector);
                     return projectile;
                 },
                 projectile =>
@@ -59,7 +62,7 @@ public class ProjectileObjectPool : MonoBehaviour
                     projectile.transform.rotation = _projectileRotation;
                     projectile.layer = _projectileLayer;
                     gameObject.transform.parent = transform;
-                    projectile.GetComponent<Projectile>()?.SetDirection(_projectileDirectionVector);
+                    projectile.GetComponent<BaseProjectile>()?.SetDirection(_projectileDirectionVector);
                 },
                 projectile => projectile.gameObject.SetActive(false),
                 projectile => Destroy(projectile.gameObject),
@@ -80,6 +83,8 @@ public class ProjectileObjectPool : MonoBehaviour
                 return _ballProjectileObjectPool.Get();
             case ProjectileType.HOMING_MISSILE:
                 return _homingMissileObjectPool.Get();
+            case ProjectileType.SPIKE_MINE:
+                return _spikeMineObjectPool.Get();
             default:
                 return _defaultBulletObjectPool.Get();
         }
@@ -94,6 +99,9 @@ public class ProjectileObjectPool : MonoBehaviour
                 break;
             case ProjectileType.HOMING_MISSILE:
                 _homingMissileObjectPool.Release(projectile);
+                break;
+            case ProjectileType.SPIKE_MINE:
+                _spikeMineObjectPool.Release(projectile);
                 break;
             default:
                 _defaultBulletObjectPool.Release(projectile);

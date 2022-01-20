@@ -23,6 +23,7 @@ public abstract class BaseProjectile : MonoBehaviour
     private Animator _myAnimator;
 
     protected bool IsMoving { get; private set; }
+    protected Vector3 ProjectileDirection { get; private set; }
     private float _hitSoundStartTime;
 
     protected virtual void Awake()
@@ -46,6 +47,14 @@ public abstract class BaseProjectile : MonoBehaviour
         _myAnimator.SetTrigger(EXPLOSION_TRIGGER);
 
         PlayHitSound();
+    }
+
+    public void SetDirection(Vector3 projectileDirection)
+    {
+        ProjectileDirection = projectileDirection;
+        ProjectileDirection = new Vector3(ProjectileDirection.x, ProjectileDirection.y, 0.0f);
+        float angleCorrection = Mathf.Atan2(ProjectileDirection.y, ProjectileDirection.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angleCorrection, Vector3.forward);
     }
 
     private void PlayHitSound()

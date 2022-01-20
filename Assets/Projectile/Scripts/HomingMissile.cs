@@ -10,7 +10,7 @@ public class HomingMissile : BaseProjectile
 
     private Rigidbody2D _myRigidbody2D;
     private Transform _target;
-    private Vector3 _projectileDirection;
+    private Vector3 _chaseDirection;
     private float _rotateAmount;
     private AudioSource _flyingAudioSource;
 
@@ -59,9 +59,9 @@ public class HomingMissile : BaseProjectile
 
     private void ChaseTarget()
     {
-        _projectileDirection = (_target.position - transform.position).normalized;
+        _chaseDirection = (_target.position - transform.position).normalized;
 
-        _rotateAmount = Vector3.Cross(_projectileDirection, transform.up).z;
+        _rotateAmount = Vector3.Cross(_chaseDirection, transform.up).z;
 
         _myRigidbody2D.angularVelocity = -_rotateAmount * _rotationVelocity;
 
