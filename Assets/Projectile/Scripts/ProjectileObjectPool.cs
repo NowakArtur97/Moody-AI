@@ -8,6 +8,7 @@ public class ProjectileObjectPool : MonoBehaviour
     [SerializeField] private GameObject _ballProjectilePrefab;
     [SerializeField] private GameObject _homingMissilePrefab;
     [SerializeField] private GameObject _spikeMinePrefab;
+    [SerializeField] private GameObject _shurikenPrefab;
 
     private Transform _projectileSpawnPosition;
     private Quaternion _projectileRotation;
@@ -16,12 +17,13 @@ public class ProjectileObjectPool : MonoBehaviour
 
     public static ProjectileObjectPool ProjectileObjectPoolInstance { get; private set; }
 
-    public enum ProjectileType { DEFAULT_BULLET, BALL_PROJECTILE, HOMING_MISSILE, SPIKE_MINE }
+    public enum ProjectileType { DEFAULT_BULLET, BALL_PROJECTILE, HOMING_MISSILE, SPIKE_MINE, SHURIKEN }
 
     private ObjectPool<GameObject> _defaultBulletObjectPool;
     private ObjectPool<GameObject> _ballProjectileObjectPool;
     private ObjectPool<GameObject> _homingMissileObjectPool;
     private ObjectPool<GameObject> _spikeMineObjectPool;
+    private ObjectPool<GameObject> _shurikenObjectPool;
 
     private void Awake()
     {
@@ -43,6 +45,7 @@ public class ProjectileObjectPool : MonoBehaviour
         _ballProjectileObjectPool = CreateProjectileObjectPool(_ballProjectilePrefab);
         _homingMissileObjectPool = CreateProjectileObjectPool(_homingMissilePrefab);
         _spikeMineObjectPool = CreateProjectileObjectPool(_spikeMinePrefab);
+        _shurikenObjectPool = CreateProjectileObjectPool(_shurikenPrefab);
     }
 
     private ObjectPool<GameObject> CreateProjectileObjectPool(GameObject projectilePrefab) => new ObjectPool<GameObject>(
@@ -85,6 +88,8 @@ public class ProjectileObjectPool : MonoBehaviour
                 return _homingMissileObjectPool.Get();
             case ProjectileType.SPIKE_MINE:
                 return _spikeMineObjectPool.Get();
+            case ProjectileType.SHURIKEN:
+                return _shurikenObjectPool.Get();
             default:
                 return _defaultBulletObjectPool.Get();
         }
@@ -102,6 +107,9 @@ public class ProjectileObjectPool : MonoBehaviour
                 break;
             case ProjectileType.SPIKE_MINE:
                 _spikeMineObjectPool.Release(projectile);
+                break;
+            case ProjectileType.SHURIKEN:
+                _shurikenObjectPool.Release(projectile);
                 break;
             default:
                 _defaultBulletObjectPool.Release(projectile);

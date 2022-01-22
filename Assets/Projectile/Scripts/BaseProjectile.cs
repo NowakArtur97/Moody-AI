@@ -15,9 +15,10 @@ public abstract class BaseProjectile : MonoBehaviour
     }
     [SerializeField] private float _damageAmount = 10.0f;
     [SerializeField] private ProjectileType _projectileType;
-    [SerializeField] float _minSoundPitch = 0.95f;
-    [SerializeField] float _maxSoundPitch = 1.05f;
-    [SerializeField] float _timeBeforeReleasing = 30f;
+    [SerializeField] private float _minSoundPitch = 0.95f;
+    [SerializeField] private float _maxSoundPitch = 1.05f;
+    [SerializeField] private float _timeBeforeReleasing = 30f;
+    [SerializeField] private bool _isDestructable = true;
 
     private AudioSource _myAudioSource;
     private Animator _myAnimator;
@@ -44,9 +45,12 @@ public abstract class BaseProjectile : MonoBehaviour
 
         IsMoving = false;
 
-        _myAnimator.SetTrigger(EXPLOSION_TRIGGER);
-
         PlayHitSound();
+
+        if (_isDestructable)
+        {
+            _myAnimator.SetTrigger(EXPLOSION_TRIGGER);
+        }
     }
 
     public void SetDirection(Vector3 projectileDirection)
