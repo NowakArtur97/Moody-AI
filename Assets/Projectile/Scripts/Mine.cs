@@ -11,11 +11,14 @@ public class Mine : BaseProjectile
         _myRigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    protected override void OnEnable()
+    private void FixedUpdate()
     {
-        base.OnEnable();
+        if (IsMoving)
+        {
+            _myRigidbody2D.AddForce(ProjectileDirection * MovementVelocity, ForceMode2D.Impulse);
 
-        _myRigidbody2D.AddForce(transform.right * MovementVelocity, ForceMode2D.Impulse);
+            IsMoving = false;
+        }
     }
 
     protected override void OnTriggerEnter2D(Collider2D collision)

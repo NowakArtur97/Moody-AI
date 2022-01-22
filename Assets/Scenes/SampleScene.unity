@@ -3172,7 +3172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72da1d2a6394cee408d1776491a785b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectileType: 0
+  _projectileType: 3
   _projectileLayerName: Player Projectile
 --- !u!82 &1482485151
 AudioSource:
@@ -3596,7 +3596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemiesData:
   - {fileID: 11400000, guid: b4317d78f2848bc4aacad32b54857555, type: 2}
-  _startingSpawnPoints: 0
+  _startingSpawnPoints: 1
   _spawnPointsMultiplier: 1
   _spawningRadius: 30
   _timeBetweenSpawningEnemies: 1

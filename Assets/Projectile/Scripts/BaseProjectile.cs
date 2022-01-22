@@ -22,7 +22,7 @@ public abstract class BaseProjectile : MonoBehaviour
     private AudioSource _myAudioSource;
     private Animator _myAnimator;
 
-    protected bool IsMoving { get; private set; }
+    protected bool IsMoving;
     protected Vector3 ProjectileDirection { get; private set; }
     private float _hitSoundStartTime;
 
