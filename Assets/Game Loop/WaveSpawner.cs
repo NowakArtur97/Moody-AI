@@ -19,6 +19,7 @@ public class WaveSpawner : MonoBehaviour
 
     private List<GameObject> _spawnedEnemies;
     private bool _isSpawning;
+    private WaveManager _waveManager;
     [SerializeField] private bool _isFinishingWave;
 
     private void Awake()
@@ -27,10 +28,11 @@ public class WaveSpawner : MonoBehaviour
         _isSpawning = true;
         _isFinishingWave = false;
 
-        FindObjectOfType<WaveManager>().OnStartWave += StartSpawning;
+        _waveManager = FindObjectOfType<WaveManager>();
+        _waveManager.OnStartWave += StartSpawning;
     }
 
-    private void OnDestroy() => FindObjectOfType<WaveManager>().OnStartWave -= StartSpawning;
+    private void OnDestroy() => _waveManager.OnStartWave -= StartSpawning;
 
     private void Update()
     {
