@@ -5,14 +5,14 @@ public class PlayerInputHandler : MonoBehaviour
 {
     private PlayerInputManager _playerInputManager;
     private SpaceMovementController _spaceMovementController;
-    private Weapon _weapon;
+    private WeaponSystem _weaponSystem;
     private bool _mouseInput;
 
     private void Start()
     {
         _spaceMovementController = GetComponent<SpaceMovementController>();
         _playerInputManager = transform.parent.GetComponentInChildren<PlayerInputManager>();
-        _weapon = transform.parent.GetComponentInChildren<Weapon>();
+        _weaponSystem = transform.parent.GetComponentInChildren<WeaponSystem>();
     }
 
     private void Update()
@@ -26,9 +26,9 @@ public class PlayerInputHandler : MonoBehaviour
     private void HandleShootingInput()
     {
         _mouseInput = _playerInputManager.MouseInput;
-        _weapon.IsShooting(_mouseInput);
+        _weaponSystem.CurentWeapon.IsShooting(_mouseInput);
 
-        if (_mouseInput && _weapon.CanShoot)
+        if (_mouseInput && _weaponSystem.CurentWeapon.CanShoot)
         {
             CameraShakeInstance.Shake();
         }

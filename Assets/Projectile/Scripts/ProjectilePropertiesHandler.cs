@@ -7,8 +7,8 @@ public class ProjectilePropertiesHandler : MonoBehaviour
 
     private void Start()
     {
-        Weapon weapon = GetComponent<Weapon>();
-        weapon.SetProjectileType(_projectileType);
-        weapon.SetProjectileLayerName(_projectileLayerName);
+        Weapon _weapon = GetComponent<Weapon>();
+        _weapon.SetProjectileType(_projectileType);
+        _weapon.SetProjectileLayerName(_projectileLayerName);
     }
 }

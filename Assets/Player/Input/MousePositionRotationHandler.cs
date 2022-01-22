@@ -4,13 +4,13 @@ public class MousePositionRotationHandler : MonoBehaviour
 {
     private PlayerInputManager _playerInputManager;
     private RotationController _rotationController;
-    private Weapon _weapon;
+    private WeaponSystem _weaponSystem;
 
     private void Start()
     {
         _playerInputManager = GetComponentInChildren<PlayerInputManager>();
         _rotationController = GetComponentInChildren<RotationController>();
-        _weapon = GetComponentInChildren<Weapon>();
+        _weaponSystem = GetComponentInChildren<WeaponSystem>();
     }
 
     private void Update()
@@ -23,7 +23,7 @@ public class MousePositionRotationHandler : MonoBehaviour
 
     private void HandleProjectileDirection()
     {
-        _weapon.SetProjectileDirection(transform.rotation);
-        _weapon.SetProjectileDirection(transform.right);
+        _weaponSystem.CurentWeapon.SetProjectileDirection(transform.rotation);
+        _weaponSystem.CurentWeapon.SetProjectileDirection(transform.right);
     }
 }
