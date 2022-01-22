@@ -7,6 +7,7 @@ public class PlayerInputManager : MonoBehaviour
     public bool MouseInput { get; private set; }
     public Vector3 MouseWorldPosition { get; private set; }
     public Vector3 MouseWorldPositionWithoutZ { get; private set; }
+    public int MouseScrollInput { get; private set; }
 
     private Camera _mainCamera;
     private Mouse _currentMouse;
@@ -30,6 +31,8 @@ public class PlayerInputManager : MonoBehaviour
             MouseInput = false;
         }
     }
+
+    public void WeaponSelection(InputAction.CallbackContext context) => MouseScrollInput = (int)_currentMouse.scroll.ReadValue().normalized.y;
 
     private void Update() => ReadMousePosition();
 
