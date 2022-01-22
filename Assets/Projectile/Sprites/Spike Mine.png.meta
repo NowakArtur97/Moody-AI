@@ -121,8 +121,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 108
-        height: 108
+        width: 102
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +140,10 @@ TextureImporter:
       name: Spike Mine_1
       rect:
         serializedVersion: 2
-        x: 108
+        x: 102
         y: 0
-        width: 108
-        height: 108
+        width: 102
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: Spike Mine_2
       rect:
         serializedVersion: 2
-        x: 216
+        x: 204
         y: 0
-        width: 108
-        height: 108
+        width: 102
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: Spike Mine_3
       rect:
         serializedVersion: 2
-        x: 324
+        x: 306
         y: 0
-        width: 108
-        height: 108
+        width: 102
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: Spike Mine_4
       rect:
         serializedVersion: 2
-        x: 432
+        x: 408
         y: 0
-        width: 108
-        height: 108
+        width: 102
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,10 +224,10 @@ TextureImporter:
       name: Spike Mine_5
       rect:
         serializedVersion: 2
-        x: 540
+        x: 510
         y: 0
-        width: 108
-        height: 108
+        width: 102
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: Spike Mine_6
       rect:
         serializedVersion: 2
-        x: 648
+        x: 612
         y: 0
-        width: 108
-        height: 108
+        width: 102
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,10 +266,10 @@ TextureImporter:
       name: Spike Mine_7
       rect:
         serializedVersion: 2
-        x: 756
+        x: 714
         y: 0
-        width: 108
-        height: 108
+        width: 102
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,10 +287,10 @@ TextureImporter:
       name: Spike Mine_8
       rect:
         serializedVersion: 2
-        x: 864
+        x: 816
         y: 0
-        width: 108
-        height: 108
+        width: 102
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,10 +308,10 @@ TextureImporter:
       name: Spike Mine_9
       rect:
         serializedVersion: 2
-        x: 972
+        x: 918
         y: 0
-        width: 108
-        height: 108
+        width: 102
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,10 +329,10 @@ TextureImporter:
       name: Spike Mine_10
       rect:
         serializedVersion: 2
-        x: 1080
+        x: 1020
         y: 0
-        width: 108
-        height: 108
+        width: 102
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,7 +340,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b3ac171622c6e44db08a1bc1f12e75f
+      spriteID: c695ca95c158cc74486f96051f883cb6
       internalID: 1542244067
       vertices: []
       indices: 

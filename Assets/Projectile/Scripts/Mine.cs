@@ -15,7 +15,7 @@ public class Mine : BaseProjectile
     {
         base.OnEnable();
 
-        _myRigidbody2D.AddForce(transform.right * MovementVelocity, ForceMode2D.Impulse);
+        _myRigidbody2D.AddForce(ProjectileDirection * MovementVelocity, ForceMode2D.Impulse);
     }
 
     protected override void OnTriggerEnter2D(Collider2D collision)
