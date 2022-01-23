@@ -10,6 +10,7 @@ public class WaveNumberUI : MonoBehaviour
 
     private TextMeshProUGUI _myTextMeshPro;
     private Animator _myAnimator;
+    private WaveManager _waveManager;
 
     private const string DISSAPEAR_TRIGGER = "dissapear";
 
@@ -18,10 +19,11 @@ public class WaveNumberUI : MonoBehaviour
         _myTextMeshPro = GetComponent<TextMeshProUGUI>();
         _myAnimator = GetComponent<Animator>();
 
-        FindObjectOfType<WaveManager>().OnStartWave += DisplayNumberOfWave;
+        _waveManager = FindObjectOfType<WaveManager>();
+        _waveManager.OnStartWave += DisplayNumberOfWave;
     }
 
-    private void OnDestroy() => FindObjectOfType<WaveManager>().OnStartWave -= DisplayNumberOfWave;
+    private void OnDestroy() => _waveManager.OnStartWave -= DisplayNumberOfWave;
 
     private void DisplayNumberOfWave(int numberOfWave) => StartCoroutine(AnimateTextCoroutine(numberOfWave));
 

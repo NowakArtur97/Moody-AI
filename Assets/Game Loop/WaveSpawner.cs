@@ -20,7 +20,7 @@ public class WaveSpawner : MonoBehaviour
     private List<GameObject> _spawnedEnemies;
     private bool _isSpawning;
     private WaveManager _waveManager;
-    [SerializeField] private bool _isFinishingWave;
+    private bool _isFinishingWave;
 
     private void Awake()
     {
@@ -51,6 +51,7 @@ public class WaveSpawner : MonoBehaviour
     private IEnumerator SpawnEnemiesCoroutine(int spawnPoints)
     {
         _isSpawning = true;
+        _isFinishingWave = false;
 
         _spawnedEnemies.Clear();
 
@@ -89,7 +90,5 @@ public class WaveSpawner : MonoBehaviour
         yield return new WaitForSeconds(_timeAfterSpawningEnemies);
 
         OnFinishWave?.Invoke();
-
-        _isFinishingWave = false;
     }
 }
