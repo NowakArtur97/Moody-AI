@@ -17,7 +17,7 @@ public class UpgradesCanvasUI : MonoBehaviour
 
     private void OnDestroy() => _waveSpawner.OnFinishWave -= OpenUpgradesUI;
 
-    private void OpenUpgradesUI() { gameObject.SetActive(true); Debug.Log("HALO"); }
+    private void OpenUpgradesUI() => gameObject.SetActive(true);
 
     public void CloseUpgradesUI()
     {
