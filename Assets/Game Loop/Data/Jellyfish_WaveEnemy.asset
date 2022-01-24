@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 624d39ac20eda454687d94e4031eed3b, type: 3}
   m_Name: Jellyfish_WaveEnemy
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 3821861732929374417, guid: 68a439f09d860d54eb6f3fbfe078cc4c, type: 3}
   enemySpawnPoints: 1
   enemyType: 0
