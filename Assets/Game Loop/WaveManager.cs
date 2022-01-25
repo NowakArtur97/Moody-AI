@@ -7,11 +7,11 @@ public class WaveManager : MonoBehaviour
 
     public Action<int> OnStartWave;
 
-    private UpgradesCanvasUI _upgradesCanvasUI;
+    private WeaponUpgradesCanvasUI _upgradesCanvasUI;
 
     private void Awake()
     {
-        _upgradesCanvasUI = FindObjectOfType<UpgradesCanvasUI>();
+        _upgradesCanvasUI = FindObjectOfType<WeaponUpgradesCanvasUI>();
         _upgradesCanvasUI.OnCloseUI += IncreaseNumberOfWave;
     }
 

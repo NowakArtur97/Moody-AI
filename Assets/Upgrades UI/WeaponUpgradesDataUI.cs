@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class UpgradesDataUI : MonoBehaviour
+public class WeaponUpgradesDataUI : MonoBehaviour
 {
     [Header("Curent Values")]
     [SerializeField] private TMP_Text _currentDamageInputField;
@@ -21,8 +21,9 @@ public class UpgradesDataUI : MonoBehaviour
     {
         _weaponUpgradeHandler = FindObjectOfType<WeaponUpgradeHandler>();
         _weaponUpgradeHandler.OnUpdateWeapon += UpdateData;
-        UpdateData();
     }
+
+    private void Start() => UpdateData();
 
     private void OnDestroy() => _weaponUpgradeHandler.OnUpdateWeapon -= UpdateData;
 

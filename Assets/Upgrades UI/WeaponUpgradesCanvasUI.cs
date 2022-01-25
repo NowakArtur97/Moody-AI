@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class UpgradesCanvasUI : MonoBehaviour
+public class WeaponUpgradesCanvasUI : MonoBehaviour
 {
     public Action OnCloseUI;
 
