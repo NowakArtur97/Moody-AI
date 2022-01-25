@@ -8,14 +8,18 @@ public class D_WeaponUpgrade : ScriptableObject
     public ProjectileType projetileType;
 
     public float startingDamage = 20.0f;
+    public float maximallyUpgradedDamage = 70.0f;
     public float damageUpgradeStep = 10.0f;
 
     public float startingFiringSpeed = 0.15f;
+    public float maximallyUpgradedFiringSpeed = 0.07f;
     public float firingSpeedUpgradeStep = -0.02f;
 
     public float startingCost = 20.0f;
+    public float maximallyUpgradedCost = 10.0f;
     public float costUpgradeStep = -2.0f;
 
     public float startingMovementSpeed = 20.0f;
+    public float maximallyUpgradedMovementSpeed = 30.0f;
     public float movementSpeedUpgradeStep = 2.0f;
 }

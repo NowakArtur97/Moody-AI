@@ -3,11 +3,11 @@ using static ProjectileObjectPool;
 
 public class WeaponDataManager : MonoBehaviour
 {
-    [SerializeField] private D_WeaponUpgrade _startingData;
-    public D_WeaponUpgrade StartingData
+    [SerializeField] private D_WeaponUpgrade _upgradesData;
+    public D_WeaponUpgrade UpgradesData
     {
-        get { return _startingData; }
-        set { _startingData = value; }
+        get { return _upgradesData; }
+        set { _upgradesData = value; }
     }
 
     private ProjectileType _projetileType;
@@ -18,18 +18,18 @@ public class WeaponDataManager : MonoBehaviour
 
     private void Awake()
     {
-        _projetileType = _startingData.projetileType;
-        CurrentDamage = _startingData.startingDamage;
-        CurrentFiringSpeed = _startingData.startingFiringSpeed;
-        CurrentCost = _startingData.startingCost;
-        CurrentMovementSpeed = _startingData.startingMovementSpeed;
+        _projetileType = _upgradesData.projetileType;
+        CurrentDamage = _upgradesData.startingDamage;
+        CurrentFiringSpeed = _upgradesData.startingFiringSpeed;
+        CurrentCost = _upgradesData.startingCost;
+        CurrentMovementSpeed = _upgradesData.startingMovementSpeed;
     }
 
-    public void UpgradeDamage() => CurrentDamage += _startingData.damageUpgradeStep;
+    public void UpgradeDamage() => CurrentDamage += _upgradesData.damageUpgradeStep;
 
-    public void UpgradeFiringSpeed() => CurrentFiringSpeed += _startingData.firingSpeedUpgradeStep;
+    public void UpgradeFiringSpeed() => CurrentFiringSpeed += _upgradesData.firingSpeedUpgradeStep;
 
-    public void UpgradeCost() => CurrentCost += _startingData.costUpgradeStep;
+    public void UpgradeCost() => CurrentCost += _upgradesData.costUpgradeStep;
 
-    public void UpgradeMovementSpeed() => CurrentMovementSpeed += _startingData.movementSpeedUpgradeStep;
+    public void UpgradeMovementSpeed() => CurrentMovementSpeed += _upgradesData.movementSpeedUpgradeStep;
 }

@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingData: {fileID: 11400000, guid: a72d50d3587cdbb4cbc116913b2b601a, type: 2}
+  _upgradesData: {fileID: 11400000, guid: a72d50d3587cdbb4cbc116913b2b601a, type: 2}
 --- !u!1 &12954242
 GameObject:
   m_ObjectHideFlags: 0
@@ -3977,6 +3977,10 @@ MonoBehaviour:
   _upgradedFiringSpeedInputField: {fileID: 1570414683}
   _upgradedCostInputField: {fileID: 773023287}
   _upgradedMovementSpeedInputField: {fileID: 605349749}
+  _damageUpgradeButton: {fileID: 1822349086}
+  _firingSpeedUpgradeButton: {fileID: 1335746756}
+  _costUpgradeButton: {fileID: 1671060192}
+  _movementSpeedUpgradeButton: {fileID: 1674644450}
 --- !u!1 &835075087
 GameObject:
   m_ObjectHideFlags: 0
@@ -5998,7 +6002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingData: {fileID: 11400000, guid: 9688cac5018d0f343a5f7c66cbd6163f, type: 2}
+  _upgradesData: {fileID: 11400000, guid: 9688cac5018d0f343a5f7c66cbd6163f, type: 2}
 --- !u!1 &1238140277
 GameObject:
   m_ObjectHideFlags: 0
@@ -6393,8 +6397,9 @@ GameObject:
   - component: {fileID: 1335746758}
   - component: {fileID: 1335746757}
   - component: {fileID: 1335746756}
+  - component: {fileID: 1335746759}
   m_Layer: 5
-  m_Name: Upgrade Button
+  m_Name: Firing Speed Upgrade Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6446,7 +6451,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.4433962, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6461,7 +6466,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1335746757}
+  m_TargetGraphic: {fileID: 2100511027}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -6515,6 +6520,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335746754}
   m_CullTransparentMesh: 1
+--- !u!114 &1335746759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335746754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f222e0dd176cbf4982b2f300387e202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myButton: {fileID: 0}
+  _weaponUpgradeHandler: {fileID: 0}
+  _currentDataManager: {fileID: 0}
 --- !u!1 &1336756319
 GameObject:
   m_ObjectHideFlags: 0
@@ -8208,7 +8228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingData: {fileID: 11400000, guid: 3e9961ee79024e64090cbad5869beea1, type: 2}
+  _upgradesData: {fileID: 11400000, guid: 3e9961ee79024e64090cbad5869beea1, type: 2}
 --- !u!1 &1663621991
 GameObject:
   m_ObjectHideFlags: 0
@@ -8356,7 +8376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingData: {fileID: 11400000, guid: a7c80821b71114743b33b8279821ea75, type: 2}
+  _upgradesData: {fileID: 11400000, guid: a7c80821b71114743b33b8279821ea75, type: 2}
 --- !u!1 &1671060190
 GameObject:
   m_ObjectHideFlags: 0
@@ -8369,8 +8389,9 @@ GameObject:
   - component: {fileID: 1671060194}
   - component: {fileID: 1671060193}
   - component: {fileID: 1671060192}
+  - component: {fileID: 1671060195}
   m_Layer: 5
-  m_Name: Upgrade Button
+  m_Name: Ammo Consumption Upgrade Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8422,7 +8443,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.4433962, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -8437,7 +8458,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1335746757}
+  m_TargetGraphic: {fileID: 1502844119}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -8491,6 +8512,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1671060190}
   m_CullTransparentMesh: 1
+--- !u!114 &1671060195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671060190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f222e0dd176cbf4982b2f300387e202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myButton: {fileID: 0}
+  _weaponUpgradeHandler: {fileID: 0}
+  _currentDataManager: {fileID: 0}
 --- !u!1 &1674644448
 GameObject:
   m_ObjectHideFlags: 0
@@ -8503,8 +8539,9 @@ GameObject:
   - component: {fileID: 1674644452}
   - component: {fileID: 1674644451}
   - component: {fileID: 1674644450}
+  - component: {fileID: 1674644453}
   m_Layer: 5
-  m_Name: Upgrade Button
+  m_Name: Speed Upgrade Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8556,7 +8593,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.4433962, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -8571,7 +8608,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1335746757}
+  m_TargetGraphic: {fileID: 922440096}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -8625,6 +8662,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674644448}
   m_CullTransparentMesh: 1
+--- !u!114 &1674644453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674644448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f222e0dd176cbf4982b2f300387e202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myButton: {fileID: 0}
+  _weaponUpgradeHandler: {fileID: 0}
+  _currentDataManager: {fileID: 0}
 --- !u!1 &1729643929
 GameObject:
   m_ObjectHideFlags: 0
@@ -9372,8 +9424,9 @@ GameObject:
   - component: {fileID: 1822349088}
   - component: {fileID: 1822349087}
   - component: {fileID: 1822349086}
+  - component: {fileID: 1822349089}
   m_Layer: 5
-  m_Name: Upgrade Button
+  m_Name: Firepower Upgrade Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9425,7 +9478,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.4433962, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -9440,7 +9493,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1822349087}
+  m_TargetGraphic: {fileID: 863822414}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -9494,6 +9547,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822349084}
   m_CullTransparentMesh: 1
+--- !u!114 &1822349089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822349084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f222e0dd176cbf4982b2f300387e202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myButton: {fileID: 0}
+  _weaponUpgradeHandler: {fileID: 0}
+  _currentDataManager: {fileID: 0}
 --- !u!1 &1838780833
 GameObject:
   m_ObjectHideFlags: 0
