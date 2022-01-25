@@ -4,8 +4,8 @@ using static ProjectileObjectPool;
 [CreateAssetMenu(fileName = "_WeaponUpgrade", menuName = "Weapon Upgrade Data")]
 public class D_WeaponUpgrade : ScriptableObject
 {
-    // TODO: D_WeaponUpgrade: Check if used
     public ProjectileType projetileType;
+    public bool isUnlockedAtTheBegining = false;
 
     public float startingDamage = 20.0f;
     public float maximallyUpgradedDamage = 70.0f;

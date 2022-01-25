@@ -49,8 +49,6 @@ public class Weapon : MonoBehaviour
 
         PlayShootingSound();
 
-        Debug.Log(_weaponDataManager.CurrentFiringSpeed);
-
         yield return new WaitForSeconds(_weaponDataManager.CurrentFiringSpeed);
 
         CanShoot = true;

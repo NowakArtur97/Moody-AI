@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -15,8 +16,6 @@ public class WeaponSystem : MonoBehaviour
     private void Awake()
     {
         _curentWeaponIndex = 0;
-        _allWeapons = GetComponentsInChildren<Weapon>().ToList();
-        CurentWeapon = _allWeapons[_curentWeaponIndex];
 
         _playerInputManager = transform.parent.GetComponentInChildren<PlayerInputManager>();
     }
@@ -45,5 +44,21 @@ public class WeaponSystem : MonoBehaviour
         }
 
         CurentWeapon = _allWeapons[_curentWeaponIndex];
+    }
+
+    public void AddWeapon(GameObject weaponGameObject)
+    {
+        if (_allWeapons == null)
+        {
+            _allWeapons = new List<Weapon>();
+        }
+
+        Weapon weapon = weaponGameObject.GetComponent<Weapon>();
+        _allWeapons.Add(weapon);
+
+        if (CurentWeapon == null)
+        {
+            CurentWeapon = weapon;
+        }
     }
 }

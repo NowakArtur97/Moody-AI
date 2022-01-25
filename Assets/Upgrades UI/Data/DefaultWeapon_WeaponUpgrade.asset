@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DefaultWeapon_WeaponUpgrade
   m_EditorClassIdentifier: 
   projetileType: 0
+  isUnlockedAtTheBegining: 1
   startingDamage: 20
   maximallyUpgradedDamage: 70
   damageUpgradeStep: 10
