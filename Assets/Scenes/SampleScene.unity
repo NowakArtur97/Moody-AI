@@ -3897,8 +3897,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 815103820}
-  - component: {fileID: 815103821}
   - component: {fileID: 815103822}
+  - component: {fileID: 815103821}
   m_Layer: 5
   m_Name: Upgrades
   m_TagString: Untagged
@@ -3969,10 +3969,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20b0655b39975443844586953ea5b45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageInputField: {fileID: 2059541061}
-  _firingSpeedInputField: {fileID: 1570414683}
-  _costInputField: {fileID: 773023287}
-  _movementSpeedInputField: {fileID: 605349749}
+  _currentDamageInputField: {fileID: 350847287}
+  _currentFiringSpeedInputField: {fileID: 1729643931}
+  _currentCostInputField: {fileID: 1838780835}
+  _currentMovementSpeedInputField: {fileID: 1079696349}
+  _upgradedDamageInputField: {fileID: 2059541061}
+  _upgradedFiringSpeedInputField: {fileID: 1570414683}
+  _upgradedCostInputField: {fileID: 773023287}
+  _upgradedMovementSpeedInputField: {fileID: 605349749}
 --- !u!1 &835075087
 GameObject:
   m_ObjectHideFlags: 0

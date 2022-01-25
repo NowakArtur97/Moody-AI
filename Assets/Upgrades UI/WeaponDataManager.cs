@@ -4,6 +4,11 @@ using static ProjectileObjectPool;
 public class WeaponDataManager : MonoBehaviour
 {
     [SerializeField] private D_WeaponUpgrade _startingData;
+    public D_WeaponUpgrade StartingData
+    {
+        get { return _startingData; }
+        set { _startingData = value; }
+    }
 
     private ProjectileType _projetileType;
     public float CurrentDamage { get; private set; }
