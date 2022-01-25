@@ -15,7 +15,7 @@ public class Mine : BaseProjectile
     {
         if (IsMoving)
         {
-            _myRigidbody2D.AddForce(ProjectileDirection * MovementVelocity, ForceMode2D.Impulse);
+            _myRigidbody2D.AddForce(ProjectileDirection * WeaponDataManager.CurrentMovementSpeed, ForceMode2D.Impulse);
 
             IsMoving = false;
         }

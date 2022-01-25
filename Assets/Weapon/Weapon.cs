@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using static ProjectileObjectPool;
 
@@ -6,7 +7,6 @@ using static ProjectileObjectPool;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] Transform _projectileSpawnPosition;
-    [SerializeField] float _offsetBetweenBullets = 0.2f;
     [SerializeField] float _minSoundPitch = 0.95f;
     [SerializeField] float _maxSoundPitch = 1.05f;
 
@@ -18,12 +18,16 @@ public class Weapon : MonoBehaviour
     private string _projectileLayerName;
 
     private AudioSource _myAudioSource;
+    private WeaponDataManager _weaponDataManager;
 
     private void Awake()
     {
         CanShoot = true;
         _myAudioSource = GetComponent<AudioSource>();
     }
+
+    private void Start() => _weaponDataManager = FindObjectsOfType<WeaponDataManager>()
+        .First(wdm => wdm.UpgradesData.projetileType == _projectileType);
 
     private void Update() => HandleShooting();
 
@@ -45,7 +49,9 @@ public class Weapon : MonoBehaviour
 
         PlayShootingSound();
 
-        yield return new WaitForSeconds(_offsetBetweenBullets);
+        Debug.Log(_weaponDataManager.CurrentFiringSpeed);
+
+        yield return new WaitForSeconds(_weaponDataManager.CurrentFiringSpeed);
 
         CanShoot = true;
     }

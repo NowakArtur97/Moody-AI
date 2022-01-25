@@ -132,7 +132,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4810896}
-  - component: {fileID: 4810900}
   - component: {fileID: 4810899}
   - component: {fileID: 4810898}
   - component: {fileID: 4810897}
@@ -213,7 +212,7 @@ MonoBehaviour:
         m_MethodName: ChangeDataManger
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4810900}
+          m_ObjectArgument: {fileID: 856306236}
           m_ObjectArgumentAssemblyTypeName: WeaponDataManager, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -258,19 +257,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4810895}
   m_CullTransparentMesh: 1
---- !u!114 &4810900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4810895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _upgradesData: {fileID: 11400000, guid: a72d50d3587cdbb4cbc116913b2b601a, type: 2}
 --- !u!1 &12954242
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,7 +850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03dbb8dab2073a048bc41bbb68cafa7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentDataManager: {fileID: 1213790227}
+  _currentDataManager: {fileID: 1199820461}
 --- !u!1 &169100348
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,6 +2023,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &557393524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 557393525}
+  - component: {fileID: 557393526}
+  m_Layer: 0
+  m_Name: Rocket Launcher Data Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &557393525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557393524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1402525431}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &557393526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557393524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upgradesData: {fileID: 11400000, guid: a7c80821b71114743b33b8279821ea75, type: 2}
 --- !u!1 &560327129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2447,7 +2478,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileSpawnPosition: {fileID: 1593062378}
-  _offsetBetweenBullets: 1
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
 --- !u!1 &605349747
@@ -3285,6 +3315,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695198981}
   m_CullTransparentMesh: 1
+--- !u!1 &711349728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 711349729}
+  - component: {fileID: 711349730}
+  m_Layer: 0
+  m_Name: Shuriken Thrower Data Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &711349729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711349728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1402525431}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &711349730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711349728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upgradesData: {fileID: 11400000, guid: 3e9961ee79024e64090cbad5869beea1, type: 2}
 --- !u!1 &742462959
 GameObject:
   m_ObjectHideFlags: 0
@@ -4065,6 +4140,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &856306234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 856306235}
+  - component: {fileID: 856306236}
+  m_Layer: 0
+  m_Name: Mine Thrower Data Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &856306235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856306234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1402525431}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &856306236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856306234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upgradesData: {fileID: 11400000, guid: a72d50d3587cdbb4cbc116913b2b601a, type: 2}
 --- !u!1 &859594501
 GameObject:
   m_ObjectHideFlags: 0
@@ -4730,7 +4850,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileSpawnPosition: {fileID: 1380731277}
-  _offsetBetweenBullets: 0.5
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
 --- !u!1 &960167901
@@ -5788,6 +5907,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1199820459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1199820460}
+  - component: {fileID: 1199820461}
+  m_Layer: 0
+  m_Name: Default Weapon Data Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1199820460
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199820459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1402525431}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1199820461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199820459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _upgradesData: {fileID: 11400000, guid: 9688cac5018d0f343a5f7c66cbd6163f, type: 2}
 --- !u!1 &1201964428
 GameObject:
   m_ObjectHideFlags: 0
@@ -5864,7 +6028,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1213790223}
-  - component: {fileID: 1213790227}
   - component: {fileID: 1213790226}
   - component: {fileID: 1213790225}
   - component: {fileID: 1213790224}
@@ -5945,7 +6108,7 @@ MonoBehaviour:
         m_MethodName: ChangeDataManger
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1213790227}
+          m_ObjectArgument: {fileID: 1199820461}
           m_ObjectArgumentAssemblyTypeName: WeaponDataManager, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -5990,19 +6153,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213790222}
   m_CullTransparentMesh: 1
---- !u!114 &1213790227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1213790222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _upgradesData: {fileID: 11400000, guid: 9688cac5018d0f343a5f7c66cbd6163f, type: 2}
 --- !u!1 &1238140277
 GameObject:
   m_ObjectHideFlags: 0
@@ -6298,7 +6448,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileSpawnPosition: {fileID: 1973991717}
-  _offsetBetweenBullets: 1
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
 --- !u!1 &1272583908
@@ -7031,6 +7180,41 @@ Transform:
   - {fileID: 814407765}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1402525430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1402525431}
+  m_Layer: 0
+  m_Name: Weapon Data Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1402525431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402525430}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 291.9297, y: 417.26147, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1199820460}
+  - {fileID: 856306235}
+  - {fileID: 711349729}
+  - {fileID: 557393525}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1482485147
 GameObject:
@@ -8090,7 +8274,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1602971884}
-  - component: {fileID: 1602971888}
   - component: {fileID: 1602971887}
   - component: {fileID: 1602971886}
   - component: {fileID: 1602971885}
@@ -8171,7 +8354,7 @@ MonoBehaviour:
         m_MethodName: ChangeDataManger
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1602971888}
+          m_ObjectArgument: {fileID: 711349730}
           m_ObjectArgumentAssemblyTypeName: WeaponDataManager, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -8216,19 +8399,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602971883}
   m_CullTransparentMesh: 1
---- !u!114 &1602971888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602971883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _upgradesData: {fileID: 11400000, guid: 3e9961ee79024e64090cbad5869beea1, type: 2}
 --- !u!1 &1663621991
 GameObject:
   m_ObjectHideFlags: 0
@@ -8238,7 +8408,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1663621992}
-  - component: {fileID: 1663621996}
   - component: {fileID: 1663621995}
   - component: {fileID: 1663621994}
   - component: {fileID: 1663621993}
@@ -8319,7 +8488,7 @@ MonoBehaviour:
         m_MethodName: ChangeDataManger
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1663621996}
+          m_ObjectArgument: {fileID: 557393526}
           m_ObjectArgumentAssemblyTypeName: WeaponDataManager, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -8364,19 +8533,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663621991}
   m_CullTransparentMesh: 1
---- !u!114 &1663621996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663621991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _upgradesData: {fileID: 11400000, guid: a7c80821b71114743b33b8279821ea75, type: 2}
 --- !u!1 &1671060190
 GameObject:
   m_ObjectHideFlags: 0
@@ -9941,7 +10097,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileSpawnPosition: {fileID: 1159303861}
-  _offsetBetweenBullets: 0.15
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
 --- !u!1 &1973991716

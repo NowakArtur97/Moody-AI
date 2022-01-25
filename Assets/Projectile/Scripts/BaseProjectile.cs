@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using static ProjectileObjectPool;
 
@@ -7,13 +8,6 @@ public abstract class BaseProjectile : MonoBehaviour
 {
     private const string EXPLOSION_TRIGGER = "explode";
 
-    [SerializeField] private float _movementVelocity = 20.0f;
-    protected float MovementVelocity
-    {
-        get { return _movementVelocity; }
-        set { _movementVelocity = value; }
-    }
-    [SerializeField] private float _damageAmount = 10.0f;
     [SerializeField] private ProjectileType _projectileType;
     [SerializeField] private float _minSoundPitch = 0.95f;
     [SerializeField] private float _maxSoundPitch = 1.05f;
@@ -22,6 +16,7 @@ public abstract class BaseProjectile : MonoBehaviour
 
     private AudioSource _myAudioSource;
     private Animator _myAnimator;
+    protected WeaponDataManager WeaponDataManager { get; private set; }
 
     protected bool IsMoving;
     protected Vector3 ProjectileDirection { get; private set; }
@@ -33,6 +28,9 @@ public abstract class BaseProjectile : MonoBehaviour
         _myAnimator = GetComponentInChildren<Animator>();
     }
 
+    private void Start() => WeaponDataManager = FindObjectsOfType<WeaponDataManager>()
+            .First(wdm => wdm.UpgradesData.projetileType == _projectileType);
+
     protected virtual void OnEnable()
     {
         StartCoroutine(ReleaseCoroutine(_timeBeforeReleasing));
@@ -41,7 +39,7 @@ public abstract class BaseProjectile : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.gameObject.GetComponentInChildren<IDamagable>()?.DealDamage(_damageAmount);
+        collision.gameObject.GetComponentInChildren<IDamagable>()?.DealDamage(WeaponDataManager.CurrentDamage);
 
         IsMoving = false;
 

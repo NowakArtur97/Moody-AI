@@ -6,7 +6,7 @@ public class Projectile : BaseProjectile
     {
         if (IsMoving)
         {
-            transform.position += ProjectileDirection * Time.deltaTime * MovementVelocity;
+            transform.position += ProjectileDirection * Time.deltaTime * WeaponDataManager.CurrentMovementSpeed;
         }
     }
 }

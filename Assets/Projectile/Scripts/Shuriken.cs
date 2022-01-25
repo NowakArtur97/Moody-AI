@@ -6,7 +6,7 @@ public class Shuriken : BaseProjectile
 
     private void Update()
     {
-        transform.position += ProjectileDirection * Time.deltaTime * MovementVelocity;
+        transform.position += ProjectileDirection * Time.deltaTime * WeaponDataManager.CurrentMovementSpeed;
         transform.Rotate(Vector3.forward * (_rotationSpeed * Time.deltaTime));
     }
 }

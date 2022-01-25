@@ -32,6 +32,8 @@ public class HomingMissile : BaseProjectile
 
     private void FixedUpdate()
     {
+        Debug.Log(WeaponDataManager.CurrentMovementSpeed);
+
         if (IsMoving)
         {
             if (_target == null)
@@ -65,7 +67,7 @@ public class HomingMissile : BaseProjectile
 
         _myRigidbody2D.angularVelocity = -_rotateAmount * _rotationVelocity;
 
-        _myRigidbody2D.velocity = transform.up * MovementVelocity;
+        _myRigidbody2D.velocity = transform.up * WeaponDataManager.CurrentMovementSpeed;
     }
 
     private void FindClosestEnemy()
