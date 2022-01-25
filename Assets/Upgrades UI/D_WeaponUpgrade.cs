@@ -15,9 +15,9 @@ public class D_WeaponUpgrade : ScriptableObject
     public float maximallyUpgradedFiringSpeed = 0.07f;
     public float firingSpeedUpgradeStep = -0.02f;
 
-    public float startingCost = 20.0f;
-    public float maximallyUpgradedCost = 10.0f;
-    public float costUpgradeStep = -2.0f;
+    public float startingAmmoConsumption = 20.0f;
+    public float maximallyUpgradedAmmoConsumption = 10.0f;
+    public float ammoConsumptionUpgradeStep = -2.0f;
 
     public float startingMovementSpeed = 20.0f;
     public float maximallyUpgradedMovementSpeed = 30.0f;

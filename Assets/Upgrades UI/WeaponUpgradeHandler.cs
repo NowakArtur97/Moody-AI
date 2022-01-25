@@ -18,6 +18,12 @@ public class WeaponUpgradeHandler : MonoBehaviour
         OnUpdateWeapon?.Invoke();
     }
 
+    public void UnlockWeapon()
+    {
+        _currentDataManager.UnlockWeapon();
+        OnUpdateWeapon?.Invoke();
+    }
+
     public void UpgradeDamage()
     {
         _currentDataManager.UpgradeDamage();
@@ -30,9 +36,9 @@ public class WeaponUpgradeHandler : MonoBehaviour
         OnUpdateWeapon?.Invoke();
     }
 
-    public void UpgradeCost()
+    public void UpgradeAmmoConsumption()
     {
-        _currentDataManager.UpgradeCost();
+        _currentDataManager.UpgradeAmmoConsumption();
         OnUpdateWeapon?.Invoke();
     }
 
