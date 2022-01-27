@@ -212,8 +212,8 @@ MonoBehaviour:
         m_MethodName: ChangeDataManger
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 856306236}
-          m_ObjectArgumentAssemblyTypeName: WeaponDataManager, Assembly-CSharp
+          m_ObjectArgument: {fileID: 988781146}
+          m_ObjectArgumentAssemblyTypeName: WeaponUpgradeManager, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -872,6 +872,52 @@ Transform:
   m_Father: {fileID: 1239492711}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &273516764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 273516765}
+  - component: {fileID: 273516766}
+  m_Layer: 0
+  m_Name: Ball Projectile Data Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &273516765
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273516764}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1402525431}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &273516766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273516764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponData: {fileID: 11400000, guid: 66c469b8e64acaf439d153b06b912f17, type: 2}
+  _isEnemy: 1
 --- !u!1 &299673044
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,7 +997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03dbb8dab2073a048bc41bbb68cafa7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentDataManager: {fileID: 1199820461}
+  _currentWeaponUpgradeManager: {fileID: 1302889611}
 --- !u!1 &301221997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2229,8 +2275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upgradesData: {fileID: 11400000, guid: a7c80821b71114743b33b8279821ea75, type: 2}
-  _weaponGameObject: {fileID: 1255738515}
+  _weaponData: {fileID: 11400000, guid: 0d2d9bb6963a9e641953886926b3dcfb, type: 2}
+  _isEnemy: 0
 --- !u!1 &560327129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2627,7 +2673,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 3
-  _projectileLayerName: Player Projectile
 --- !u!114 &594855488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2643,6 +2688,7 @@ MonoBehaviour:
   _projectileSpawnPosition: {fileID: 1593062378}
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
+  _isEnemy: 0
 --- !u!1 &605349747
 GameObject:
   m_ObjectHideFlags: 0
@@ -3036,7 +3082,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &662335193
 GameObject:
@@ -3522,8 +3568,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upgradesData: {fileID: 11400000, guid: 3e9961ee79024e64090cbad5869beea1, type: 2}
-  _weaponGameObject: {fileID: 941006600}
+  _weaponData: {fileID: 11400000, guid: 6a82b590dcb749044901395d5105dc54, type: 2}
+  _isEnemy: 0
 --- !u!1 &742462959
 GameObject:
   m_ObjectHideFlags: 0
@@ -4323,8 +4369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upgradesData: {fileID: 11400000, guid: a72d50d3587cdbb4cbc116913b2b601a, type: 2}
-  _weaponGameObject: {fileID: 594855484}
+  _weaponData: {fileID: 11400000, guid: c36dcc965fef3364da21129cf6780295, type: 2}
+  _isEnemy: 0
 --- !u!1 &859594501
 GameObject:
   m_ObjectHideFlags: 0
@@ -4976,7 +5022,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 4
-  _projectileLayerName: Player Projectile
 --- !u!114 &941006604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4992,6 +5037,7 @@ MonoBehaviour:
   _projectileSpawnPosition: {fileID: 1380731277}
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
+  _isEnemy: 0
 --- !u!1 &960167901
 GameObject:
   m_ObjectHideFlags: 0
@@ -5160,6 +5206,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &988781144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 988781145}
+  - component: {fileID: 988781146}
+  m_Layer: 0
+  m_Name: Mine Thrower Upgrade Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &988781145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988781144}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1494430960}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &988781146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988781144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a3b7f00ebcbae47aa0cd6503c29788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponUpgradeData: {fileID: 11400000, guid: a72d50d3587cdbb4cbc116913b2b601a, type: 2}
+  _weaponGameObject: {fileID: 594855484}
 --- !u!1 &996073654
 GameObject:
   m_ObjectHideFlags: 0
@@ -6228,8 +6320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _upgradesData: {fileID: 11400000, guid: 9688cac5018d0f343a5f7c66cbd6163f, type: 2}
-  _weaponGameObject: {fileID: 1905738966}
+  _weaponData: {fileID: 11400000, guid: cef00d4222260a1439c1e00a5a4af3d7, type: 2}
+  _isEnemy: 0
 --- !u!1 &1201964428
 GameObject:
   m_ObjectHideFlags: 0
@@ -6386,8 +6478,8 @@ MonoBehaviour:
         m_MethodName: ChangeDataManger
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1199820461}
-          m_ObjectArgumentAssemblyTypeName: WeaponDataManager, Assembly-CSharp
+          m_ObjectArgument: {fileID: 1302889611}
+          m_ObjectArgumentAssemblyTypeName: WeaponUpgradeManager, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6526,7 +6618,7 @@ RectTransform:
   - {fileID: 996073655}
   - {fileID: 859594502}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6712,7 +6804,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 2
-  _projectileLayerName: Player Projectile
 --- !u!114 &1255738519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6728,6 +6819,7 @@ MonoBehaviour:
   _projectileSpawnPosition: {fileID: 1973991717}
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
+  _isEnemy: 0
 --- !u!1 &1272583908
 GameObject:
   m_ObjectHideFlags: 0
@@ -6812,6 +6904,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1302889609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1302889610}
+  - component: {fileID: 1302889611}
+  m_Layer: 0
+  m_Name: Default Weapon Upgrade Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1302889610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302889609}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1494430960}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1302889611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302889609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a3b7f00ebcbae47aa0cd6503c29788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponUpgradeData: {fileID: 11400000, guid: 9688cac5018d0f343a5f7c66cbd6163f, type: 2}
+  _weaponGameObject: {fileID: 1905738966}
 --- !u!1 &1335746754
 GameObject:
   m_ObjectHideFlags: 0
@@ -7475,8 +7613,9 @@ Transform:
   - {fileID: 856306235}
   - {fileID: 711349729}
   - {fileID: 557393525}
+  - {fileID: 273516765}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1482485147
 GameObject:
@@ -7526,6 +7665,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93031f13cd079f7408a7048130b16d47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1494430959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1494430960}
+  m_Layer: 0
+  m_Name: Weapon Upgrade Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1494430960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494430959}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1302889610}
+  - {fileID: 1531058143}
+  - {fileID: 988781145}
+  - {fileID: 1928528348}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1502844117
 GameObject:
   m_ObjectHideFlags: 0
@@ -7875,6 +8049,52 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &1531058142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1531058143}
+  - component: {fileID: 1531058144}
+  m_Layer: 0
+  m_Name: Rocket Launcher Upgrade Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1531058143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531058142}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1494430960}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1531058144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531058142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a3b7f00ebcbae47aa0cd6503c29788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponUpgradeData: {fileID: 11400000, guid: a7c80821b71114743b33b8279821ea75, type: 2}
+  _weaponGameObject: {fileID: 1255738515}
 --- !u!1 &1565290746
 GameObject:
   m_ObjectHideFlags: 0
@@ -8616,8 +8836,8 @@ MonoBehaviour:
         m_MethodName: ChangeDataManger
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 711349730}
-          m_ObjectArgumentAssemblyTypeName: WeaponDataManager, Assembly-CSharp
+          m_ObjectArgument: {fileID: 1928528349}
+          m_ObjectArgumentAssemblyTypeName: WeaponUpgradeManager, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8750,8 +8970,8 @@ MonoBehaviour:
         m_MethodName: ChangeDataManger
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 557393526}
-          m_ObjectArgumentAssemblyTypeName: WeaponDataManager, Assembly-CSharp
+          m_ObjectArgument: {fileID: 1531058144}
+          m_ObjectArgumentAssemblyTypeName: WeaponUpgradeManager, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10297,7 +10517,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 0
-  _projectileLayerName: Player Projectile
 --- !u!114 &1905738970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10313,6 +10532,53 @@ MonoBehaviour:
   _projectileSpawnPosition: {fileID: 1159303861}
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
+  _isEnemy: 0
+--- !u!1 &1928528347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1928528348}
+  - component: {fileID: 1928528349}
+  m_Layer: 0
+  m_Name: Shuriken Thrower Upgrade Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1928528348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928528347}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1494430960}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1928528349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928528347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90a3b7f00ebcbae47aa0cd6503c29788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponUpgradeData: {fileID: 11400000, guid: 3e9961ee79024e64090cbad5869beea1, type: 2}
+  _weaponGameObject: {fileID: 941006600}
 --- !u!1 &1973991716
 GameObject:
   m_ObjectHideFlags: 0
@@ -11005,7 +11271,7 @@ Transform:
   - {fileID: 1598980183}
   - {fileID: 1396745224}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2122192352
 GameObject:

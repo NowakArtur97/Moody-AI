@@ -175,11 +175,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e915ff31d726dfa4f8effdc65d10349b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectilePrefab: {fileID: 7120018407457122070, guid: 2f7a9738aa51e5145bf7f24baca31344, type: 3}
   _projectileSpawnPosition: {fileID: 3821861733975746550}
-  _offsetBetweenBullets: 5
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
+  _isEnemy: 1
 --- !u!114 &3821861732873186493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,7 +204,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 1
-  _projectileLayerName: Enemy Projectile
 --- !u!82 &3821861732873186494
 AudioSource:
   m_ObjectHideFlags: 0

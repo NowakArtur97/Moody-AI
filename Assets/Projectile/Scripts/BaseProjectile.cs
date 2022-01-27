@@ -9,6 +9,7 @@ public abstract class BaseProjectile : MonoBehaviour
     private const string EXPLOSION_TRIGGER = "explode";
 
     [SerializeField] private ProjectileType _projectileType;
+    [SerializeField] private bool _isEnemy;
     [SerializeField] private float _minSoundPitch = 0.95f;
     [SerializeField] private float _maxSoundPitch = 1.05f;
     [SerializeField] private float _timeBeforeReleasing = 30f;
@@ -29,7 +30,7 @@ public abstract class BaseProjectile : MonoBehaviour
     }
 
     private void Start() => WeaponDataManager = FindObjectsOfType<WeaponDataManager>()
-            .First(wdm => wdm.UpgradesData.projetileType == _projectileType);
+            .First(wdm => wdm.ProjectileType == _projectileType && wdm.IsEnemy == _isEnemy);
 
     protected virtual void OnEnable()
     {

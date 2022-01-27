@@ -6,9 +6,13 @@ using static ProjectileObjectPool;
 [RequireComponent(typeof(AudioSource))]
 public class Weapon : MonoBehaviour
 {
+    private const string PLAYER_PROJECTILE_LAYER = "Player Projectile";
+    private const string ENEMY_PROJECTILE_LAYER = "Enemy Projectile";
+
     [SerializeField] Transform _projectileSpawnPosition;
     [SerializeField] float _minSoundPitch = 0.95f;
     [SerializeField] float _maxSoundPitch = 1.05f;
+    [SerializeField] bool _isEnemy = false;
 
     public bool CanShoot { get; private set; }
     private bool _isShooting;
@@ -24,10 +28,11 @@ public class Weapon : MonoBehaviour
     {
         CanShoot = true;
         _myAudioSource = GetComponent<AudioSource>();
+        _projectileLayerName = _isEnemy ? ENEMY_PROJECTILE_LAYER : PLAYER_PROJECTILE_LAYER;
     }
 
     private void Start() => _weaponDataManager = FindObjectsOfType<WeaponDataManager>()
-        .First(wdm => wdm.UpgradesData.projetileType == _projectileType);
+        .First(wdm => wdm.ProjectileType == _projectileType && wdm.IsEnemy == _isEnemy);
 
     private void Update() => HandleShooting();
 
@@ -67,6 +72,4 @@ public class Weapon : MonoBehaviour
     public void SetProjectileDirection(Quaternion projectileDirection) => _projectileDirectionQuaternion = projectileDirection;
 
     public void SetProjectileType(ProjectileType projectileType) => _projectileType = projectileType;
-
-    public void SetProjectileLayerName(string projectileLayerName) => _projectileLayerName = projectileLayerName;
 }

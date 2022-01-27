@@ -166,12 +166,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fce4e5f18effd9843ab7086f7bf108ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementVelocity: 20
-  _damageAmount: 10
   _projectileType: 1
+  _isEnemy: 1
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
   _timeBeforeReleasing: 30
+  _isDestructable: 1
 --- !u!58 &1971431543668059938
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,7 +30,6 @@ public class WeaponUpgradesDataUI : MonoBehaviour
     [SerializeField] private Button _movementSpeedUpgradeButton;
 
     private WeaponUpgradeHandler _weaponUpgradeHandler;
-    private WeaponDataManager _currentDataManager;
 
     private void Awake()
     {
@@ -43,29 +43,32 @@ public class WeaponUpgradesDataUI : MonoBehaviour
 
     private void UpdateUI()
     {
-        _currentDataManager = _weaponUpgradeHandler.CurrentDataManager;
+        WeaponDataManager currentDataManager = FindObjectsOfType<WeaponDataManager>()
+            .First(wdm => wdm.ProjectileType == _weaponUpgradeHandler.CurrentWeaponUpgradeManager.ProjectileType && wdm.IsEnemy == false);
+        WeaponUpgradeManager weaponUpgradeDataManager = FindObjectsOfType<WeaponUpgradeManager>()
+            .First(wdm => wdm.ProjectileType == _weaponUpgradeHandler.CurrentWeaponUpgradeManager.ProjectileType);
 
-        bool isUnlocked = _weaponUpgradeHandler.CurrentDataManager.IsUnlocked;
+        bool isUnlocked = _weaponUpgradeHandler.CurrentWeaponUpgradeManager.IsUnlocked;
         UpgradesUI.gameObject.SetActive(isUnlocked);
         UnlockButton.gameObject.SetActive(!isUnlocked);
 
-        _currentDamageInputField.text = _currentDataManager.CurrentDamage.ToString(TWO_DECIMAL_PLACES_FORMAT);
-        _currentFiringSpeedInputField.text = _currentDataManager.CurrentFiringSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT);
-        _currentCostInputField.text = _currentDataManager.CurrentAmmoConsumption.ToString(TWO_DECIMAL_PLACES_FORMAT);
-        _currentMovementSpeedInputField.text = _currentDataManager.CurrentMovementSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT);
+        _currentDamageInputField.text = currentDataManager.CurrentDamage.ToString(TWO_DECIMAL_PLACES_FORMAT);
+        _currentFiringSpeedInputField.text = currentDataManager.CurrentFiringSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT);
+        _currentCostInputField.text = currentDataManager.CurrentAmmoConsumption.ToString(TWO_DECIMAL_PLACES_FORMAT);
+        _currentMovementSpeedInputField.text = currentDataManager.CurrentMovementSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT);
 
-        float upgradedDamage = _currentDataManager.CurrentDamage + _currentDataManager.UpgradesData.damageUpgradeStep;
+        float upgradedDamage = currentDataManager.CurrentDamage + weaponUpgradeDataManager.WeaponUpgradeData.damageUpgradeStep;
         _upgradedDamageInputField.text = upgradedDamage.ToString(TWO_DECIMAL_PLACES_FORMAT);
-        float upgradedFiringSpeed = _currentDataManager.CurrentFiringSpeed + _currentDataManager.UpgradesData.firingSpeedUpgradeStep;
+        float upgradedFiringSpeed = currentDataManager.CurrentFiringSpeed + weaponUpgradeDataManager.WeaponUpgradeData.firingSpeedUpgradeStep;
         _upgradedFiringSpeedInputField.text = upgradedFiringSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT);
-        float upgradedCost = _currentDataManager.CurrentAmmoConsumption + _currentDataManager.UpgradesData.ammoConsumptionUpgradeStep;
+        float upgradedCost = currentDataManager.CurrentAmmoConsumption + weaponUpgradeDataManager.WeaponUpgradeData.ammoConsumptionUpgradeStep;
         _upgradedCostInputField.text = upgradedCost.ToString(TWO_DECIMAL_PLACES_FORMAT);
-        float upgradedMovementSpeed = _currentDataManager.CurrentMovementSpeed + _currentDataManager.UpgradesData.movementSpeedUpgradeStep;
+        float upgradedMovementSpeed = currentDataManager.CurrentMovementSpeed + weaponUpgradeDataManager.WeaponUpgradeData.movementSpeedUpgradeStep;
         _upgradedMovementSpeedInputField.text = upgradedMovementSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT);
 
-        _damageUpgradeButton.interactable = upgradedDamage < _currentDataManager.UpgradesData.maximallyUpgradedDamage;
-        _firingSpeedUpgradeButton.interactable = upgradedFiringSpeed > _currentDataManager.UpgradesData.maximallyUpgradedFiringSpeed;
-        _costUpgradeButton.interactable = upgradedCost > _currentDataManager.UpgradesData.maximallyUpgradedAmmoConsumption;
-        _movementSpeedUpgradeButton.interactable = upgradedMovementSpeed < _currentDataManager.UpgradesData.maximallyUpgradedMovementSpeed;
+        _damageUpgradeButton.interactable = upgradedDamage < weaponUpgradeDataManager.WeaponUpgradeData.maximallyUpgradedDamage;
+        _firingSpeedUpgradeButton.interactable = upgradedFiringSpeed > weaponUpgradeDataManager.WeaponUpgradeData.maximallyUpgradedFiringSpeed;
+        _costUpgradeButton.interactable = upgradedCost > weaponUpgradeDataManager.WeaponUpgradeData.maximallyUpgradedAmmoConsumption;
+        _movementSpeedUpgradeButton.interactable = upgradedMovementSpeed < weaponUpgradeDataManager.WeaponUpgradeData.maximallyUpgradedMovementSpeed;
     }
 }

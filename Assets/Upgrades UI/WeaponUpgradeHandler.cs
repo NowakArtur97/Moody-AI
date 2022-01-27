@@ -5,46 +5,46 @@ public class WeaponUpgradeHandler : MonoBehaviour
 {
     public Action OnUpdateWeapon;
 
-    [SerializeField] private WeaponDataManager _currentDataManager;
-    public WeaponDataManager CurrentDataManager
+    [SerializeField] private WeaponUpgradeManager _currentWeaponUpgradeManager;
+    public WeaponUpgradeManager CurrentWeaponUpgradeManager
     {
-        get { return _currentDataManager; }
-        set { _currentDataManager = value; }
+        get { return _currentWeaponUpgradeManager; }
+        set { _currentWeaponUpgradeManager = value; }
     }
 
-    public void ChangeDataManger(WeaponDataManager dataManager)
+    public void ChangeDataManger(WeaponUpgradeManager weaponUpgradeManager)
     {
-        _currentDataManager = dataManager;
+        _currentWeaponUpgradeManager = weaponUpgradeManager;
         OnUpdateWeapon?.Invoke();
     }
 
     public void UnlockWeapon()
     {
-        _currentDataManager.UnlockWeapon();
+        _currentWeaponUpgradeManager.UnlockWeapon();
         OnUpdateWeapon?.Invoke();
     }
 
     public void UpgradeDamage()
     {
-        _currentDataManager.UpgradeDamage();
+        _currentWeaponUpgradeManager.UpgradeDamage();
         OnUpdateWeapon?.Invoke();
     }
 
     public void UpgradeFiringSpeed()
     {
-        _currentDataManager.UpgradeFiringSpeed();
+        _currentWeaponUpgradeManager.UpgradeFiringSpeed();
         OnUpdateWeapon?.Invoke();
     }
 
     public void UpgradeAmmoConsumption()
     {
-        _currentDataManager.UpgradeAmmoConsumption();
+        _currentWeaponUpgradeManager.UpgradeAmmoConsumption();
         OnUpdateWeapon?.Invoke();
     }
 
     public void UpgradeMovementSpeed()
     {
-        _currentDataManager.UpgradeMovementSpeed();
+        _currentWeaponUpgradeManager.UpgradeMovementSpeed();
         OnUpdateWeapon?.Invoke();
     }
 }

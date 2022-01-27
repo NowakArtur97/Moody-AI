@@ -7,19 +7,15 @@ public class D_WeaponUpgrade : ScriptableObject
     public ProjectileType projetileType;
     public bool isUnlockedAtTheBegining = false;
 
-    public float startingDamage = 20.0f;
     public float maximallyUpgradedDamage = 70.0f;
     public float damageUpgradeStep = 10.0f;
 
-    public float startingFiringSpeed = 0.15f;
     public float maximallyUpgradedFiringSpeed = 0.07f;
     public float firingSpeedUpgradeStep = -0.02f;
 
-    public float startingAmmoConsumption = 20.0f;
     public float maximallyUpgradedAmmoConsumption = 10.0f;
     public float ammoConsumptionUpgradeStep = -2.0f;
 
-    public float startingMovementSpeed = 20.0f;
     public float maximallyUpgradedMovementSpeed = 30.0f;
     public float movementSpeedUpgradeStep = 2.0f;
 }
