@@ -6,6 +6,7 @@ public class D_WeaponUpgrade : ScriptableObject
 {
     public ProjectileType projetileType;
     public bool isUnlockedAtTheBegining = false;
+    public int unlockCost = 50;
 
     public float maximallyUpgradedDamage = 70.0f;
     public float damageUpgradeStep = 10.0f;

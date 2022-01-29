@@ -972,7 +972,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UpgradesUI: {fileID: 2086775331}
-  UnlockButton: {fileID: 312178161}
+  UnlockButtonGameObject: {fileID: 312178161}
+  UnlockButton: {fileID: 312178163}
+  UnlockButtonText: {fileID: 1033023695}
   _currentDamageInputField: {fileID: 350847287}
   _currentFiringSpeedInputField: {fileID: 1729643931}
   _currentCostInputField: {fileID: 1838780835}
@@ -1204,7 +1206,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0, g: 0.3301887, b: 0.05642629, a: 1}
     m_PressedColor: {r: 0.11311853, g: 0.5849056, b: 0.19637504, a: 1}
     m_SelectedColor: {r: 0, g: 0.33333334, b: 0.05882353, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.44313726, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6804,7 +6806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cf6f24dd707d54287752a7ab40e02f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingMoneyAmount: 1000
+  _startingMoneyAmount: 100
 --- !u!4 &1255371285
 Transform:
   m_ObjectHideFlags: 0

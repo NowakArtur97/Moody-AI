@@ -10,6 +10,11 @@ public class MoneyManager : MonoBehaviour
 
     private void Awake() => CurrentMoneyAmount = _startingMoneyAmount;
 
+    private void Update()
+    {
+        Debug.Log(CurrentMoneyAmount);
+    }
+
     public void IncreaseMoneyAmount(int amount)
     {
         CurrentMoneyAmount += amount;

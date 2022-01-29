@@ -50,6 +50,10 @@ public class WeaponUpgradeManager : MonoBehaviour
         IsUnlocked = true;
         _weaponGameObject.SetActive(true);
         _weaponSystem.AddWeapon(_weaponGameObject);
+        if (!_weaponUpgradeData.isUnlockedAtTheBegining)
+        {
+            _moneyManager.DecreaseMoneyAmount(_weaponUpgradeData.unlockCost);
+        }
     }
 
     public void UpgradeDamage()
