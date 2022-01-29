@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyTargetTransformHandler: {fileID: 0}
+  _enemyTargetTransformHandler: {fileID: 2379886183520702906}
 --- !u!114 &3140539819564114347
 MonoBehaviour:
   m_ObjectHideFlags: 0

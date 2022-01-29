@@ -32,7 +32,7 @@ public class WeaponUpgradeManager : MonoBehaviour
     }
 
     private void Start() => _weaponDataManager = FindObjectsOfType<WeaponDataManager>()
-        .First(wdm => wdm.ProjectileType == ProjectileType);
+        .First(wdm => wdm.ProjectileType == ProjectileType && wdm.IsEnemy == false);
 
     public void UnlockWeapon()
     {

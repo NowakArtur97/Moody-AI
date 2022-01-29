@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class WeaponUpgradesDataUI : MonoBehaviour
 {
+    private const string MAXIMALLY_UPGRADED_PROPERTY_MESSAGE = "MAX";
     private const string TWO_DECIMAL_PLACES_FORMAT = "0.00";
 
     [Header("General")]
@@ -58,17 +59,27 @@ public class WeaponUpgradesDataUI : MonoBehaviour
         _currentMovementSpeedInputField.text = currentDataManager.CurrentMovementSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT);
 
         float upgradedDamage = currentDataManager.CurrentDamage + weaponUpgradeDataManager.WeaponUpgradeData.damageUpgradeStep;
-        _upgradedDamageInputField.text = upgradedDamage.ToString(TWO_DECIMAL_PLACES_FORMAT);
         float upgradedFiringSpeed = currentDataManager.CurrentFiringSpeed + weaponUpgradeDataManager.WeaponUpgradeData.firingSpeedUpgradeStep;
-        _upgradedFiringSpeedInputField.text = upgradedFiringSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT);
         float upgradedCost = currentDataManager.CurrentAmmoConsumption + weaponUpgradeDataManager.WeaponUpgradeData.ammoConsumptionUpgradeStep;
-        _upgradedCostInputField.text = upgradedCost.ToString(TWO_DECIMAL_PLACES_FORMAT);
         float upgradedMovementSpeed = currentDataManager.CurrentMovementSpeed + weaponUpgradeDataManager.WeaponUpgradeData.movementSpeedUpgradeStep;
-        _upgradedMovementSpeedInputField.text = upgradedMovementSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT);
 
-        _damageUpgradeButton.interactable = upgradedDamage < weaponUpgradeDataManager.WeaponUpgradeData.maximallyUpgradedDamage;
-        _firingSpeedUpgradeButton.interactable = upgradedFiringSpeed > weaponUpgradeDataManager.WeaponUpgradeData.maximallyUpgradedFiringSpeed;
-        _costUpgradeButton.interactable = upgradedCost > weaponUpgradeDataManager.WeaponUpgradeData.maximallyUpgradedAmmoConsumption;
-        _movementSpeedUpgradeButton.interactable = upgradedMovementSpeed < weaponUpgradeDataManager.WeaponUpgradeData.maximallyUpgradedMovementSpeed;
+        bool isDamagaeMaximallyUpgraded = upgradedDamage < weaponUpgradeDataManager.WeaponUpgradeData.maximallyUpgradedDamage;
+        bool isFiringSpeedMaximallyUpgraded = upgradedFiringSpeed > weaponUpgradeDataManager.WeaponUpgradeData.maximallyUpgradedFiringSpeed;
+        bool isAmmoConsuptionMaximallyUpgraded = upgradedCost > weaponUpgradeDataManager.WeaponUpgradeData.maximallyUpgradedAmmoConsumption;
+        bool isMovementSpeedMaximallyUpgraded = upgradedMovementSpeed < weaponUpgradeDataManager.WeaponUpgradeData.maximallyUpgradedMovementSpeed;
+
+        _damageUpgradeButton.interactable = isDamagaeMaximallyUpgraded;
+        _firingSpeedUpgradeButton.interactable = isFiringSpeedMaximallyUpgraded;
+        _costUpgradeButton.interactable = isAmmoConsuptionMaximallyUpgraded;
+        _movementSpeedUpgradeButton.interactable = isMovementSpeedMaximallyUpgraded;
+
+        _upgradedDamageInputField.text = isDamagaeMaximallyUpgraded ? upgradedDamage.ToString(TWO_DECIMAL_PLACES_FORMAT)
+            : MAXIMALLY_UPGRADED_PROPERTY_MESSAGE;
+        _upgradedFiringSpeedInputField.text = isFiringSpeedMaximallyUpgraded ? upgradedFiringSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT)
+            : MAXIMALLY_UPGRADED_PROPERTY_MESSAGE;
+        _upgradedCostInputField.text = isAmmoConsuptionMaximallyUpgraded ? upgradedCost.ToString(TWO_DECIMAL_PLACES_FORMAT)
+            : MAXIMALLY_UPGRADED_PROPERTY_MESSAGE;
+        _upgradedMovementSpeedInputField.text = isAmmoConsuptionMaximallyUpgraded ? upgradedMovementSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT)
+            : MAXIMALLY_UPGRADED_PROPERTY_MESSAGE;
     }
 }

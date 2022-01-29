@@ -1386,7 +1386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyTargetTransformHandler: {fileID: 0}
+  _enemyTargetTransformHandler: {fileID: 8411009055314306753}
 --- !u!50 &4117220609159550771
 Rigidbody2D:
   serializedVersion: 4

@@ -138,7 +138,6 @@ GameObject:
   - component: {fileID: 3821861732873186490}
   - component: {fileID: 3821861732873186492}
   - component: {fileID: 3821861732873186493}
-  - component: {fileID: 3821861732873186495}
   - component: {fileID: 3821861732873186494}
   m_Layer: 7
   m_Name: Weapon
@@ -175,6 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e915ff31d726dfa4f8effdc65d10349b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _projectileType: 0
   _projectileSpawnPosition: {fileID: 3821861733975746550}
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
@@ -191,19 +191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a37567d8411b9c4aa25a27314ef3672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3821861732873186495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3821861732873186491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72da1d2a6394cee408d1776491a785b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _projectileType: 1
 --- !u!82 &3821861732873186494
 AudioSource:
   m_ObjectHideFlags: 0
@@ -379,7 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyTargetTransformHandler: {fileID: 0}
+  _enemyTargetTransformHandler: {fileID: 1883743808626040941}
 --- !u!114 &3821861732929374423
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
     private const string PLAYER_PROJECTILE_LAYER = "Player Projectile";
     private const string ENEMY_PROJECTILE_LAYER = "Enemy Projectile";
 
+    [SerializeField] private ProjectileType _projectileType;
     [SerializeField] Transform _projectileSpawnPosition;
     [SerializeField] float _minSoundPitch = 0.95f;
     [SerializeField] float _maxSoundPitch = 1.05f;
@@ -18,7 +19,6 @@ public class Weapon : MonoBehaviour
     private bool _isShooting;
     private Vector3 _projectileDirectionVector;
     private Quaternion _projectileDirectionQuaternion;
-    private ProjectileType _projectileType;
     private string _projectileLayerName;
 
     private AudioSource _myAudioSource;
@@ -29,6 +29,11 @@ public class Weapon : MonoBehaviour
         CanShoot = true;
         _myAudioSource = GetComponent<AudioSource>();
         _projectileLayerName = _isEnemy ? ENEMY_PROJECTILE_LAYER : PLAYER_PROJECTILE_LAYER;
+
+        if (_isEnemy)
+        {
+            _isShooting = true;
+        }
     }
 
     private void Start() => _weaponDataManager = FindObjectsOfType<WeaponDataManager>()
@@ -70,6 +75,4 @@ public class Weapon : MonoBehaviour
     public void SetProjectileDirection(Vector3 projectileDirection) => _projectileDirectionVector = projectileDirection;
 
     public void SetProjectileDirection(Quaternion projectileDirection) => _projectileDirectionQuaternion = projectileDirection;
-
-    public void SetProjectileType(ProjectileType projectileType) => _projectileType = projectileType;
 }

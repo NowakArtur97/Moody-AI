@@ -883,7 +883,7 @@ GameObject:
   - component: {fileID: 273516765}
   - component: {fileID: 273516766}
   m_Layer: 0
-  m_Name: Ball Projectile Data Manager
+  m_Name: Enemy Ball Projectile Data Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2539,7 +2539,6 @@ GameObject:
   m_Component:
   - component: {fileID: 594855485}
   - component: {fileID: 594855488}
-  - component: {fileID: 594855487}
   - component: {fileID: 594855486}
   m_Layer: 6
   m_Name: Mine Thrower
@@ -2660,19 +2659,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &594855487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594855484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72da1d2a6394cee408d1776491a785b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _projectileType: 3
 --- !u!114 &594855488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2685,6 +2671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e915ff31d726dfa4f8effdc65d10349b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _projectileType: 3
   _projectileSpawnPosition: {fileID: 1593062378}
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
@@ -4888,7 +4875,6 @@ GameObject:
   m_Component:
   - component: {fileID: 941006601}
   - component: {fileID: 941006604}
-  - component: {fileID: 941006603}
   - component: {fileID: 941006602}
   m_Layer: 6
   m_Name: Shuriken Thrower
@@ -5009,19 +4995,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &941006603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 941006600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72da1d2a6394cee408d1776491a785b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _projectileType: 4
 --- !u!114 &941006604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5034,6 +5007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e915ff31d726dfa4f8effdc65d10349b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _projectileType: 4
   _projectileSpawnPosition: {fileID: 1380731277}
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
@@ -6670,7 +6644,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1255738516}
   - component: {fileID: 1255738519}
-  - component: {fileID: 1255738518}
   - component: {fileID: 1255738517}
   m_Layer: 6
   m_Name: Rocket Launcher
@@ -6791,19 +6764,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1255738518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255738515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72da1d2a6394cee408d1776491a785b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _projectileType: 2
 --- !u!114 &1255738519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6816,6 +6776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e915ff31d726dfa4f8effdc65d10349b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _projectileType: 2
   _projectileSpawnPosition: {fileID: 1973991717}
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
@@ -7614,6 +7575,7 @@ Transform:
   - {fileID: 711349729}
   - {fileID: 557393525}
   - {fileID: 273516765}
+  - {fileID: 1996963164}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9466,8 +9428,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemiesData:
   - {fileID: 11400000, guid: b4317d78f2848bc4aacad32b54857555, type: 2}
-  _startingSpawnPoints: 1
-  _spawnPointsMultiplier: 1
+  _startingSpawnPoints: 2
+  _spawnPointsMultiplier: 2
   _spawningRadius: 30
   _timeBetweenSpawningEnemies: 1
   _timeBeforeSpawningEnemies: 6
@@ -10383,7 +10345,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1905738967}
   - component: {fileID: 1905738970}
-  - component: {fileID: 1905738969}
   - component: {fileID: 1905738968}
   m_Layer: 6
   m_Name: Default Weapon
@@ -10504,19 +10465,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1905738969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1905738966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72da1d2a6394cee408d1776491a785b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _projectileType: 0
 --- !u!114 &1905738970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10529,6 +10477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e915ff31d726dfa4f8effdc65d10349b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _projectileType: 0
   _projectileSpawnPosition: {fileID: 1159303861}
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
@@ -10694,6 +10643,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1996963163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1996963164}
+  - component: {fileID: 1996963165}
+  m_Layer: 0
+  m_Name: Enemy Default Weapon Data Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1996963164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996963163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1402525431}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1996963165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996963163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponData: {fileID: 11400000, guid: cef00d4222260a1439c1e00a5a4af3d7, type: 2}
+  _isEnemy: 1
 --- !u!1 &1997483996
 GameObject:
   m_ObjectHideFlags: 0

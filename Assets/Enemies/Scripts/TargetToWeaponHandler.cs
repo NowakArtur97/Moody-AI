@@ -9,7 +9,6 @@ public class TargetToWeaponHandler : MonoBehaviour
     private void Start()
     {
         _weapon = GetComponent<Weapon>();
-        _weapon.IsShooting(true);
         _targetTransform = GetComponentInParent<EnemyTargetTransformHandler>().TargetTransform;
     }
 

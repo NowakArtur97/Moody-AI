@@ -14,15 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projetileType: 0
   isUnlockedAtTheBegining: 1
-  startingDamage: 20
   maximallyUpgradedDamage: 70
   damageUpgradeStep: 10
-  startingFiringSpeed: 0.15
-  maximallyUpgradedFiringSpeed: 0.07
+  maximallyUpgradedFiringSpeed: 0.08
   firingSpeedUpgradeStep: -0.02
-  startingCost: 20
-  maximallyUpgradedCost: 10
-  costUpgradeStep: -2
-  startingMovementSpeed: 20
+  maximallyUpgradedAmmoConsumption: 10
+  ammoConsumptionUpgradeStep: -2
   maximallyUpgradedMovementSpeed: 30
   movementSpeedUpgradeStep: 2
