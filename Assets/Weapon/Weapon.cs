@@ -26,10 +26,13 @@ public class Weapon : MonoBehaviour
 
     private void Awake()
     {
-        CanShoot = true;
         _myAudioSource = GetComponent<AudioSource>();
         _projectileLayerName = _isEnemy ? ENEMY_PROJECTILE_LAYER : PLAYER_PROJECTILE_LAYER;
+    }
 
+    private void OnEnable()
+    {
+        CanShoot = true;
         if (_isEnemy)
         {
             _isShooting = true;
@@ -43,6 +46,7 @@ public class Weapon : MonoBehaviour
 
     private void HandleShooting()
     {
+        Debug.Log(transform.parent.gameObject.name + " " + CanShoot);
         if (CanShoot && _isShooting)
         {
             StartCoroutine(ShotingCoroutine());
@@ -52,8 +56,8 @@ public class Weapon : MonoBehaviour
     private IEnumerator ShotingCoroutine()
     {
         ProjectileObjectPoolInstance.InstantiateProjectile(_projectileType, _projectileSpawnPosition,
-            _projectileDirectionQuaternion != null ? _projectileDirectionQuaternion : Quaternion.identity, _projectileDirectionVector,
-            _projectileLayerName);
+            _projectileDirectionQuaternion != null ? _projectileDirectionQuaternion : Quaternion.identity,
+            _projectileDirectionVector, _projectileLayerName);
 
         CanShoot = false;
 
