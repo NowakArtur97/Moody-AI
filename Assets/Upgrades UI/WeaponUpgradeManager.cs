@@ -12,11 +12,16 @@ public class WeaponUpgradeManager : MonoBehaviour
     }
     [SerializeField] private GameObject _weaponGameObject;
     private WeaponSystem _weaponSystem;
+    private MoneyManager _moneyManager;
 
     public ProjectileType ProjectileType { get; private set; }
     private WeaponDataManager _weaponDataManager;
 
     public bool IsUnlocked { get; private set; }
+    public int CurrentDamageCost { get; private set; }
+    public int CurrentFiringSpeedCost { get; private set; }
+    public int CurrentAmmoConsumptionCost { get; private set; }
+    public int CurrentMovementSpeedCost { get; private set; }
 
     private void Awake()
     {
@@ -24,11 +29,17 @@ public class WeaponUpgradeManager : MonoBehaviour
         IsUnlocked = _weaponUpgradeData.isUnlockedAtTheBegining;
 
         _weaponSystem = FindObjectOfType<WeaponSystem>();
+        _moneyManager = FindObjectOfType<MoneyManager>();
 
         if (IsUnlocked)
         {
             UnlockWeapon();
         }
+
+        CurrentDamageCost = _weaponUpgradeData.startingDamageUpgradeCost;
+        CurrentFiringSpeedCost = _weaponUpgradeData.startingFiringSpeedUpgradeCost;
+        CurrentAmmoConsumptionCost = _weaponUpgradeData.startingAmmoConsumptionUpgradeCost;
+        CurrentMovementSpeedCost = _weaponUpgradeData.startingMovementSpeedUpgradeCost;
     }
 
     private void Start() => _weaponDataManager = FindObjectsOfType<WeaponDataManager>()
@@ -41,11 +52,31 @@ public class WeaponUpgradeManager : MonoBehaviour
         _weaponSystem.AddWeapon(_weaponGameObject);
     }
 
-    public void UpgradeDamage() => _weaponDataManager.UpgradeDamage(_weaponUpgradeData.damageUpgradeStep);
+    public void UpgradeDamage()
+    {
+        CurrentDamageCost += _weaponUpgradeData.damageUpgradeCostStep;
+        _weaponDataManager.UpgradeDamage(_weaponUpgradeData.damageUpgradeStep);
+        _moneyManager.DecreaseMoneyAmount(CurrentDamageCost);
+    }
 
-    public void UpgradeFiringSpeed() => _weaponDataManager.UpgradeFiringSpeed(_weaponUpgradeData.firingSpeedUpgradeStep);
+    public void UpgradeFiringSpeed()
+    {
+        CurrentFiringSpeedCost += _weaponUpgradeData.firingSpeedUpgradeCostStep;
+        _weaponDataManager.UpgradeFiringSpeed(_weaponUpgradeData.firingSpeedUpgradeStep);
+        _moneyManager.DecreaseMoneyAmount(CurrentFiringSpeedCost);
+    }
 
-    public void UpgradeAmmoConsumption() => _weaponDataManager.UpgradeAmmoConsumption(_weaponUpgradeData.ammoConsumptionUpgradeStep);
+    public void UpgradeAmmoConsumption()
+    {
+        CurrentAmmoConsumptionCost += _weaponUpgradeData.ammoConsumptionUpgradeCostStep;
+        _weaponDataManager.UpgradeAmmoConsumption(_weaponUpgradeData.ammoConsumptionUpgradeStep);
+        _moneyManager.DecreaseMoneyAmount(CurrentAmmoConsumptionCost);
+    }
 
-    public void UpgradeMovementSpeed() => _weaponDataManager.UpgradeMovementSpeed(_weaponUpgradeData.movementSpeedUpgradeStep);
+    public void UpgradeMovementSpeed()
+    {
+        CurrentMovementSpeedCost += _weaponUpgradeData.movementSpeedUpgradeCostStep;
+        _weaponDataManager.UpgradeMovementSpeed(_weaponUpgradeData.movementSpeedUpgradeStep);
+        _moneyManager.DecreaseMoneyAmount(CurrentMovementSpeedCost);
+    }
 }
