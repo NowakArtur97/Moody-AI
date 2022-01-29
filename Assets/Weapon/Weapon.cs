@@ -46,7 +46,6 @@ public class Weapon : MonoBehaviour
 
     private void HandleShooting()
     {
-        Debug.Log(transform.parent.gameObject.name + " " + CanShoot);
         if (CanShoot && _isShooting)
         {
             StartCoroutine(ShotingCoroutine());
