@@ -23,6 +23,7 @@ public class Weapon : MonoBehaviour
 
     private AudioSource _myAudioSource;
     private WeaponDataManager _weaponDataManager;
+    private WeaponAmmoConsumptionManager _weaponAmmoConsumptionManager;
 
     private void Awake()
     {
@@ -41,14 +42,17 @@ public class Weapon : MonoBehaviour
 
     private void Start()
     {
-        _weaponDataManager = FindObjectsOfType<WeaponDataManager>().First(wdm => wdm.ProjectileType == _projectileType && wdm.IsEnemy == _isEnemy);
+        _weaponDataManager = FindObjectsOfType<WeaponDataManager>()
+            .First(manager => manager.ProjectileType == _projectileType && manager.IsEnemy == _isEnemy);
+        _weaponAmmoConsumptionManager = FindObjectsOfType<WeaponAmmoConsumptionManager>()
+            .First(manager => manager.ProjectileType == _projectileType);
     }
 
     private void Update() => HandleShooting();
 
     private void HandleShooting()
     {
-        if (CanShoot && _isShooting && (_isEnemy || (!_isEnemy && _weaponDataManager.CanShoot())))
+        if (CanShoot && _isShooting && (_isEnemy || (!_isEnemy && _weaponAmmoConsumptionManager.CanShoot())))
         {
             StartCoroutine(ShotingCoroutine());
         }
@@ -60,7 +64,7 @@ public class Weapon : MonoBehaviour
             _projectileDirectionQuaternion != null ? _projectileDirectionQuaternion : Quaternion.identity,
             _projectileDirectionVector, _projectileLayerName);
 
-        _weaponDataManager.ConsumeAmmunition();
+        _weaponAmmoConsumptionManager.ConsumeAmmunition();
 
         CanShoot = false;
 

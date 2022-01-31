@@ -1,10 +1,14 @@
-using System;
 using UnityEngine;
 using static ProjectileObjectPool;
 
 public class WeaponDataManager : MonoBehaviour
 {
     [SerializeField] private D_Weapon _weaponData;
+    public D_Weapon WeaponData
+    {
+        get { return _weaponData; }
+        set { _weaponData = value; }
+    }
     [SerializeField] private bool _isEnemy;
     public bool IsEnemy
     {
@@ -17,7 +21,6 @@ public class WeaponDataManager : MonoBehaviour
     public float CurrentFiringSpeed { get; private set; }
     public float CurrentAmmoConsumption { get; private set; }
     public float CurrentMovementSpeed { get; private set; }
-    public float CurrentAmmoCapacity { get; private set; }
 
     private void Awake()
     {
@@ -26,7 +29,6 @@ public class WeaponDataManager : MonoBehaviour
         CurrentFiringSpeed = _weaponData.startingFiringSpeed;
         CurrentAmmoConsumption = _weaponData.startingAmmoConsumption;
         CurrentMovementSpeed = _weaponData.startingMovementSpeed;
-        CurrentAmmoCapacity = _weaponData.startingAmmoCapacity;
     }
 
     public void UpgradeDamage(float damageUpgradeStep) => CurrentDamage += damageUpgradeStep;
@@ -36,8 +38,4 @@ public class WeaponDataManager : MonoBehaviour
     public void UpgradeAmmoConsumption(float ammoConsumptionUpgradeStep) => CurrentAmmoConsumption += ammoConsumptionUpgradeStep;
 
     public void UpgradeMovementSpeed(float movementSpeedUpgradeStep) => CurrentMovementSpeed += movementSpeedUpgradeStep;
-
-    public bool CanShoot() => CurrentAmmoCapacity >= CurrentAmmoConsumption;
-
-    public void ConsumeAmmunition() => CurrentAmmoCapacity -= CurrentAmmoConsumption;
 }
