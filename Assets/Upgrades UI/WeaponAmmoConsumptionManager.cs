@@ -34,7 +34,6 @@ public class WeaponAmmoConsumptionManager : MonoBehaviour
         {
             StartCoroutine(AmmoRestorationCoroutine());
         }
-        Debug.Log(CanShoot());
     }
 
     private IEnumerator AmmoRestorationCoroutine()

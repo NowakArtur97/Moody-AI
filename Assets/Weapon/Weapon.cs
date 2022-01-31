@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Linq;
 using UnityEngine;
+using static CameraShake;
 using static ProjectileObjectPool;
 
 [RequireComponent(typeof(AudioSource))]
@@ -65,6 +66,8 @@ public class Weapon : MonoBehaviour
             _projectileDirectionVector, _projectileLayerName);
 
         _weaponAmmoConsumptionManager.ConsumeAmmunition();
+
+        CameraShakeInstance.Shake();
 
         CanShoot = false;
 

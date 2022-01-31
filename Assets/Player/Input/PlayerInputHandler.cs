@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using static CameraShake;
 
 public class PlayerInputHandler : MonoBehaviour
 {
@@ -50,11 +48,6 @@ public class PlayerInputHandler : MonoBehaviour
             _mouseInput = _playerInputManager.MouseInput;
 
             _weaponSystem.CurentWeapon.IsShooting(_mouseInput);
-
-            if (_mouseInput && _weaponSystem.CurentWeapon.CanShoot)
-            {
-                CameraShakeInstance.Shake();
-            }
         }
     }
 
