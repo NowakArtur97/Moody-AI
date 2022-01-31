@@ -39,14 +39,16 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    private void Start() => _weaponDataManager = FindObjectsOfType<WeaponDataManager>()
-        .First(wdm => wdm.ProjectileType == _projectileType && wdm.IsEnemy == _isEnemy);
+    private void Start()
+    {
+        _weaponDataManager = FindObjectsOfType<WeaponDataManager>().First(wdm => wdm.ProjectileType == _projectileType && wdm.IsEnemy == _isEnemy);
+    }
 
     private void Update() => HandleShooting();
 
     private void HandleShooting()
     {
-        if (CanShoot && _isShooting)
+        if (CanShoot && _isShooting && (_isEnemy || (!_isEnemy && _weaponDataManager.CanShoot())))
         {
             StartCoroutine(ShotingCoroutine());
         }
@@ -57,6 +59,8 @@ public class Weapon : MonoBehaviour
         ProjectileObjectPoolInstance.InstantiateProjectile(_projectileType, _projectileSpawnPosition,
             _projectileDirectionQuaternion != null ? _projectileDirectionQuaternion : Quaternion.identity,
             _projectileDirectionVector, _projectileLayerName);
+
+        _weaponDataManager.ConsumeAmmunition();
 
         CanShoot = false;
 

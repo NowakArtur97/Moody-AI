@@ -6807,6 +6807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startingMoneyAmount: 100
+  _awardForFinishingWave: 100
 --- !u!4 &1255371285
 Transform:
   m_ObjectHideFlags: 0
@@ -9617,8 +9618,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemiesData:
   - {fileID: 11400000, guid: b4317d78f2848bc4aacad32b54857555, type: 2}
-  _startingSpawnPoints: 2
-  _spawnPointsMultiplier: 2
+  _startingSpawnPoints: -2
+  _spawnPointsMultiplier: 0
   _spawningRadius: 30
   _timeBetweenSpawningEnemies: 1
   _timeBeforeSpawningEnemies: 6

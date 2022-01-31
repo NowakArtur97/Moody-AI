@@ -13,4 +13,6 @@ public class D_Weapon : ScriptableObject
     public float startingAmmoConsumption = 20.0f;
 
     public float startingMovementSpeed = 20.0f;
+
+    public float startingAmmoCapacity = 200.0f;
 }
