@@ -38,10 +38,7 @@ public class HealthSystem : MonoBehaviour, IDamagable
             StartCoroutine(ReleaseCoroutine());
         }
 
-        if (_isPlanet)
-        {
-            AmmoRestorationManagerInstance.RestoreAmmunition(AmmoRestorationType.DAMAGING_PLANET);
-        }
+        HandleAmmoRestorationActions();
     }
 
     private void PlayDeathSound()
@@ -63,6 +60,18 @@ public class HealthSystem : MonoBehaviour, IDamagable
         else
         {
             Destroy(transform.parent.gameObject);
+        }
+    }
+
+    private void HandleAmmoRestorationActions()
+    {
+        if (_isPlanet)
+        {
+            AmmoRestorationManagerInstance.RestoreAmmunition(AmmoRestorationType.DAMAGING_PLANET);
+        }
+        else if (!_isEnemy)
+        {
+            AmmoRestorationManagerInstance.RestoreAmmunition(AmmoRestorationType.TAKING_DAMAGE);
         }
     }
 }

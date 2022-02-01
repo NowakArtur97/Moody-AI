@@ -921,6 +921,10 @@ MonoBehaviour:
     RestorationType: 0
   - RecoveryValue: 50
     RestorationType: 1
+  - RecoveryValue: 50
+    RestorationType: 2
+  - RecoveryValue: 50
+    RestorationType: 3
 --- !u!1 &273516764
 GameObject:
   m_ObjectHideFlags: 0
@@ -7864,7 +7868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 0
-  _restorationType: 0
+  _restorationType: 2
   _maxAmmoCapacity: 400
   _defaultRecoveryTime: 1
   _defaultRecoveryValue: 5

@@ -6,7 +6,7 @@ public class AmmoRestorationManager : MonoBehaviour
 {
     [SerializeField] private AmmoRecovery[] _ammoRecoveryData;
 
-    public enum AmmoRestorationType { DEFEATING_ENEMIES, DAMAGING_PLANET }
+    public enum AmmoRestorationType { DEFEATING_ENEMIES, DAMAGING_PLANET, TAKING_DAMAGE, DODGING_BULLETS }
     public static AmmoRestorationManager AmmoRestorationManagerInstance { get; private set; }
 
     private List<WeaponAmmoConsumptionManager> _weaponAmmoConsumptionManager;
