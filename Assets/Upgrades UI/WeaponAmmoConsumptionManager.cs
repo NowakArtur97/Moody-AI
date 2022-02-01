@@ -57,11 +57,14 @@ public class WeaponAmmoConsumptionManager : MonoBehaviour
 
     public void RestoreAmmunition(float _ammunitionRecoveryValue)
     {
-        if (CurrentAmmoCapacity < _maxAmmoCapacity)
+        if (CurrentAmmoCapacity + _ammunitionRecoveryValue >= _maxAmmoCapacity)
+        {
+            CurrentAmmoCapacity = _maxAmmoCapacity;
+        }
+        else
         {
             CurrentAmmoCapacity += _ammunitionRecoveryValue;
         }
-        Debug.Log(CurrentAmmoCapacity);
     }
 
     public bool CanShoot() => CurrentAmmoCapacity - _weaponDataManager.CurrentAmmoConsumption >= 0;
