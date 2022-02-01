@@ -11,6 +11,7 @@ public class HealthSystem : MonoBehaviour, IDamagable
     [SerializeField] float _minSoundPitch = 0.8f;
     [SerializeField] float _maxSoundPitch = 1.05f;
     [SerializeField] bool _isEnemy = true;
+    [SerializeField] bool _isPlanet = false;
 
     private AudioSource _myAudioSource;
     private bool _isDying;
@@ -35,6 +36,11 @@ public class HealthSystem : MonoBehaviour, IDamagable
             PlayDeathSound();
 
             StartCoroutine(ReleaseCoroutine());
+        }
+
+        if (_isPlanet)
+        {
+            AmmoRestorationManagerInstance.RestoreAmmunition(AmmoRestorationType.DAMAGING_PLANET);
         }
     }
 

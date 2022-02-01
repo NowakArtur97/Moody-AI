@@ -6,7 +6,7 @@ public class AmmoRestorationManager : MonoBehaviour
 {
     [SerializeField] private AmmoRecovery[] _ammoRecoveryData;
 
-    public enum AmmoRestorationType { DEFEATING_ENEMIES }
+    public enum AmmoRestorationType { DEFEATING_ENEMIES, DAMAGING_PLANET }
     public static AmmoRestorationManager AmmoRestorationManagerInstance { get; private set; }
 
     private List<WeaponAmmoConsumptionManager> _weaponAmmoConsumptionManager;
@@ -33,7 +33,7 @@ public class AmmoRestorationManager : MonoBehaviour
         if (weaponAmmoConsumptionManager == null)
         {
             weaponAmmoConsumptionManager = FindObjectsOfType<WeaponAmmoConsumptionManager>()
-                .First(manager => manager.RestorationType == ammoRestorationType);
+                .FirstOrDefault(manager => manager.RestorationType == ammoRestorationType);
 
             _weaponAmmoConsumptionManager.Add(weaponAmmoConsumptionManager);
         }

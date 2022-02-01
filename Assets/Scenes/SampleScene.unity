@@ -917,9 +917,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ammoRecoveryData:
-  - RecoveryTime: 1
-    RecoveryValue: 50
+  - RecoveryValue: 50
     RestorationType: 0
+  - RecoveryValue: 50
+    RestorationType: 1
 --- !u!1 &273516764
 GameObject:
   m_ObjectHideFlags: 0
@@ -4070,6 +4071,7 @@ MonoBehaviour:
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
   _isEnemy: 0
+  _isPlanet: 1
   _currentHealth: 0
 --- !u!82 &807674657
 AudioSource:
@@ -7862,8 +7864,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 0
-  _restorationType: 0
+  _restorationType: 1
   _maxAmmoCapacity: 400
+  _defaultRecoveryTime: 1
+  _defaultRecoveryValue: 5
 --- !u!1 &1482485147
 GameObject:
   m_ObjectHideFlags: 0
@@ -8132,6 +8136,7 @@ MonoBehaviour:
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
   _isEnemy: 0
+  _isPlanet: 0
   _currentHealth: 0
 --- !u!82 &1512275515
 AudioSource:
