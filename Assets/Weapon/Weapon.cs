@@ -45,8 +45,12 @@ public class Weapon : MonoBehaviour
     {
         _weaponDataManager = FindObjectsOfType<WeaponDataManager>()
             .First(manager => manager.ProjectileType == _projectileType && manager.IsEnemy == _isEnemy);
-        _weaponAmmoConsumptionManager = FindObjectsOfType<WeaponAmmoConsumptionManager>()
-            .First(manager => manager.ProjectileType == _projectileType);
+
+        if (!_isEnemy)
+        {
+            _weaponAmmoConsumptionManager = FindObjectsOfType<WeaponAmmoConsumptionManager>()
+                .First(manager => manager.ProjectileType == _projectileType);
+        }
     }
 
     private void Update() => HandleShooting();
@@ -65,9 +69,11 @@ public class Weapon : MonoBehaviour
             _projectileDirectionQuaternion != null ? _projectileDirectionQuaternion : Quaternion.identity,
             _projectileDirectionVector, _projectileLayerName);
 
-        _weaponAmmoConsumptionManager.ConsumeAmmunition();
-
-        CameraShakeInstance.Shake();
+        if (!_isEnemy)
+        {
+            _weaponAmmoConsumptionManager.ConsumeAmmunition();
+            CameraShakeInstance.Shake();
+        }
 
         CanShoot = false;
 

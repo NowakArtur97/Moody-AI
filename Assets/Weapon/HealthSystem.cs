@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using static EnemyObjectPool;
+using static AmmoRestorationManager;
 
 [RequireComponent(typeof(AudioSource))]
 public class HealthSystem : MonoBehaviour, IDamagable
@@ -49,6 +50,8 @@ public class HealthSystem : MonoBehaviour, IDamagable
 
         if (_isEnemy)
         {
+            AmmoRestorationManagerInstance.RestoreAmmunition(AmmoRestorationType.DEFEATING_ENEMIES);
+
             EnemyObjectPoolInstance.ReleaseEnemy(transform.parent.gameObject, _enemyType);
         }
         else

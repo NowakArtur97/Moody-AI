@@ -25,7 +25,7 @@ public class AmmoRestorationManager : MonoBehaviour
         _weaponAmmoConsumptionManager = new List<WeaponAmmoConsumptionManager>();
     }
 
-    public void RestoreAmunition(AmmoRestorationType ammoRestorationType)
+    public void RestoreAmmunition(AmmoRestorationType ammoRestorationType)
     {
         WeaponAmmoConsumptionManager weaponAmmoConsumptionManager = _weaponAmmoConsumptionManager
             .Find(manager => manager.RestorationType == ammoRestorationType);

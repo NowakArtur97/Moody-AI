@@ -872,6 +872,54 @@ Transform:
   m_Father: {fileID: 1239492711}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &252482767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 252482768}
+  - component: {fileID: 252482769}
+  m_Layer: 0
+  m_Name: Ammo Restoration Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &252482768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252482767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2016319198}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &252482769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252482767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0aec1e222c6f0a43930f897b3c8ec8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ammoRecoveryData:
+  - RecoveryTime: 1
+    RecoveryValue: 50
+    RestorationType: 0
 --- !u!1 &273516764
 GameObject:
   m_ObjectHideFlags: 0
@@ -7799,7 +7847,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2016319198}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1466476684
 MonoBehaviour:
@@ -7814,8 +7862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 0
-  _ammunitionRecoveryTime: 1
-  _ammunitionRecoveryValue: 10
+  _restorationType: 0
   _maxAmmoCapacity: 400
 --- !u!1 &1482485147
 GameObject:
@@ -9666,8 +9713,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemiesData:
   - {fileID: 11400000, guid: b4317d78f2848bc4aacad32b54857555, type: 2}
-  _startingSpawnPoints: -2
-  _spawnPointsMultiplier: 0
+  _startingSpawnPoints: 3
+  _spawnPointsMultiplier: 1
   _spawningRadius: 30
   _timeBetweenSpawningEnemies: 1
   _timeBeforeSpawningEnemies: 6
@@ -10897,7 +10944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1996963164
 Transform:
   m_ObjectHideFlags: 0
@@ -10925,7 +10972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4d102caed979541a6d88707630b828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponData: {fileID: 11400000, guid: cef00d4222260a1439c1e00a5a4af3d7, type: 2}
+  _weaponData: {fileID: 11400000, guid: cf57a16256e59f64abc54556ff51c124, type: 2}
   _isEnemy: 1
 --- !u!1 &1997483996
 GameObject:
@@ -11039,6 +11086,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 252482768}
   - {fileID: 1466476683}
   m_Father: {fileID: 0}
   m_RootOrder: 8
