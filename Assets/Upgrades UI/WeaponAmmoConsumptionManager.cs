@@ -1,6 +1,6 @@
-using System.Collections;
 using System.Linq;
 using UnityEngine;
+using static AmmoRestorationManager;
 using static ProjectileObjectPool;
 
 public class WeaponAmmoConsumptionManager : MonoBehaviour
@@ -11,16 +11,17 @@ public class WeaponAmmoConsumptionManager : MonoBehaviour
         get { return _projectileType; }
         set { _projectileType = value; }
     }
-    [SerializeField] private float _ammunitionRecoveryTime = 1f;
-    [SerializeField] private float _ammunitionRecoveryValue = 10f;
+    [SerializeField] private AmmoRestorationType _restorationType;
+    public AmmoRestorationType RestorationType
+    {
+        get { return _restorationType; }
+        set { _restorationType = value; }
+    }
     [SerializeField] private float _maxAmmoCapacity = 400.0f;
 
     private WeaponDataManager _weaponDataManager;
-    private bool _shouldRestore;
 
     public float CurrentAmmoCapacity { get; private set; }
-
-    private void Awake() => _shouldRestore = true;
 
     private void Start()
     {
@@ -28,26 +29,12 @@ public class WeaponAmmoConsumptionManager : MonoBehaviour
         CurrentAmmoCapacity = _weaponDataManager.WeaponData.startingAmmoCapacity;
     }
 
-    private void Update()
-    {
-        if (_shouldRestore)
-        {
-            StartCoroutine(AmmoRestorationCoroutine());
-        }
-    }
-
-    private IEnumerator AmmoRestorationCoroutine()
+    public void RestoreAmmunition(float _ammunitionRecoveryValue)
     {
         if (CurrentAmmoCapacity < _maxAmmoCapacity)
         {
             CurrentAmmoCapacity += _ammunitionRecoveryValue;
         }
-
-        _shouldRestore = false;
-
-        yield return new WaitForSeconds(_ammunitionRecoveryTime);
-
-        _shouldRestore = true;
     }
 
     public bool CanShoot() => CurrentAmmoCapacity - _weaponDataManager.CurrentAmmoConsumption >= 0;
