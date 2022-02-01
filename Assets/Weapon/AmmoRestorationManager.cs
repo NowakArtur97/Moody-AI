@@ -5,6 +5,11 @@ using UnityEngine;
 public class AmmoRestorationManager : MonoBehaviour
 {
     [SerializeField] private AmmoRecovery[] _ammoRecoveryData;
+    public AmmoRecovery[] AmmoRecoveryData
+    {
+        get { return _ammoRecoveryData; }
+        set { _ammoRecoveryData = value; }
+    }
 
     public enum AmmoRestorationType { DEFEATING_ENEMIES, DAMAGING_PLANET, TAKING_DAMAGE, DODGING_BULLETS }
     public static AmmoRestorationManager AmmoRestorationManagerInstance { get; private set; }

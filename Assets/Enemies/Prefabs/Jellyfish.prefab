@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementVelocity: 10
-  _distanceWhenShouldStop: 5
+  _distanceWhenShouldStop: 15
 --- !u!114 &3821861732929374425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -985,6 +985,7 @@ MonoBehaviour:
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
   _isEnemy: 1
+  _isPlanet: 0
   _currentHealth: 0
 --- !u!82 &3821861733994176880
 AudioSource:
