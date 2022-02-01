@@ -7864,7 +7864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 0
-  _restorationType: 1
+  _restorationType: 0
   _maxAmmoCapacity: 400
   _defaultRecoveryTime: 1
   _defaultRecoveryValue: 5

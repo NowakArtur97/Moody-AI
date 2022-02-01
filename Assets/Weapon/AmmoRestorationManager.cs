@@ -35,6 +35,11 @@ public class AmmoRestorationManager : MonoBehaviour
             weaponAmmoConsumptionManager = FindObjectsOfType<WeaponAmmoConsumptionManager>()
                 .FirstOrDefault(manager => manager.RestorationType == ammoRestorationType);
 
+            if (weaponAmmoConsumptionManager == null)
+            {
+                return;
+            }
+
             _weaponAmmoConsumptionManager.Add(weaponAmmoConsumptionManager);
         }
 
