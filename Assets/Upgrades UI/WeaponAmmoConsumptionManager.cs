@@ -65,7 +65,6 @@ public class WeaponAmmoConsumptionManager : MonoBehaviour
         {
             CurrentAmmoCapacity += _ammunitionRecoveryValue;
         }
-        Debug.Log(CurrentAmmoCapacity);
     }
 
     public bool CanShoot() => CurrentAmmoCapacity - _weaponDataManager.CurrentAmmoConsumption >= 0;
