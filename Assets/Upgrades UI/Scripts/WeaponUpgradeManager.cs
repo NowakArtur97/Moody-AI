@@ -16,6 +16,7 @@ public class WeaponUpgradeManager : MonoBehaviour
 
     public ProjectileType ProjectileType { get; private set; }
     private WeaponDataManager _weaponDataManager;
+    private WeaponUpgradeTabUI _weaponUpgradeTabUI;
 
     public bool IsUnlocked { get; private set; }
     public int CurrentDamageCost { get; private set; }
@@ -30,6 +31,7 @@ public class WeaponUpgradeManager : MonoBehaviour
 
         _weaponSystem = FindObjectOfType<WeaponSystem>();
         _moneyManager = FindObjectOfType<MoneyManager>();
+        _weaponUpgradeTabUI = FindObjectOfType<WeaponUpgradeTabUI>();
 
         if (IsUnlocked)
         {
@@ -53,34 +55,35 @@ public class WeaponUpgradeManager : MonoBehaviour
         if (!_weaponUpgradeData.isUnlockedAtTheBegining)
         {
             _moneyManager.DecreaseMoneyAmount(_weaponUpgradeData.unlockCost);
+            _weaponUpgradeTabUI.HandleUI();
         }
     }
 
     public void UpgradeDamage()
     {
+        _moneyManager.DecreaseMoneyAmount(CurrentDamageCost);
         CurrentDamageCost += _weaponUpgradeData.damageUpgradeCostStep;
         _weaponDataManager.UpgradeDamage(_weaponUpgradeData.damageUpgradeStep);
-        _moneyManager.DecreaseMoneyAmount(CurrentDamageCost);
     }
 
     public void UpgradeFiringSpeed()
     {
+        _moneyManager.DecreaseMoneyAmount(CurrentFiringSpeedCost);
         CurrentFiringSpeedCost += _weaponUpgradeData.firingSpeedUpgradeCostStep;
         _weaponDataManager.UpgradeFiringSpeed(_weaponUpgradeData.firingSpeedUpgradeStep);
-        _moneyManager.DecreaseMoneyAmount(CurrentFiringSpeedCost);
     }
 
     public void UpgradeAmmoConsumption()
     {
+        _moneyManager.DecreaseMoneyAmount(CurrentAmmoConsumptionCost);
         CurrentAmmoConsumptionCost += _weaponUpgradeData.ammoConsumptionUpgradeCostStep;
         _weaponDataManager.UpgradeAmmoConsumption(_weaponUpgradeData.ammoConsumptionUpgradeStep);
-        _moneyManager.DecreaseMoneyAmount(CurrentAmmoConsumptionCost);
     }
 
     public void UpgradeMovementSpeed()
     {
+        _moneyManager.DecreaseMoneyAmount(CurrentMovementSpeedCost);
         CurrentMovementSpeedCost += _weaponUpgradeData.movementSpeedUpgradeCostStep;
         _weaponDataManager.UpgradeMovementSpeed(_weaponUpgradeData.movementSpeedUpgradeStep);
-        _moneyManager.DecreaseMoneyAmount(CurrentMovementSpeedCost);
     }
 }

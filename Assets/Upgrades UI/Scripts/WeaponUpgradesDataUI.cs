@@ -12,9 +12,6 @@ public class WeaponUpgradesDataUI : MonoBehaviour
 
     [Header("General")]
     [SerializeField] private GameObject UpgradesUI;
-    [SerializeField] private GameObject UnlockButtonGameObject;
-    [SerializeField] private Button UnlockButton;
-    [SerializeField] private TMP_Text UnlockButtonText;
 
     [Header("Curent Values")]
     [SerializeField] private TMP_Text _currentDamageText;
@@ -69,12 +66,6 @@ public class WeaponUpgradesDataUI : MonoBehaviour
 
         bool isUnlocked = _weaponUpgradeHandler.CurrentWeaponUpgradeManager.IsUnlocked;
         UpgradesUI.gameObject.SetActive(isUnlocked);
-        UnlockButtonGameObject.gameObject.SetActive(!isUnlocked);
-        if (UnlockButtonGameObject.activeInHierarchy)
-        {
-            UnlockButtonText.text = weaponUpgradeDataManager.WeaponUpgradeData.unlockCost.ToString();
-            UnlockButton.interactable = currentMoneyAmount >= weaponUpgradeDataManager.WeaponUpgradeData.unlockCost;
-        }
 
         _currentDamageText.text = currentDataManager.CurrentDamage.ToString(TWO_DECIMAL_PLACES_FORMAT);
         _currentFiringSpeedText.text = currentDataManager.CurrentFiringSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT);
