@@ -42,7 +42,7 @@ public class WeaponUpgradesDataUI : MonoBehaviour
 
     private void Awake()
     {
-        _weaponUpgradeHandler = FindObjectOfType<WeaponUpgradeHandler>();
+        _weaponUpgradeHandler = FindObjectOfType<WeaponUpgradeHandler>(true);
         _weaponUpgradeHandler.OnUpdateWeapon += UpdateUI;
 
         _moneyManager = FindObjectOfType<MoneyManager>();
