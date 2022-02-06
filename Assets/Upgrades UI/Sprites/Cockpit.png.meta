@@ -178,6 +178,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Cockpit_3
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 0
+        width: 274
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d1db180b8166b34e9c7d429f5e1ea82
+      internalID: -1244751265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -191,6 +212,7 @@ TextureImporter:
     nameFileIdTable:
       Cockpit_0: -273452899
       Cockpit_1: 1726583595
+      Cockpit_3: -1244751265
       Cockpit_2: -547145759
   spritePackingTag: 
   pSDRemoveMatte: 0
