@@ -8,6 +8,7 @@ public class WeaponUpgradesDataUI : MonoBehaviour
     private const string MAXIMALLY_UPGRADED_BUTTON_MESSAGE = "";
     private const string MAXIMALLY_UPGRADED_PROPERTY_MESSAGE = "MAX";
     private const string TWO_DECIMAL_PLACES_FORMAT = "0.00";
+    private const string DOLLAR_SIGN = "$";
 
     [Header("General")]
     [SerializeField] private GameObject UpgradesUI;
@@ -16,24 +17,24 @@ public class WeaponUpgradesDataUI : MonoBehaviour
     [SerializeField] private TMP_Text UnlockButtonText;
 
     [Header("Curent Values")]
-    [SerializeField] private TMP_Text _currentDamageInputField;
-    [SerializeField] private TMP_Text _currentFiringSpeedInputField;
-    [SerializeField] private TMP_Text _currentCostInputField;
-    [SerializeField] private TMP_Text _currentMovementSpeedInputField;
+    [SerializeField] private TMP_Text _currentDamageText;
+    [SerializeField] private TMP_Text _currentFiringSpeedText;
+    [SerializeField] private TMP_Text _currentAmmonConsumptionText;
+    [SerializeField] private TMP_Text _currentMovementSpeedText;
 
     [Header("Upgraded Values")]
-    [SerializeField] private TMP_Text _upgradedDamageInputField;
-    [SerializeField] private TMP_Text _upgradedFiringSpeedInputField;
-    [SerializeField] private TMP_Text _upgradedCostInputField;
-    [SerializeField] private TMP_Text _upgradedMovementSpeedInputField;
+    [SerializeField] private TMP_Text _upgradedDamageText;
+    [SerializeField] private TMP_Text _upgradedFiringSpeedText;
+    [SerializeField] private TMP_Text _upgradedAmmonConsumptionText;
+    [SerializeField] private TMP_Text _upgradedMovementSpeedText;
 
     [Header("Buttons")]
     [SerializeField] private Button _damageUpgradeButton;
     [SerializeField] private TMP_Text _damageUpgradeButtonText;
     [SerializeField] private Button _firingSpeedUpgradeButton;
     [SerializeField] private TMP_Text _firingSpeedUpgradeButtonText;
-    [SerializeField] private Button _costUpgradeButton;
-    [SerializeField] private TMP_Text _costUpgradeButtonText;
+    [SerializeField] private Button _ammonConsumptionUpgradeButton;
+    [SerializeField] private TMP_Text _ammonConsumptionUpgradeButtonText;
     [SerializeField] private Button _movementSpeedUpgradeButton;
     [SerializeField] private TMP_Text _movementSpeedUpgradeButtonText;
 
@@ -75,10 +76,10 @@ public class WeaponUpgradesDataUI : MonoBehaviour
             UnlockButton.interactable = currentMoneyAmount >= weaponUpgradeDataManager.WeaponUpgradeData.unlockCost;
         }
 
-        _currentDamageInputField.text = currentDataManager.CurrentDamage.ToString(TWO_DECIMAL_PLACES_FORMAT);
-        _currentFiringSpeedInputField.text = currentDataManager.CurrentFiringSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT);
-        _currentCostInputField.text = currentDataManager.CurrentAmmoConsumption.ToString(TWO_DECIMAL_PLACES_FORMAT);
-        _currentMovementSpeedInputField.text = currentDataManager.CurrentMovementSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT);
+        _currentDamageText.text = currentDataManager.CurrentDamage.ToString(TWO_DECIMAL_PLACES_FORMAT);
+        _currentFiringSpeedText.text = currentDataManager.CurrentFiringSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT);
+        _currentAmmonConsumptionText.text = currentDataManager.CurrentAmmoConsumption.ToString(TWO_DECIMAL_PLACES_FORMAT);
+        _currentMovementSpeedText.text = currentDataManager.CurrentMovementSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT);
 
         float upgradedDamage = currentDataManager.CurrentDamage + weaponUpgradeDataManager.WeaponUpgradeData.damageUpgradeStep;
         float upgradedFiringSpeed = currentDataManager.CurrentFiringSpeed + weaponUpgradeDataManager.WeaponUpgradeData.firingSpeedUpgradeStep;
@@ -90,30 +91,30 @@ public class WeaponUpgradesDataUI : MonoBehaviour
         bool isAmmoConsumptionUpgradable = upgradedAmmoConsumption > weaponUpgradeDataManager.WeaponUpgradeData.maximallyUpgradedAmmoConsumption;
         bool isMovementSpeedUpgradable = upgradedMovementSpeed < weaponUpgradeDataManager.WeaponUpgradeData.maximallyUpgradedMovementSpeed;
 
-        _damageUpgradeButtonText.text = isDamageUpgradable ? weaponUpgradeDataManager.CurrentDamageCost.ToString()
+        _damageUpgradeButtonText.text = isDamageUpgradable ? weaponUpgradeDataManager.CurrentDamageCost + DOLLAR_SIGN
             : MAXIMALLY_UPGRADED_BUTTON_MESSAGE;
         _damageUpgradeButton.interactable = isDamageUpgradable
             && currentMoneyAmount >= weaponUpgradeDataManager.CurrentDamageCost;
-        _firingSpeedUpgradeButtonText.text = isFiringSpeedUpgradable ? weaponUpgradeDataManager.CurrentFiringSpeedCost.ToString()
+        _firingSpeedUpgradeButtonText.text = isFiringSpeedUpgradable ? weaponUpgradeDataManager.CurrentFiringSpeedCost + DOLLAR_SIGN
             : MAXIMALLY_UPGRADED_BUTTON_MESSAGE;
         _firingSpeedUpgradeButton.interactable = isFiringSpeedUpgradable
             && currentMoneyAmount >= weaponUpgradeDataManager.CurrentFiringSpeedCost;
-        _costUpgradeButtonText.text = isAmmoConsumptionUpgradable ? weaponUpgradeDataManager.CurrentAmmoConsumptionCost.ToString()
+        _ammonConsumptionUpgradeButtonText.text = isAmmoConsumptionUpgradable ? weaponUpgradeDataManager.CurrentAmmoConsumptionCost + DOLLAR_SIGN
             : MAXIMALLY_UPGRADED_BUTTON_MESSAGE;
-        _costUpgradeButton.interactable = isAmmoConsumptionUpgradable
+        _ammonConsumptionUpgradeButton.interactable = isAmmoConsumptionUpgradable
             && currentMoneyAmount >= weaponUpgradeDataManager.CurrentAmmoConsumptionCost;
-        _movementSpeedUpgradeButtonText.text = isMovementSpeedUpgradable ? weaponUpgradeDataManager.CurrentMovementSpeedCost.ToString()
+        _movementSpeedUpgradeButtonText.text = isMovementSpeedUpgradable ? weaponUpgradeDataManager.CurrentMovementSpeedCost + DOLLAR_SIGN
             : MAXIMALLY_UPGRADED_BUTTON_MESSAGE;
         _movementSpeedUpgradeButton.interactable = isMovementSpeedUpgradable
             && currentMoneyAmount >= weaponUpgradeDataManager.CurrentMovementSpeedCost;
 
-        _upgradedDamageInputField.text = isDamageUpgradable ? upgradedDamage.ToString(TWO_DECIMAL_PLACES_FORMAT)
+        _upgradedDamageText.text = isDamageUpgradable ? upgradedDamage.ToString(TWO_DECIMAL_PLACES_FORMAT)
             : MAXIMALLY_UPGRADED_PROPERTY_MESSAGE;
-        _upgradedFiringSpeedInputField.text = isFiringSpeedUpgradable ? upgradedFiringSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT)
+        _upgradedFiringSpeedText.text = isFiringSpeedUpgradable ? upgradedFiringSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT)
             : MAXIMALLY_UPGRADED_PROPERTY_MESSAGE;
-        _upgradedCostInputField.text = isAmmoConsumptionUpgradable ? upgradedAmmoConsumption.ToString(TWO_DECIMAL_PLACES_FORMAT)
+        _upgradedAmmonConsumptionText.text = isAmmoConsumptionUpgradable ? upgradedAmmoConsumption.ToString(TWO_DECIMAL_PLACES_FORMAT)
             : MAXIMALLY_UPGRADED_PROPERTY_MESSAGE;
-        _upgradedMovementSpeedInputField.text = isMovementSpeedUpgradable ? upgradedMovementSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT)
+        _upgradedMovementSpeedText.text = isMovementSpeedUpgradable ? upgradedMovementSpeed.ToString(TWO_DECIMAL_PLACES_FORMAT)
             : MAXIMALLY_UPGRADED_PROPERTY_MESSAGE;
     }
 }

@@ -10,16 +10,16 @@ public class WeaponUpgradesCanvasUI : MonoBehaviour
     private void Awake()
     {
         _waveSpawner = FindObjectOfType<WaveSpawner>();
-        _waveSpawner.OnFinishWave += OpenUpgradesUI;
+        _waveSpawner.OnFinishWave += OpenUI;
     }
 
     private void Start() => gameObject.SetActive(false);
 
-    private void OnDestroy() => _waveSpawner.OnFinishWave -= OpenUpgradesUI;
+    private void OnDestroy() => _waveSpawner.OnFinishWave -= OpenUI;
 
-    private void OpenUpgradesUI() => gameObject.SetActive(true);
+    private void OpenUI() => gameObject.SetActive(true);
 
-    public void CloseUpgradesUI()
+    public void CloseUI()
     {
         gameObject.SetActive(false);
         OnCloseUI?.Invoke();
