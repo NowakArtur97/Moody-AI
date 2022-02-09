@@ -15,7 +15,8 @@ public class WeaponConsumptionManager : MonoBehaviour
 
     public float CurrentAmmoCapacity { get; private set; }
 
-    private void Start() => _weaponDataManager = FindObjectsOfType<WeaponDataManager>().First(wdm => wdm.ProjectileType == _projectileType && wdm.IsEnemy == false);
+    private void Start() => _weaponDataManager = FindObjectsOfType<WeaponDataManager>()
+        .First(wdm => wdm.ProjectileType == _projectileType && wdm.IsEnemy == false);
 
     private void Update()
     {

@@ -14,7 +14,7 @@ public class AmmoRestorationManager : MonoBehaviour
     public enum AmmoRestorationType { DEFEATING_ENEMIES, DAMAGING_PLANET, TAKING_DAMAGE, DODGING_BULLETS }
     public static AmmoRestorationManager AmmoRestorationManagerInstance { get; private set; }
 
-    private List<WeaponAmmoConsumptionManager> _weaponAmmoConsumptionManager;
+    private List<WeaponAmmoConsumptionManager> _weaponAmmoConsumptionManagers;
 
     private void Awake()
     {
@@ -27,12 +27,12 @@ public class AmmoRestorationManager : MonoBehaviour
             AmmoRestorationManagerInstance = this;
         }
 
-        _weaponAmmoConsumptionManager = new List<WeaponAmmoConsumptionManager>();
+        _weaponAmmoConsumptionManagers = new List<WeaponAmmoConsumptionManager>();
     }
 
     public void RestoreAmmunition(AmmoRestorationType ammoRestorationType)
     {
-        WeaponAmmoConsumptionManager weaponAmmoConsumptionManager = _weaponAmmoConsumptionManager
+        WeaponAmmoConsumptionManager weaponAmmoConsumptionManager = _weaponAmmoConsumptionManagers
             .Find(manager => manager.RestorationType == ammoRestorationType);
 
         if (weaponAmmoConsumptionManager == null)
@@ -45,7 +45,7 @@ public class AmmoRestorationManager : MonoBehaviour
                 return;
             }
 
-            _weaponAmmoConsumptionManager.Add(weaponAmmoConsumptionManager);
+            _weaponAmmoConsumptionManagers.Add(weaponAmmoConsumptionManager);
         }
 
         AmmoRecovery ammoRecovery = _ammoRecoveryData
