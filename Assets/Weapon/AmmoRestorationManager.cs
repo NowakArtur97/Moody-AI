@@ -11,7 +11,7 @@ public class AmmoRestorationManager : MonoBehaviour
         set { _ammoRecoveryData = value; }
     }
 
-    public enum AmmoRestorationType { DEFEATING_ENEMIES, DAMAGING_PLANET, TAKING_DAMAGE, DODGING_BULLETS }
+    public enum AmmoRestorationType { DEFEATING_ENEMIES, DAMAGING_PLANET, TAKING_DAMAGE, DODGING_BULLETS, STAYING_IN_PLACE }
     public static AmmoRestorationManager AmmoRestorationManagerInstance { get; private set; }
 
     private List<WeaponAmmoConsumptionManager> _weaponAmmoConsumptionManagers;
@@ -37,7 +37,7 @@ public class AmmoRestorationManager : MonoBehaviour
 
         if (weaponAmmoConsumptionManager == null)
         {
-            weaponAmmoConsumptionManager = FindObjectsOfType<WeaponAmmoConsumptionManager>()
+            weaponAmmoConsumptionManager = GetComponentsInChildren<WeaponAmmoConsumptionManager>()
                 .FirstOrDefault(manager => manager.RestorationType == ammoRestorationType);
 
             if (weaponAmmoConsumptionManager == null)
