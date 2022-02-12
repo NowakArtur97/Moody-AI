@@ -604,6 +604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 63171978}
+  - component: {fileID: 63171981}
   - component: {fileID: 63171979}
   - component: {fileID: 63171980}
   m_Layer: 5
@@ -665,7 +666,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponSelectionMenu: {fileID: 1090943245}
   _weaponUpgradeMenu: {fileID: 1092060921}
+  _changeViewButton: {fileID: 1886729776}
+--- !u!114 &63171981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63171977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b1ce9dcf5094f4488d963bcb63f3cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   UnlockButtonGameObject: {fileID: 86916973}
+  MoodSelectionGameObject: {fileID: 341430313}
   UnlockButton: {fileID: 86916975}
   UnlockButtonText: {fileID: 397975304}
 --- !u!1 &86916973
@@ -755,6 +770,30 @@ MonoBehaviour:
       - m_Target: {fileID: 1090943247}
         m_TargetAssemblyTypeName: WeaponUpgradeHandler, Assembly-CSharp
         m_MethodName: UnlockWeapon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 63171980}
+        m_TargetAssemblyTypeName: WeaponUpgradeTabUI, Assembly-CSharp
+        m_MethodName: HandleEnterButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 63171981}
+        m_TargetAssemblyTypeName: WeaponUnlockButtonUI, Assembly-CSharp
+        m_MethodName: HandleUnlockButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2668,6 +2707,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 63171981}
+        m_TargetAssemblyTypeName: WeaponUnlockButtonUI, Assembly-CSharp
+        m_MethodName: HandleUnlockButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 63171980}
+        m_TargetAssemblyTypeName: WeaponUpgradeTabUI, Assembly-CSharp
+        m_MethodName: HandleEnterButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &280617914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3621,6 +3684,30 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 799174717}
           m_ObjectArgumentAssemblyTypeName: WeaponUpgradeManager, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 63171981}
+        m_TargetAssemblyTypeName: WeaponUnlockButtonUI, Assembly-CSharp
+        m_MethodName: HandleUnlockButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 63171980}
+        m_TargetAssemblyTypeName: WeaponUpgradeTabUI, Assembly-CSharp
+        m_MethodName: HandleEnterButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8438,6 +8525,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 63171981}
+        m_TargetAssemblyTypeName: WeaponUnlockButtonUI, Assembly-CSharp
+        m_MethodName: HandleUnlockButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 63171980}
+        m_TargetAssemblyTypeName: WeaponUpgradeTabUI, Assembly-CSharp
+        m_MethodName: HandleEnterButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1176331585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11708,6 +11819,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 63171981}
+        m_TargetAssemblyTypeName: WeaponUnlockButtonUI, Assembly-CSharp
+        m_MethodName: HandleUnlockButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 63171980}
+        m_TargetAssemblyTypeName: WeaponUpgradeTabUI, Assembly-CSharp
+        m_MethodName: HandleEnterButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1674666852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11966,6 +12101,30 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1928528349}
           m_ObjectArgumentAssemblyTypeName: WeaponUpgradeManager, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 63171981}
+        m_TargetAssemblyTypeName: WeaponUnlockButtonUI, Assembly-CSharp
+        m_MethodName: HandleUnlockButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 63171980}
+        m_TargetAssemblyTypeName: WeaponUpgradeTabUI, Assembly-CSharp
+        m_MethodName: HandleEnterButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -13029,7 +13188,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 63171980}
         m_TargetAssemblyTypeName: WeaponUpgradeTabUI, Assembly-CSharp
-        m_MethodName: HandleUI
+        m_MethodName: HandleUITab
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

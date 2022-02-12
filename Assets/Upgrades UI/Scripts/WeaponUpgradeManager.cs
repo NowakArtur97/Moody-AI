@@ -16,7 +16,6 @@ public class WeaponUpgradeManager : MonoBehaviour
 
     public ProjectileType ProjectileType { get; private set; }
     private WeaponDataManager _weaponDataManager;
-    private WeaponUpgradeTabUI _weaponUpgradeTabUI;
 
     public bool IsUnlocked { get; private set; }
     public int CurrentDamageCost { get; private set; }
@@ -31,7 +30,6 @@ public class WeaponUpgradeManager : MonoBehaviour
 
         _weaponSystem = FindObjectOfType<WeaponSystem>();
         _moneyManager = FindObjectOfType<MoneyManager>();
-        _weaponUpgradeTabUI = FindObjectOfType<WeaponUpgradeTabUI>();
 
         if (IsUnlocked)
         {
@@ -55,7 +53,6 @@ public class WeaponUpgradeManager : MonoBehaviour
         if (!_weaponUpgradeData.isUnlockedAtTheBegining)
         {
             _moneyManager.DecreaseMoneyAmount(_weaponUpgradeData.unlockCost);
-            _weaponUpgradeTabUI.HandleUI();
         }
     }
 
