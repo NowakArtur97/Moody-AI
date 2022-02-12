@@ -2106,6 +2106,8 @@ MonoBehaviour:
     RestorationType: 2
   - RecoveryValue: 50
     RestorationType: 3
+  - RecoveryValue: 50
+    RestorationType: 4
 --- !u!1 &258446054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2249,6 +2251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 261452473}
+  - component: {fileID: 261452477}
   - component: {fileID: 261452476}
   - component: {fileID: 261452475}
   - component: {fileID: 261452474}
@@ -2373,6 +2376,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261452472}
   m_CullTransparentMesh: 1
+--- !u!114 &261452477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261452472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e504adf5f218d17478fa60fc9ed5bbbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ammoRestorationType: 0
 --- !u!1 &265739840
 GameObject:
   m_ObjectHideFlags: 0
@@ -6147,6 +6163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 895914051}
+  - component: {fileID: 895914055}
   - component: {fileID: 895914054}
   - component: {fileID: 895914053}
   - component: {fileID: 895914052}
@@ -6271,6 +6288,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895914050}
   m_CullTransparentMesh: 1
+--- !u!114 &895914055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895914050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e504adf5f218d17478fa60fc9ed5bbbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ammoRestorationType: 4
 --- !u!1 &898641731
 GameObject:
   m_ObjectHideFlags: 0
@@ -8022,6 +8052,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1134042314}
+  - component: {fileID: 1134042318}
   - component: {fileID: 1134042317}
   - component: {fileID: 1134042316}
   - component: {fileID: 1134042315}
@@ -8146,6 +8177,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134042313}
   m_CullTransparentMesh: 1
+--- !u!114 &1134042318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134042313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e504adf5f218d17478fa60fc9ed5bbbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ammoRestorationType: 3
 --- !u!1 &1159303860
 GameObject:
   m_ObjectHideFlags: 0
@@ -11266,6 +11310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1631215234}
+  - component: {fileID: 1631215238}
   - component: {fileID: 1631215237}
   - component: {fileID: 1631215236}
   - component: {fileID: 1631215235}
@@ -11390,6 +11435,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631215233}
   m_CullTransparentMesh: 1
+--- !u!114 &1631215238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631215233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e504adf5f218d17478fa60fc9ed5bbbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ammoRestorationType: 2
 --- !u!1 &1653916422
 GameObject:
   m_ObjectHideFlags: 0
@@ -13366,6 +13424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1995826079}
+  - component: {fileID: 1995826083}
   - component: {fileID: 1995826082}
   - component: {fileID: 1995826081}
   - component: {fileID: 1995826080}
@@ -13490,6 +13549,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995826078}
   m_CullTransparentMesh: 1
+--- !u!114 &1995826083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995826078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e504adf5f218d17478fa60fc9ed5bbbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ammoRestorationType: 1
 --- !u!1 &1996963163
 GameObject:
   m_ObjectHideFlags: 0

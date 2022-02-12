@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using static ProjectileObjectPool;
@@ -9,8 +6,8 @@ public class HighlightedBlueprintUI : MonoBehaviour
 {
     [SerializeField] private ProjectileType _projectileType;
 
-    private WeaponUpgradeHandler _weaponUpgradeHandler;
     private Button _myButton;
+    private WeaponUpgradeHandler _weaponUpgradeHandler;
 
     private void Awake()
     {
@@ -27,7 +24,7 @@ public class HighlightedBlueprintUI : MonoBehaviour
     {
         if (_projectileType == _weaponUpgradeHandler.CurrentWeaponUpgradeManager.ProjectileType)
         {
-            _myButton.Select();
+            //_myButton.Select();
         }
     }
 }

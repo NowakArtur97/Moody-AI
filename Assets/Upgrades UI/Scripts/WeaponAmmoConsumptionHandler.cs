@@ -6,6 +6,8 @@ using static AmmoRestorationManager;
 
 public class WeaponAmmoConsumptionHandler : MonoBehaviour
 {
+    public Action OnChangeRestorationType;
+
     private WeaponUpgradeHandler _weaponUpgradeHandler;
     private List<WeaponAmmoConsumptionManager> _weaponAmmoConsumptionManagers;
 
@@ -32,5 +34,6 @@ public class WeaponAmmoConsumptionHandler : MonoBehaviour
         }
 
         weaponAmmoConsumptionManager.RestorationType = ammoRestorationType;
+        OnChangeRestorationType?.Invoke();
     }
 }
