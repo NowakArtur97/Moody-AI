@@ -9,16 +9,21 @@ public class HighlightedBlueprintUI : MonoBehaviour
 {
     [SerializeField] private ProjectileType _projectileType;
 
-    private Button _myButton;
     private WeaponUpgradeHandler _weaponUpgradeHandler;
+    private Button _myButton;
 
     private void Awake()
     {
         _myButton = GetComponent<Button>();
         _weaponUpgradeHandler = FindObjectOfType<WeaponUpgradeHandler>();
+        _weaponUpgradeHandler.OnUpdateWeapon += HandleButtonHighlight;
     }
 
-    private void Update()
+    private void OnDestroy() => _weaponUpgradeHandler.OnUpdateWeapon -= HandleButtonHighlight;
+
+    private void OnEnable() => HandleButtonHighlight();
+
+    private void HandleButtonHighlight()
     {
         if (_projectileType == _weaponUpgradeHandler.CurrentWeaponUpgradeManager.ProjectileType)
         {
