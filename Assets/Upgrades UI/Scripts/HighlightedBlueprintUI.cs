@@ -24,7 +24,7 @@ public class HighlightedBlueprintUI : MonoBehaviour
     {
         if (_projectileType == _weaponUpgradeHandler.CurrentWeaponUpgradeManager.ProjectileType)
         {
-            //_myButton.Select();
+            _myButton.Select();
         }
     }
 }

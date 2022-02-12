@@ -7,15 +7,17 @@ using static AmmoRestorationManager;
 public class HighlightedMoodUI : MonoBehaviour
 {
     [SerializeField] private AmmoRestorationType _ammoRestorationType;
+    [SerializeField] private Sprite _defaultSprite;
+    [SerializeField] private Sprite _highlightedSprite;
 
-    private Button _myButton;
+    private Image _myImage;
     private WeaponUpgradeHandler _weaponUpgradeHandler;
     private WeaponAmmoConsumptionHandler _weaponAmmoConsumptionHandler;
     private List<WeaponAmmoConsumptionManager> _weaponAmmoConsumptionManagers;
 
     private void Awake()
     {
-        _myButton = GetComponent<Button>();
+        _myImage = GetComponent<Image>();
 
         _weaponUpgradeHandler = FindObjectOfType<WeaponUpgradeHandler>();
         _weaponUpgradeHandler.OnUpdateWeapon += HandleMoodHighlight;
@@ -39,9 +41,6 @@ public class HighlightedMoodUI : MonoBehaviour
         WeaponAmmoConsumptionManager weaponAmmoConsumptionManager = _weaponAmmoConsumptionManagers
             .Find(manager => manager.ProjectileType == _weaponUpgradeHandler.CurrentWeaponUpgradeManager.ProjectileType);
 
-        if (_ammoRestorationType == weaponAmmoConsumptionManager.RestorationType)
-        {
-            _myButton.Select();
-        }
+        _myImage.sprite = _ammoRestorationType == weaponAmmoConsumptionManager.RestorationType ? _highlightedSprite : _defaultSprite;
     }
 }
