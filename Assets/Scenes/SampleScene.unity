@@ -245,10 +245,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 30841917}
+  - component: {fileID: 30841921}
   - component: {fileID: 30841920}
   - component: {fileID: 30841919}
   m_Layer: 5
-  m_Name: Angry Mood Button
+  m_Name: Alien Weapon Mood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,6 +313,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30841916}
   m_CullTransparentMesh: 1
+--- !u!114 &30841921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30841916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d584f6ca3e9d2f0499a3a37840ee87f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectileType: 1
+  _emptyFaceSprite: {fileID: 21300000, guid: 9155f819b9412ba468ecc49cc1987765, type: 3}
+  _happyFaceSprite: {fileID: -630757326, guid: b342c2bb260f39a43a5826dc66434b67, type: 3}
+  _angryFaceSprite: {fileID: 1568644539, guid: 962a8b886e3443c4d913815475f6f904, type: 3}
+  _sadFaceSprite: {fileID: -272028167, guid: 097f4c9fb6ca67f478b37557ee141043, type: 3}
+  _sleepyFaceSprite: {fileID: 335629722, guid: ebc8816a3d118e345a833f736db060ae, type: 3}
+  _surprisedFaceSprite: {fileID: -582784814, guid: 1544d38202910ad4bb235c4c7fb7103d, type: 3}
 --- !u!1 &31117314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,10 +1112,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 117310462}
+  - component: {fileID: 117310466}
   - component: {fileID: 117310465}
   - component: {fileID: 117310464}
   m_Layer: 5
-  m_Name: Happy Mood Button
+  m_Name: Default Weapon Mood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1159,6 +1180,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117310461}
   m_CullTransparentMesh: 1
+--- !u!114 &117310466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117310461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d584f6ca3e9d2f0499a3a37840ee87f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectileType: 0
+  _emptyFaceSprite: {fileID: 21300000, guid: 9155f819b9412ba468ecc49cc1987765, type: 3}
+  _happyFaceSprite: {fileID: -630757326, guid: b342c2bb260f39a43a5826dc66434b67, type: 3}
+  _angryFaceSprite: {fileID: 1568644539, guid: 962a8b886e3443c4d913815475f6f904, type: 3}
+  _sadFaceSprite: {fileID: -272028167, guid: 097f4c9fb6ca67f478b37557ee141043, type: 3}
+  _sleepyFaceSprite: {fileID: 335629722, guid: ebc8816a3d118e345a833f736db060ae, type: 3}
+  _surprisedFaceSprite: {fileID: -582784814, guid: 1544d38202910ad4bb235c4c7fb7103d, type: 3}
 --- !u!1 &123928602
 GameObject:
   m_ObjectHideFlags: 0
@@ -4929,10 +4969,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 590609551}
+  - component: {fileID: 590609555}
   - component: {fileID: 590609554}
   - component: {fileID: 590609553}
   m_Layer: 5
-  m_Name: Sleepy Mood Button
+  m_Name: Spike Mine Mood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4996,6 +5037,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590609550}
   m_CullTransparentMesh: 1
+--- !u!114 &590609555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590609550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d584f6ca3e9d2f0499a3a37840ee87f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectileType: 3
+  _emptyFaceSprite: {fileID: 21300000, guid: 9155f819b9412ba468ecc49cc1987765, type: 3}
+  _happyFaceSprite: {fileID: -630757326, guid: b342c2bb260f39a43a5826dc66434b67, type: 3}
+  _angryFaceSprite: {fileID: 1568644539, guid: 962a8b886e3443c4d913815475f6f904, type: 3}
+  _sadFaceSprite: {fileID: -272028167, guid: 097f4c9fb6ca67f478b37557ee141043, type: 3}
+  _sleepyFaceSprite: {fileID: 335629722, guid: ebc8816a3d118e345a833f736db060ae, type: 3}
+  _surprisedFaceSprite: {fileID: -582784814, guid: 1544d38202910ad4bb235c4c7fb7103d, type: 3}
 --- !u!1 &594855484
 GameObject:
   m_ObjectHideFlags: 0
@@ -9008,10 +9068,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1254819351}
+  - component: {fileID: 1254819355}
   - component: {fileID: 1254819354}
   - component: {fileID: 1254819353}
   m_Layer: 5
-  m_Name: Sad Mood Button
+  m_Name: Shuriken Mood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9075,6 +9136,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254819350}
   m_CullTransparentMesh: 1
+--- !u!114 &1254819355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254819350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d584f6ca3e9d2f0499a3a37840ee87f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectileType: 4
+  _emptyFaceSprite: {fileID: 21300000, guid: 9155f819b9412ba468ecc49cc1987765, type: 3}
+  _happyFaceSprite: {fileID: -630757326, guid: b342c2bb260f39a43a5826dc66434b67, type: 3}
+  _angryFaceSprite: {fileID: 1568644539, guid: 962a8b886e3443c4d913815475f6f904, type: 3}
+  _sadFaceSprite: {fileID: -272028167, guid: 097f4c9fb6ca67f478b37557ee141043, type: 3}
+  _sleepyFaceSprite: {fileID: 335629722, guid: ebc8816a3d118e345a833f736db060ae, type: 3}
+  _surprisedFaceSprite: {fileID: -582784814, guid: 1544d38202910ad4bb235c4c7fb7103d, type: 3}
 --- !u!1 &1255371283
 GameObject:
   m_ObjectHideFlags: 0
@@ -12565,10 +12645,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1827502172}
+  - component: {fileID: 1827502176}
   - component: {fileID: 1827502175}
   - component: {fileID: 1827502174}
   m_Layer: 5
-  m_Name: Surprised Mood Button
+  m_Name: Homing Missile Mood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12632,6 +12713,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1827502171}
   m_CullTransparentMesh: 1
+--- !u!114 &1827502176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827502171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d584f6ca3e9d2f0499a3a37840ee87f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _projectileType: 2
+  _emptyFaceSprite: {fileID: 21300000, guid: 9155f819b9412ba468ecc49cc1987765, type: 3}
+  _happyFaceSprite: {fileID: -630757326, guid: b342c2bb260f39a43a5826dc66434b67, type: 3}
+  _angryFaceSprite: {fileID: 1568644539, guid: 962a8b886e3443c4d913815475f6f904, type: 3}
+  _sadFaceSprite: {fileID: -272028167, guid: 097f4c9fb6ca67f478b37557ee141043, type: 3}
+  _sleepyFaceSprite: {fileID: 335629722, guid: ebc8816a3d118e345a833f736db060ae, type: 3}
+  _surprisedFaceSprite: {fileID: -582784814, guid: 1544d38202910ad4bb235c4c7fb7103d, type: 3}
 --- !u!1 &1832962610
 GameObject:
   m_ObjectHideFlags: 0
