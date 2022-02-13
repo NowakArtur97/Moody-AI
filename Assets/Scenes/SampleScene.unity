@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 3
-  _restorationType: 4
+  _restorationType: 0
   _maxAmmoCapacity: 400
   _defaultRecoveryTime: 1
   _defaultRecoveryValue: 5
@@ -2467,7 +2467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e504adf5f218d17478fa60fc9ed5bbbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ammoRestorationType: 0
+  _ammoRestorationType: 1
   _defaultSprite: {fileID: 1651291639, guid: b342c2bb260f39a43a5826dc66434b67, type: 3}
   _highlightedSprite: {fileID: -630757326, guid: b342c2bb260f39a43a5826dc66434b67, type: 3}
 --- !u!1 &265739840
@@ -6449,7 +6449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e504adf5f218d17478fa60fc9ed5bbbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ammoRestorationType: 4
+  _ammoRestorationType: 5
   _defaultSprite: {fileID: -2143323333, guid: ebc8816a3d118e345a833f736db060ae, type: 3}
   _highlightedSprite: {fileID: 335629722, guid: ebc8816a3d118e345a833f736db060ae, type: 3}
 --- !u!1 &898641731
@@ -6955,7 +6955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 4
-  _restorationType: 3
+  _restorationType: 0
   _maxAmmoCapacity: 400
   _defaultRecoveryTime: 1
   _defaultRecoveryValue: 5
@@ -8340,7 +8340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e504adf5f218d17478fa60fc9ed5bbbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ammoRestorationType: 3
+  _ammoRestorationType: 4
   _defaultSprite: {fileID: -1438386784, guid: 1544d38202910ad4bb235c4c7fb7103d, type: 3}
   _highlightedSprite: {fileID: -582784814, guid: 1544d38202910ad4bb235c4c7fb7103d, type: 3}
 --- !u!1 &1159303860
@@ -8885,7 +8885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 1
-  _restorationType: 2
+  _restorationType: 0
   _maxAmmoCapacity: 400
   _defaultRecoveryTime: 1
   _defaultRecoveryValue: 5
@@ -11644,7 +11644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e504adf5f218d17478fa60fc9ed5bbbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ammoRestorationType: 2
+  _ammoRestorationType: 3
   _defaultSprite: {fileID: 1976126225, guid: 962a8b886e3443c4d913815475f6f904, type: 3}
   _highlightedSprite: {fileID: 1568644539, guid: 962a8b886e3443c4d913815475f6f904, type: 3}
 --- !u!1 &1653916422
@@ -13828,7 +13828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e504adf5f218d17478fa60fc9ed5bbbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ammoRestorationType: 1
+  _ammoRestorationType: 2
   _defaultSprite: {fileID: 1807053649, guid: 097f4c9fb6ca67f478b37557ee141043, type: 3}
   _highlightedSprite: {fileID: -272028167, guid: 097f4c9fb6ca67f478b37557ee141043, type: 3}
 --- !u!1 &1996963163
@@ -14143,7 +14143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 2
-  _restorationType: 1
+  _restorationType: 0
   _maxAmmoCapacity: 400
   _defaultRecoveryTime: 1
   _defaultRecoveryValue: 5
