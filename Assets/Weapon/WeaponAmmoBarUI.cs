@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,10 +7,14 @@ using static AmmoRestorationManager;
 public class WeaponAmmoBarUI : MonoBehaviour
 {
     [SerializeField] private AmmoRestorationType _ammoRestorationType;
+    public AmmoRestorationType RestorationType
+    {
+        get { return _ammoRestorationType; }
+        set { _ammoRestorationType = value; }
+    }
 
     private Scrollbar _myScrollbar;
     private WeaponAmmoConsumptionManager _weaponAmmoConsumptionManager;
-    private WaveManager _waveManager;
     private List<WeaponAmmoConsumptionManager> _weaponAmmoConsumptionManagers;
 
     private void Awake()
@@ -20,15 +23,10 @@ public class WeaponAmmoBarUI : MonoBehaviour
 
         _weaponAmmoConsumptionManagers = FindObjectsOfType<WeaponAmmoConsumptionManager>()
               .ToList();
-
-        _waveManager = FindObjectOfType<WaveManager>();
-        _waveManager.OnStartWave += FindWeaponAmmoConsumptionManager;
     }
 
-    private void OnDestroy() => _waveManager.OnStartWave -= FindWeaponAmmoConsumptionManager;
-
-    private void FindWeaponAmmoConsumptionManager(int wave) => _weaponAmmoConsumptionManager = _weaponAmmoConsumptionManagers
-        .Find(manager => manager.RestorationType == _ammoRestorationType);
+    private void OnEnable() => _weaponAmmoConsumptionManager = _weaponAmmoConsumptionManagers
+            .Find(manager => manager.RestorationType == _ammoRestorationType);
 
     private void Update()
     {

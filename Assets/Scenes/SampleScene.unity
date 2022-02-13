@@ -7166,6 +7166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 865221600}
+  - component: {fileID: 865221602}
   - component: {fileID: 865221601}
   m_Layer: 5
   m_Name: Ammo Bars
@@ -7225,6 +7226,24 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &865221602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865221599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e72c7ee4b47c9346919fe3499e1913b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ammoBars:
+  - {fileID: 621098718}
+  - {fileID: 920747639}
+  - {fileID: 315954194}
+  - {fileID: 251287204}
+  - {fileID: 879042319}
 --- !u!1 &879042314
 GameObject:
   m_ObjectHideFlags: 0
@@ -7239,7 +7258,7 @@ GameObject:
   - component: {fileID: 879042317}
   - component: {fileID: 879042316}
   m_Layer: 5
-  m_Name: Surprisd Ammo Scrollbar
+  m_Name: Surprised Ammo Scrollbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
