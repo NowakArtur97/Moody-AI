@@ -19,6 +19,11 @@ public class WeaponAmmoConsumptionManager : MonoBehaviour
         set { _restorationType = value; }
     }
     [SerializeField] private float _maxAmmoCapacity = 400.0f;
+    public float MaxAmmoCapacity
+    {
+        get { return _maxAmmoCapacity; }
+        set { _maxAmmoCapacity = value; }
+    }
     [SerializeField] private float _defaultRecoveryTime = 1f;
     [SerializeField] private float _defaultRecoveryValue = 5f;
 
