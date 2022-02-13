@@ -76,6 +76,9 @@ public class WeaponMoodUI : MonoBehaviour
                 case AmmoRestorationType.DODGING_BULLETS:
                     _myImage.sprite = _surprisedFaceSprite;
                     break;
+                default:
+                    _myImage.sprite = _emptyFaceSprite;
+                    break;
             }
         }
         else

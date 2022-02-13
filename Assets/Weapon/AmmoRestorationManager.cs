@@ -11,7 +11,7 @@ public class AmmoRestorationManager : MonoBehaviour
         set { _ammoRecoveryData = value; }
     }
 
-    public enum AmmoRestorationType { DEFEATING_ENEMIES, DAMAGING_PLANET, TAKING_DAMAGE, DODGING_BULLETS, STAYING_IN_PLACE }
+    public enum AmmoRestorationType { EMPTY, DEFEATING_ENEMIES, DAMAGING_PLANET, TAKING_DAMAGE, DODGING_BULLETS, STAYING_IN_PLACE }
     public static AmmoRestorationManager AmmoRestorationManagerInstance { get; private set; }
 
     private List<WeaponAmmoConsumptionManager> _weaponAmmoConsumptionManagers;

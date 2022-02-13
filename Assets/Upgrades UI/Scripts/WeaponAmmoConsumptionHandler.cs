@@ -33,7 +33,20 @@ public class WeaponAmmoConsumptionHandler : MonoBehaviour
             _weaponAmmoConsumptionManagers.Add(weaponAmmoConsumptionManager);
         }
 
+        RemovePreviousIfExists(ammoRestorationType);
+
         weaponAmmoConsumptionManager.RestorationType = ammoRestorationType;
         OnChangeRestorationType?.Invoke();
+    }
+
+    private void RemovePreviousIfExists(AmmoRestorationType ammoRestorationType)
+    {
+        WeaponAmmoConsumptionManager weaponAmmoConsumptionManagerWithSelectedRestorationType = _weaponAmmoConsumptionManagers
+                    .Find(manager => manager.RestorationType == ammoRestorationType);
+
+        if (weaponAmmoConsumptionManagerWithSelectedRestorationType != null)
+        {
+            weaponAmmoConsumptionManagerWithSelectedRestorationType.RestorationType = AmmoRestorationType.EMPTY;
+        }
     }
 }
