@@ -10,13 +10,22 @@ public class WeaponAmmoConsumptionHandler : MonoBehaviour
 
     private WeaponUpgradeHandler _weaponUpgradeHandler;
     private List<WeaponAmmoConsumptionManager> _weaponAmmoConsumptionManagers;
+    private List<AmmoRestorationType> ammoRestorationTypeValues;
 
     private void Awake()
     {
+        ammoRestorationTypeValues = Enum.GetValues(typeof(AmmoRestorationType)).Cast<AmmoRestorationType>()
+            .Where(restorationType => restorationType != AmmoRestorationType.EMPTY)
+            .ToList();
+
         _weaponUpgradeHandler = FindObjectOfType<WeaponUpgradeHandler>();
 
-        _weaponAmmoConsumptionManagers = new List<WeaponAmmoConsumptionManager>();
+        _weaponAmmoConsumptionManagers = FindObjectsOfType<WeaponAmmoConsumptionManager>().ToList();
+
+        _weaponUpgradeHandler.OnUpdateWeapon += SetupMoodsForAllEmptyManagers;
     }
+
+    private void OnDestroy() => _weaponUpgradeHandler.OnUpdateWeapon -= SetupMoodsForAllEmptyManagers;
 
     public void ChangeRestorationType(string ammoRestorationTypeString)
     {
@@ -25,18 +34,30 @@ public class WeaponAmmoConsumptionHandler : MonoBehaviour
         WeaponAmmoConsumptionManager weaponAmmoConsumptionManager = _weaponAmmoConsumptionManagers
             .Find(manager => manager.ProjectileType == _weaponUpgradeHandler.CurrentWeaponUpgradeManager.ProjectileType);
 
-        if (weaponAmmoConsumptionManager == null)
+        if (weaponAmmoConsumptionManager.RestorationType == ammoRestorationType)
         {
-            weaponAmmoConsumptionManager = GetComponentsInChildren<WeaponAmmoConsumptionManager>()
-                .First(manager => manager.ProjectileType == _weaponUpgradeHandler.CurrentWeaponUpgradeManager.ProjectileType);
-
-            _weaponAmmoConsumptionManagers.Add(weaponAmmoConsumptionManager);
+            return;
         }
 
         RemovePreviousIfExists(ammoRestorationType);
 
         weaponAmmoConsumptionManager.RestorationType = ammoRestorationType;
+
+        SetupMoodsForAllEmptyManagers();
+
         OnChangeRestorationType?.Invoke();
+    }
+
+    private void SetupMoodsForAllEmptyManagers()
+    {
+        List<AmmoRestorationType> freeRestorationType = ammoRestorationTypeValues
+               .FindAll(restorationType => !_weaponAmmoConsumptionManagers.Any(manager => manager.RestorationType == restorationType));
+
+        int index = 0;
+
+        _weaponAmmoConsumptionManagers.Where(manager => manager.RestorationType == AmmoRestorationType.EMPTY)
+            .ToList()
+            .ForEach(manager => manager.RestorationType = freeRestorationType[index++]);
     }
 
     private void RemovePreviousIfExists(AmmoRestorationType ammoRestorationType)
