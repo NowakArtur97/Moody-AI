@@ -4140,6 +4140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 462285598}
+  - component: {fileID: 462285601}
   - component: {fileID: 462285600}
   - component: {fileID: 462285599}
   m_Layer: 5
@@ -4207,6 +4208,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462285597}
   m_CullTransparentMesh: 1
+--- !u!114 &462285601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462285597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0d8567a9b2e0a40b25651cf68bd2ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ammoRestorationType: 5
+  _defaultWeaponSprite: {fileID: 408478854, guid: 48c74b27556f6ba4c91908561fbff61a, type: 3}
+  _alienWeaponSprite: {fileID: 320455079, guid: 63963634e304e264f966bcb2f32b65cf, type: 3}
+  _rocketLauncherSprite: {fileID: -1012265366, guid: 7e51c433d783ff14191304be26b0bbd7, type: 3}
+  _mineThrowerSprite: {fileID: -1820796776, guid: d1e836d225a6ae14bb3719af9336aa3b, type: 3}
+  _shurikenThrowerSprite: {fileID: -837851586, guid: ad0a0192ac686c14f85fb39cb940954d, type: 3}
 --- !u!1 &503254017
 GameObject:
   m_ObjectHideFlags: 0
@@ -7322,10 +7341,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ammoBars:
   - {fileID: 621098718}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1304072156}
+  - {fileID: 503254022}
+  - {fileID: 1075047906}
+  - {fileID: 1319524359}
+  _ammoBarsImages:
+  - {fileID: 1001018669}
+  - {fileID: 909455743}
+  - {fileID: 2014091343}
+  - {fileID: 462285601}
+  - {fileID: 1309204277}
 --- !u!1 &873600742
 GameObject:
   m_ObjectHideFlags: 0
@@ -7838,6 +7863,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 909455740}
+  - component: {fileID: 909455743}
   - component: {fileID: 909455742}
   - component: {fileID: 909455741}
   m_Layer: 5
@@ -7905,6 +7931,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909455739}
   m_CullTransparentMesh: 1
+--- !u!114 &909455743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909455739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0d8567a9b2e0a40b25651cf68bd2ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ammoRestorationType: 3
+  _defaultWeaponSprite: {fileID: 408478854, guid: 48c74b27556f6ba4c91908561fbff61a, type: 3}
+  _alienWeaponSprite: {fileID: 320455079, guid: 63963634e304e264f966bcb2f32b65cf, type: 3}
+  _rocketLauncherSprite: {fileID: -1012265366, guid: 7e51c433d783ff14191304be26b0bbd7, type: 3}
+  _mineThrowerSprite: {fileID: -1820796776, guid: d1e836d225a6ae14bb3719af9336aa3b, type: 3}
+  _shurikenThrowerSprite: {fileID: -837851586, guid: ad0a0192ac686c14f85fb39cb940954d, type: 3}
 --- !u!1 &909961924
 GameObject:
   m_ObjectHideFlags: 0
@@ -8940,6 +8984,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1001018666}
+  - component: {fileID: 1001018669}
   - component: {fileID: 1001018668}
   - component: {fileID: 1001018667}
   m_Layer: 5
@@ -9007,6 +9052,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001018665}
   m_CullTransparentMesh: 1
+--- !u!114 &1001018669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001018665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0d8567a9b2e0a40b25651cf68bd2ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ammoRestorationType: 1
+  _defaultWeaponSprite: {fileID: 408478854, guid: 48c74b27556f6ba4c91908561fbff61a, type: 3}
+  _alienWeaponSprite: {fileID: 320455079, guid: 63963634e304e264f966bcb2f32b65cf, type: 3}
+  _rocketLauncherSprite: {fileID: -1012265366, guid: 7e51c433d783ff14191304be26b0bbd7, type: 3}
+  _mineThrowerSprite: {fileID: -1820796776, guid: d1e836d225a6ae14bb3719af9336aa3b, type: 3}
+  _shurikenThrowerSprite: {fileID: -837851586, guid: ad0a0192ac686c14f85fb39cb940954d, type: 3}
 --- !u!1 &1045587316
 GameObject:
   m_ObjectHideFlags: 0
@@ -11641,6 +11704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1309204274}
+  - component: {fileID: 1309204277}
   - component: {fileID: 1309204276}
   - component: {fileID: 1309204275}
   m_Layer: 5
@@ -11708,6 +11772,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309204273}
   m_CullTransparentMesh: 1
+--- !u!114 &1309204277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309204273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0d8567a9b2e0a40b25651cf68bd2ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ammoRestorationType: 4
+  _defaultWeaponSprite: {fileID: 408478854, guid: 48c74b27556f6ba4c91908561fbff61a, type: 3}
+  _alienWeaponSprite: {fileID: 320455079, guid: 63963634e304e264f966bcb2f32b65cf, type: 3}
+  _rocketLauncherSprite: {fileID: -1012265366, guid: 7e51c433d783ff14191304be26b0bbd7, type: 3}
+  _mineThrowerSprite: {fileID: -1820796776, guid: d1e836d225a6ae14bb3719af9336aa3b, type: 3}
+  _shurikenThrowerSprite: {fileID: -837851586, guid: ad0a0192ac686c14f85fb39cb940954d, type: 3}
 --- !u!1 &1319524354
 GameObject:
   m_ObjectHideFlags: 0
@@ -16189,6 +16271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2014091340}
+  - component: {fileID: 2014091343}
   - component: {fileID: 2014091342}
   - component: {fileID: 2014091341}
   m_Layer: 5
@@ -16256,6 +16339,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014091339}
   m_CullTransparentMesh: 1
+--- !u!114 &2014091343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014091339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0d8567a9b2e0a40b25651cf68bd2ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ammoRestorationType: 2
+  _defaultWeaponSprite: {fileID: 408478854, guid: 48c74b27556f6ba4c91908561fbff61a, type: 3}
+  _alienWeaponSprite: {fileID: 320455079, guid: 63963634e304e264f966bcb2f32b65cf, type: 3}
+  _rocketLauncherSprite: {fileID: -1012265366, guid: 7e51c433d783ff14191304be26b0bbd7, type: 3}
+  _mineThrowerSprite: {fileID: -1820796776, guid: d1e836d225a6ae14bb3719af9336aa3b, type: 3}
+  _shurikenThrowerSprite: {fileID: -837851586, guid: ad0a0192ac686c14f85fb39cb940954d, type: 3}
 --- !u!1 &2016319197
 GameObject:
   m_ObjectHideFlags: 0
