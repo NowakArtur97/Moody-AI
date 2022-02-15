@@ -33,7 +33,8 @@ public class WeaponAmmoBarImageUI : MonoBehaviour
 
     private void SetupImage()
     {
-        WeaponAmmoConsumptionManager weaponAmmoConsumptionManager = _weaponAmmoConsumptionManager.Find(manager => manager.RestorationType == _ammoRestorationType);
+        WeaponAmmoConsumptionManager weaponAmmoConsumptionManager = _weaponAmmoConsumptionManager
+            .Find(manager => manager.RestorationType == _ammoRestorationType);
 
         if (weaponAmmoConsumptionManager != null)
         {

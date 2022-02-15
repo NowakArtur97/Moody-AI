@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static ProjectileObjectPool;
 
 public class WeaponAmmoBarsManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class WeaponAmmoBarsManager : MonoBehaviour
     private WaveManager _waveManager;
     private WaveSpawner _waveSpawner;
     private List<WeaponAmmoConsumptionManager> _weaponAmmoConsumptionManagers;
+    private List<WeaponUpgradeManager> _weaponUpgradeManagers;
 
     private void Awake()
     {
@@ -25,6 +27,7 @@ public class WeaponAmmoBarsManager : MonoBehaviour
         _waveSpawner.OnFinishWave += HideBars;
 
         _weaponAmmoConsumptionManagers = FindObjectsOfType<WeaponAmmoConsumptionManager>().ToList();
+        _weaponUpgradeManagers = FindObjectsOfType<WeaponUpgradeManager>().ToList();
     }
 
     private void OnDestroy()
@@ -35,13 +38,30 @@ public class WeaponAmmoBarsManager : MonoBehaviour
 
     private void ShowUsedBars(int waveNumber)
     {
+        List<ProjectileType> activeProjectileTypes = _weaponUpgradeManagers
+            .Where(manager => manager.IsUnlocked)
+            .Select(manager => manager.ProjectileType)
+            .ToList();
+
         _weaponAmmoBars
-            .ForEach(bar => bar.gameObject
-                .SetActive(_weaponAmmoConsumptionManagers.Exists(manager => manager.RestorationType == bar.RestorationType)));
+            .ForEach(bar =>
+                {
+                    WeaponAmmoConsumptionManager _weaponAmmoConsumptionManager = _weaponAmmoConsumptionManagers
+                        .Find(manager => manager.RestorationType == bar.RestorationType);
+                    bar.gameObject.SetActive(_weaponAmmoConsumptionManager != null &&
+                        activeProjectileTypes.Contains(_weaponAmmoConsumptionManager.ProjectileType));
+                }
+            );
 
         _weaponAmmoBarsImages
-            .ForEach(image => image.gameObject
-                .SetActive(_weaponAmmoConsumptionManagers.Exists(manager => manager.RestorationType == image.RestorationType)));
+            .ForEach(image =>
+                {
+                    WeaponAmmoConsumptionManager _weaponAmmoConsumptionManager = _weaponAmmoConsumptionManagers
+                        .Find(manager => manager.RestorationType == image.RestorationType);
+                    image.gameObject.SetActive(_weaponAmmoConsumptionManager != null &&
+                        activeProjectileTypes.Contains(_weaponAmmoConsumptionManager.ProjectileType));
+                }
+            );
     }
 
     private void HideBars()
