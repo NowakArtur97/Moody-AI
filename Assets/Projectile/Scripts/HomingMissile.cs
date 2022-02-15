@@ -32,8 +32,6 @@ public class HomingMissile : BaseProjectile
 
     private void FixedUpdate()
     {
-        Debug.Log(WeaponDataManager.CurrentMovementSpeed);
-
         if (IsMoving)
         {
             if (_target == null)

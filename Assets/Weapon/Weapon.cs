@@ -15,6 +15,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] float _minSoundPitch = 0.95f;
     [SerializeField] float _maxSoundPitch = 1.05f;
     [SerializeField] bool _isEnemy = false;
+    [SerializeField] float _recoil = 10.0f;
 
     public bool CanShoot { get; private set; }
     private bool _isShooting;
@@ -23,6 +24,7 @@ public class Weapon : MonoBehaviour
     private string _projectileLayerName;
 
     private AudioSource _myAudioSource;
+    private Rigidbody2D _myRigidbody2D;
     private WeaponDataManager _weaponDataManager;
     private WeaponAmmoConsumptionManager _weaponAmmoConsumptionManager;
 
@@ -30,6 +32,11 @@ public class Weapon : MonoBehaviour
     {
         _myAudioSource = GetComponent<AudioSource>();
         _projectileLayerName = _isEnemy ? ENEMY_PROJECTILE_LAYER : PLAYER_PROJECTILE_LAYER;
+
+        if (!_isEnemy)
+        {
+            _myRigidbody2D = GetComponentInParent<Rigidbody2D>();
+        }
     }
 
     private void OnEnable()
@@ -73,6 +80,7 @@ public class Weapon : MonoBehaviour
         {
             _weaponAmmoConsumptionManager.ConsumeAmmunition();
             CameraShakeInstance.Shake();
+            _myRigidbody2D.AddForce(-_projectileDirectionVector * _recoil);
         }
 
         CanShoot = false;

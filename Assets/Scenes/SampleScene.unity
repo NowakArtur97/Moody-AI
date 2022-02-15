@@ -4131,6 +4131,7 @@ MonoBehaviour:
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
   _isEnemy: 0
+  _recoil: 12
 --- !u!1 &462285597
 GameObject:
   m_ObjectHideFlags: 0
@@ -5737,6 +5738,7 @@ MonoBehaviour:
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
   _isEnemy: 0
+  _recoil: 8
 --- !u!1 &600604451
 GameObject:
   m_ObjectHideFlags: 0
@@ -8622,6 +8624,7 @@ MonoBehaviour:
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
   _isEnemy: 0
+  _recoil: 12
 --- !u!1 &960167901
 GameObject:
   m_ObjectHideFlags: 0
@@ -11234,6 +11237,7 @@ MonoBehaviour:
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
   _isEnemy: 0
+  _recoil: 20
 --- !u!1 &1269329391
 GameObject:
   m_ObjectHideFlags: 0
@@ -15441,6 +15445,7 @@ MonoBehaviour:
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
   _isEnemy: 0
+  _recoil: 10
 --- !u!1 &1928528347
 GameObject:
   m_ObjectHideFlags: 0
