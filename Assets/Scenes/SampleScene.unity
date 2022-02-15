@@ -7339,18 +7339,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e72c7ee4b47c9346919fe3499e1913b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ammoBars:
-  - {fileID: 621098718}
-  - {fileID: 1304072156}
-  - {fileID: 503254022}
-  - {fileID: 1075047906}
-  - {fileID: 1319524359}
-  _ammoBarsImages:
-  - {fileID: 1001018669}
-  - {fileID: 909455743}
-  - {fileID: 2014091343}
-  - {fileID: 462285601}
-  - {fileID: 1309204277}
+  _barsWrappers:
+  - {fileID: 1206104999}
+  - {fileID: 313828477}
+  - {fileID: 728368088}
+  - {fileID: 739848676}
+  - {fileID: 400135065}
 --- !u!1 &873600742
 GameObject:
   m_ObjectHideFlags: 0
