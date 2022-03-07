@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8122089589880650065}
   - component: {fileID: 8122089589880650064}
+  - component: {fileID: 6140608367824891955}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -84,6 +85,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6140608367824891955
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8122089589880650066}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 984a047bee8720f4b9c24fcb59d41b63, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8122089591293258863
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,6 +256,7 @@ MonoBehaviour:
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
   _isEnemy: 1
+  _isPlanet: 0
   _currentHealth: 0
 --- !u!82 &8122089591362620966
 AudioSource:
