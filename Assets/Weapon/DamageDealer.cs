@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class DamageDealer : MonoBehaviour
 {
+    private readonly string DAMAGE_TRIGGER = "damage";
+
     [SerializeField] private float _damageAmount = 5.0f;
     [SerializeField] float _offsetBetweenDealingDamage = 0.5f;
     [SerializeField] float _minSoundPitch = 0.95f;
@@ -14,12 +16,14 @@ public class DamageDealer : MonoBehaviour
     private List<IDamagable> _toDamage;
 
     private AudioSource _myAudioSource;
+    private Animator _myAnimatior;
 
     private void Awake()
     {
         _canAttack = true;
         _toDamage = new List<IDamagable>();
         _myAudioSource = GetComponent<AudioSource>();
+        _myAnimatior = gameObject.transform.parent.GetComponentInChildren<Animator>();
     }
 
     private void Update() => DealDamage();
@@ -28,9 +32,11 @@ public class DamageDealer : MonoBehaviour
     {
         if (_canAttack && _toDamage.Count > 0)
         {
-            StartCoroutine(DamageCoroutine());
+            _myAnimatior.SetTrigger(DAMAGE_TRIGGER);
         }
     }
+
+    public void DamageTrigger() => StartCoroutine(DamageCoroutine());
 
     private IEnumerator DamageCoroutine()
     {

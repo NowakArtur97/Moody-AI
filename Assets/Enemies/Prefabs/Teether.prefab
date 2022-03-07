@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7553509044128949834}
+  - component: {fileID: 6430669355541905736}
   - component: {fileID: 7553509044128949835}
+  - component: {fileID: 6328933488599849346}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -32,6 +34,18 @@ Transform:
   m_Father: {fileID: 7553509044135878636}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6430669355541905736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7553509044128949941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ee802f8da5f514bb17e1f21080bec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &7553509044128949835
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -84,6 +98,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6328933488599849346
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7553509044128949941}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4f33719c285588545be4470797d0737c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7553509044135878632
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +505,7 @@ MonoBehaviour:
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
   _isEnemy: 1
+  _isPlanet: 0
   _currentHealth: 0
 --- !u!82 &7553509045732516326
 AudioSource:
