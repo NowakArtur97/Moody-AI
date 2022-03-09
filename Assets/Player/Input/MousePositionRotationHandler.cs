@@ -23,7 +23,10 @@ public class MousePositionRotationHandler : MonoBehaviour
 
     private void HandleProjectileDirection()
     {
-        _weaponSystem.CurentWeapon.SetProjectileDirection(transform.rotation);
-        _weaponSystem.CurentWeapon.SetProjectileDirection(transform.right);
+        if (_weaponSystem.CurentWeapon)
+        {
+            _weaponSystem.CurentWeapon.SetProjectileDirection(transform.rotation);
+            _weaponSystem.CurentWeapon.SetProjectileDirection(transform.right);
+        }
     }
 }

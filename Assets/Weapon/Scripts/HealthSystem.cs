@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using static EnemyObjectPool;
 using static AmmoRestorationManager;
+using System;
 
 [RequireComponent(typeof(AudioSource))]
 public class HealthSystem : MonoBehaviour, IDamagable
@@ -16,6 +17,8 @@ public class HealthSystem : MonoBehaviour, IDamagable
     private AudioSource _myAudioSource;
     private bool _isDying;
     [SerializeField] private float _currentHealth;
+
+    public Action OnPlayerDeath;
 
     private void Awake() => _myAudioSource = GetComponent<AudioSource>();
 
@@ -43,7 +46,7 @@ public class HealthSystem : MonoBehaviour, IDamagable
 
     private void PlayDeathSound()
     {
-        _myAudioSource.pitch = Random.Range(_minSoundPitch, _maxSoundPitch);
+        _myAudioSource.pitch = UnityEngine.Random.Range(_minSoundPitch, _maxSoundPitch);
         _myAudioSource.Play();
     }
 
@@ -59,7 +62,7 @@ public class HealthSystem : MonoBehaviour, IDamagable
         }
         else
         {
-            Destroy(transform.parent.gameObject);
+            OnPlayerDeath?.Invoke();
         }
     }
 

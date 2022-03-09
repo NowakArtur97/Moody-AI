@@ -11,11 +11,22 @@ public class Weapon : MonoBehaviour
     private const string ENEMY_PROJECTILE_LAYER = "Enemy Projectile";
 
     [SerializeField] private ProjectileType _projectileType;
-    [SerializeField] Transform _projectileSpawnPosition;
-    [SerializeField] float _minSoundPitch = 0.95f;
-    [SerializeField] float _maxSoundPitch = 1.05f;
-    [SerializeField] bool _isEnemy = false;
-    [SerializeField] float _recoil = 10.0f;
+    public ProjectileType ProjectileType
+    {
+        get { return _projectileType; }
+        set { _projectileType = value; }
+    }
+    [SerializeField] private bool _isEnemy;
+    public bool IsEnemy
+    {
+        get { return _isEnemy; }
+        set { _isEnemy = value; }
+    }
+
+    [SerializeField] private Transform _projectileSpawnPosition;
+    [SerializeField] private float _minSoundPitch = 0.95f;
+    [SerializeField] private float _maxSoundPitch = 1.05f;
+    [SerializeField] private float _recoil = 10.0f;
 
     public bool CanShoot { get; private set; }
     private bool _isShooting;
@@ -32,11 +43,6 @@ public class Weapon : MonoBehaviour
     {
         _myAudioSource = GetComponent<AudioSource>();
         _projectileLayerName = _isEnemy ? ENEMY_PROJECTILE_LAYER : PLAYER_PROJECTILE_LAYER;
-
-        if (!_isEnemy)
-        {
-            _myRigidbody2D = GetComponentInParent<Rigidbody2D>();
-        }
     }
 
     private void OnEnable()
@@ -80,6 +86,10 @@ public class Weapon : MonoBehaviour
         {
             _weaponAmmoConsumptionManager.ConsumeAmmunition();
             CameraShakeInstance.Shake();
+            if (_myRigidbody2D == null)
+            {
+                _myRigidbody2D = transform.parent.GetComponentInParent<Rigidbody2D>();
+            }
             _myRigidbody2D.AddForce(-_projectileDirectionVector * _recoil);
         }
 

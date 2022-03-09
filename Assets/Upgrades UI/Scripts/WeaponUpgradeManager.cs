@@ -10,12 +10,14 @@ public class WeaponUpgradeManager : MonoBehaviour
         get { return _weaponUpgradeData; }
         set { _weaponUpgradeData = value; }
     }
-    [SerializeField] private GameObject _weaponGameObject;
+    [SerializeField] private GameObject _weaponPrefab;
+
     private WeaponSystem _weaponSystem;
     private MoneyManager _moneyManager;
 
     public ProjectileType ProjectileType { get; private set; }
     private WeaponDataManager _weaponDataManager;
+    private PlayerLifeManager _playerLifeManager;
 
     public bool IsUnlocked { get; private set; }
     public int CurrentDamageCost { get; private set; }
@@ -28,28 +30,46 @@ public class WeaponUpgradeManager : MonoBehaviour
         ProjectileType = _weaponUpgradeData.projetileType;
         IsUnlocked = _weaponUpgradeData.isUnlockedAtTheBegining;
 
-        _weaponSystem = FindObjectOfType<WeaponSystem>();
         _moneyManager = FindObjectOfType<MoneyManager>();
 
-        if (IsUnlocked)
-        {
-            UnlockWeapon();
-        }
+        _playerLifeManager = FindObjectOfType<PlayerLifeManager>();
+        _playerLifeManager.OnPlayerRespawn += UnlockWeaponOrNot;
+    }
 
+    private void OnDestroy() => _playerLifeManager.OnPlayerRespawn -= UnlockWeaponOrNot;
+
+    private void Start()
+    {
         CurrentDamageCost = _weaponUpgradeData.startingDamageUpgradeCost;
         CurrentFiringSpeedCost = _weaponUpgradeData.startingFiringSpeedUpgradeCost;
         CurrentAmmoConsumptionCost = _weaponUpgradeData.startingAmmoConsumptionUpgradeCost;
         CurrentMovementSpeedCost = _weaponUpgradeData.startingMovementSpeedUpgradeCost;
+
+        _weaponDataManager = FindObjectsOfType<WeaponDataManager>()
+            .First(wdm => wdm.ProjectileType == ProjectileType && wdm.IsEnemy == false);
     }
 
-    private void Start() => _weaponDataManager = FindObjectsOfType<WeaponDataManager>()
-        .First(wdm => wdm.ProjectileType == ProjectileType && wdm.IsEnemy == false);
+    private void UnlockWeaponOrNot()
+    {
+        if (IsUnlocked || _weaponUpgradeData.isUnlockedAtTheBegining)
+        {
+            UnlockWeapon();
+        }
+    }
 
     public void UnlockWeapon()
     {
         IsUnlocked = true;
-        _weaponGameObject.SetActive(true);
-        _weaponSystem.AddWeapon(_weaponGameObject);
+
+        if (_weaponSystem == null)
+        {
+            _weaponSystem = FindObjectOfType<WeaponSystem>();
+        }
+
+        GameObject weaponGameObject = Instantiate(_weaponPrefab, Vector2.zero, Quaternion.identity);
+        weaponGameObject.transform.parent = _weaponSystem.transform;
+        _weaponSystem.AddWeapon(weaponGameObject);
+
         if (!_weaponUpgradeData.isUnlockedAtTheBegining)
         {
             _moneyManager.DecreaseMoneyAmount(_weaponUpgradeData.unlockCost);

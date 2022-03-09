@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class WeaponSystem : MonoBehaviour
@@ -9,7 +7,7 @@ public class WeaponSystem : MonoBehaviour
     private int _mouseScrollInput;
     private List<Weapon> _allWeapons;
 
-    public Weapon CurentWeapon { get; private set; }
+    [SerializeField] public Weapon CurentWeapon;
 
     private PlayerInputManager _playerInputManager;
 

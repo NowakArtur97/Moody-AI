@@ -43,10 +43,9 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void HandleShootingInput()
     {
-        if (_canShoot)
+        if (_canShoot && _weaponSystem.CurentWeapon != null)
         {
             _mouseInput = _playerInputManager.MouseInput;
-
             _weaponSystem.CurentWeapon.IsShooting(_mouseInput);
         }
     }
