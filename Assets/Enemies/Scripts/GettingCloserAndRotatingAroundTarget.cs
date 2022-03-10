@@ -7,15 +7,23 @@ public class GettingCloserAndRotatingAroundTarget : MonoBehaviour
     [SerializeField] private float _distanceWhenShouldRotateAround = 8.0f;
 
     private Transform _targetTransform;
+    private EnemyTargetTransformHandler _enemyTargetTransformHandler;
     private Vector3 _zAxis;
     private bool _shouldRotateAround;
 
-    private void Awake() => _zAxis = new Vector3(0, 0, 1);
-
-    private void Start() => _targetTransform = GetComponent<EnemyTargetTransformHandler>().TargetTransform;
+    private void Awake()
+    {
+        _zAxis = new Vector3(0, 0, 1);
+        _enemyTargetTransformHandler = GetComponent<EnemyTargetTransformHandler>();
+    }
 
     private void FixedUpdate()
     {
+        if (_targetTransform == null)
+        {
+            _targetTransform = _enemyTargetTransformHandler.FindRandomTargetTransform();
+        }
+
         CheckIfDistanceReached();
 
         if (_shouldRotateAround)

@@ -15,6 +15,7 @@ public class TowardsTargetAndRandomPositionsWithinCameraMovementHandler : MonoBe
     private Camera _mainCamera;
     private RotationController _rotationController;
     private SpaceMovementController _spaceMovementController;
+    private EnemyTargetTransformHandler _enemyTargetTransformHandler;
 
     private void Start()
     {
@@ -25,7 +26,7 @@ public class TowardsTargetAndRandomPositionsWithinCameraMovementHandler : MonoBe
         _rotationController = GetComponentInParent<RotationController>();
         _spaceMovementController = GetComponent<SpaceMovementController>();
 
-        _targetTransform = GetComponentInParent<EnemyTargetTransformHandler>().TargetTransform;
+        _enemyTargetTransformHandler = GetComponentInParent<EnemyTargetTransformHandler>();
 
         AimForTarget();
     }
@@ -60,6 +61,11 @@ public class TowardsTargetAndRandomPositionsWithinCameraMovementHandler : MonoBe
 
     private void AimForTarget()
     {
+        if (_targetTransform == null)
+        {
+            _targetTransform = _enemyTargetTransformHandler.FindRandomTargetTransform();
+        }
+
         _targetPosition = _targetTransform.position;
         _spaceMovementController.SetAccelerationFactor(_targetPositionAccelerationFactor);
         _shouldPickRandomPosition = true;

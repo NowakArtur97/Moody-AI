@@ -5,7 +5,9 @@ public class EnemyTargetTransformHandler : MonoBehaviour
 {
     [SerializeField] private TargetType _targetType = TargetType.PLANET;
 
-    public Transform TargetTransform { get; private set; }
+    private EnemyRandomTargetTransformManager _enemyRandomTargetTransformManager;
 
-    private void Awake() => TargetTransform = FindObjectOfType<EnemyRandomTargetTransformManager>().GetRandomTransform(_targetType);
+    private void Awake() => _enemyRandomTargetTransformManager = FindObjectOfType<EnemyRandomTargetTransformManager>();
+
+    public Transform FindRandomTargetTransform() => _enemyRandomTargetTransformManager.GetRandomTransform(_targetType);
 }

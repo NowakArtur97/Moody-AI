@@ -5,14 +5,23 @@ public class TargetToWeaponHandler : MonoBehaviour
     private Transform _targetTransform;
 
     private Weapon _weapon;
+    private EnemyTargetTransformHandler _enemyTargetTransformHandler;
 
-    private void Start()
+    private void Awake()
     {
         _weapon = GetComponent<Weapon>();
-        _targetTransform = GetComponentInParent<EnemyTargetTransformHandler>().TargetTransform;
+        _enemyTargetTransformHandler = GetComponentInParent<EnemyTargetTransformHandler>();
     }
 
-    private void Update() => HandleShootingDirection();
+    private void Update()
+    {
+        if (_targetTransform == null)
+        {
+            _targetTransform = _enemyTargetTransformHandler.FindRandomTargetTransform();
+        }
+
+        HandleShootingDirection();
+    }
 
     private void HandleShootingDirection() => _weapon.SetProjectileDirection((_targetTransform.position - transform.position).normalized);
 }

@@ -6,6 +6,7 @@ public class PlayerLifeManager : MonoBehaviour
     [SerializeField] private int _numberOfPlayerLives = 3;
     [SerializeField] private GameObject _playerPrefab;
 
+    private GameObject _playerGameObject;
     private HealthSystem _lastPlayerObjectHealthSystem;
 
     public Action OnPlayerRespawn;
@@ -22,8 +23,10 @@ public class PlayerLifeManager : MonoBehaviour
         {
             _lastPlayerObjectHealthSystem.OnPlayerDeath -= SpawnPlayer;
         }
-        GameObject player = Instantiate(_playerPrefab, Vector2.zero, Quaternion.identity);
-        _lastPlayerObjectHealthSystem = player.GetComponentInChildren<HealthSystem>();
+        // TODO: Animation for Player Death
+        Destroy(_playerGameObject);
+        _playerGameObject = Instantiate(_playerPrefab, Vector2.zero, Quaternion.identity);
+        _lastPlayerObjectHealthSystem = _playerGameObject.GetComponentInChildren<HealthSystem>();
         _lastPlayerObjectHealthSystem.OnPlayerDeath += SpawnPlayer;
         _numberOfPlayerLives--;
 
