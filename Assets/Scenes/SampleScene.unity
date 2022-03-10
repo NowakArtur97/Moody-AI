@@ -939,6 +939,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93137539}
   m_CullTransparentMesh: 1
+--- !u!1 &94357434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 94357435}
+  - component: {fileID: 94357436}
+  m_Layer: 5
+  m_Name: Player Lives Wrapper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &94357435
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94357434}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 7, y: 7, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 529818649}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -125, y: -19}
+  m_SizeDelta: {x: 60, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &94357436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94357434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 3
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &111042751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,6 +1298,7 @@ RectTransform:
   m_Children:
   - {fileID: 544980840}
   - {fileID: 63171978}
+  - {fileID: 529818649}
   - {fileID: 889568972}
   - {fileID: 865221600}
   m_Father: {fileID: 0}
@@ -4337,6 +4401,57 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &529818648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 529818649}
+  - component: {fileID: 529818650}
+  m_Layer: 5
+  m_Name: Player Lives
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &529818649
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529818648}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 94357435}
+  m_Father: {fileID: 123928606}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -584, y: -400}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &529818650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529818648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a032faf67819143b47f9da6c7f8ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _livesWrapper: {fileID: 94357434}
 --- !u!1 &540793435
 GameObject:
   m_ObjectHideFlags: 0
@@ -6811,7 +6926,7 @@ RectTransform:
   - {fileID: 739848677}
   - {fileID: 400135066}
   m_Father: {fileID: 123928606}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -7045,7 +7160,7 @@ RectTransform:
   m_Children:
   - {fileID: 1666679203}
   m_Father: {fileID: 123928606}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -11419,6 +11534,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _numberOfPlayerLives: 3
   _playerPrefab: {fileID: 572695998574228435, guid: 75b48ab974995c24a91550ec30c063c8, type: 3}
+  _healthUI: {fileID: 919363010333617479, guid: 23242469cb709e44b9c0464ec86c10ad, type: 3}
+  _healthWrapper: {fileID: 94357434}
 --- !u!1 &1396745223
 GameObject:
   m_ObjectHideFlags: 0
@@ -13145,13 +13262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemiesData:
-  - {fileID: 11400000, guid: be1b95a9d22389e4fb36d1ec5a8fc63f, type: 2}
-  - {fileID: 11400000, guid: ab75bd1638ca8f74a87225d3c3312f2a, type: 2}
-  - {fileID: 11400000, guid: b4317d78f2848bc4aacad32b54857555, type: 2}
-  - {fileID: 11400000, guid: a332421292aaafb41b1064ec54648c71, type: 2}
   - {fileID: 11400000, guid: a04aa51a291a7b04ebe02153be5be85f, type: 2}
-  - {fileID: 11400000, guid: c875b5ad0ad174b4584ed650480b8816, type: 2}
-  _startingSpawnPoints: 20
+  _startingSpawnPoints: 1
   _spawnPointsMultiplier: 1
   _spawningRadius: 30
   _timeBetweenSpawningEnemies: 1
