@@ -7,7 +7,12 @@ using System;
 [RequireComponent(typeof(AudioSource))]
 public class HealthSystem : MonoBehaviour, IDamagable
 {
-    [SerializeField] private float _health = 40.0f;
+    [SerializeField] private float _maxHealth = 40.0f;
+    public float MaxHealth
+    {
+        get { return _maxHealth; }
+        set { _maxHealth = value; }
+    }
     [SerializeField] private EnemyType _enemyType;
     [SerializeField] float _minSoundPitch = 0.8f;
     [SerializeField] float _maxSoundPitch = 1.05f;
@@ -16,7 +21,8 @@ public class HealthSystem : MonoBehaviour, IDamagable
 
     private AudioSource _myAudioSource;
     private bool _isDying;
-    [SerializeField] private float _currentHealth;
+
+    public float CurrentHealth { get; private set; }
 
     public Action OnPlayerDeath;
 
@@ -25,14 +31,14 @@ public class HealthSystem : MonoBehaviour, IDamagable
     private void OnEnable()
     {
         _isDying = false;
-        _currentHealth = _health;
+        CurrentHealth = _maxHealth;
     }
 
     public void DealDamage(float damageAmount)
     {
-        _currentHealth -= damageAmount;
+        CurrentHealth -= damageAmount;
 
-        if (_currentHealth <= 0 && !_isDying)
+        if (CurrentHealth <= 0 && !_isDying)
         {
             _isDying = true;
 
