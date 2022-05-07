@@ -19,5 +19,8 @@ public class WeaponUpgradeTabUI : MonoBehaviour
         }
     }
 
-    public void HandleEnterButton() => _changeViewButton.SetActive(_weaponUpgradeHandler.CurrentWeaponUpgradeManager.IsUnlocked);
+    public void HandleEnterButton()
+    {
+        _changeViewButton.SetActive(_weaponUpgradeHandler.CurrentWeaponUpgradeManager.IsUnlocked);
+    }
 }
