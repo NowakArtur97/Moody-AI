@@ -13153,7 +13153,7 @@ MonoBehaviour:
   _spawningRadius: 30
   _timeBetweenSpawningEnemies: 1
   _timeBeforeSpawningEnemies: 6
-  _timeAfterSpawningEnemies: 2
+  _timeAfterSpawningEnemies: 20000
 --- !u!1 &1788919499
 GameObject:
   m_ObjectHideFlags: 0
