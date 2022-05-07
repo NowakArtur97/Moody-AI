@@ -121,8 +121,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 55
+        width: 55
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +140,10 @@ TextureImporter:
       name: Spaceship_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 55
         y: 0
-        width: 64
-        height: 55
+        width: 55
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: Spaceship_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 110
         y: 0
-        width: 64
-        height: 55
+        width: 55
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: Spaceship_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 165
         y: 0
-        width: 64
-        height: 55
+        width: 55
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: Spaceship_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 220
         y: 0
-        width: 64
-        height: 55
+        width: 55
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,10 +224,10 @@ TextureImporter:
       name: Spaceship_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 275
         y: 0
-        width: 64
-        height: 55
+        width: 55
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: Spaceship_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 330
         y: 0
-        width: 64
-        height: 55
+        width: 55
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,10 +266,10 @@ TextureImporter:
       name: Spaceship_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 385
         y: 0
-        width: 64
-        height: 55
+        width: 55
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
