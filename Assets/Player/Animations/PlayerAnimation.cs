@@ -6,10 +6,10 @@ public class PlayerAnimation : MonoBehaviour
     private readonly string MOVING_RIGHT_ANIMATION_BOOL_NAME = "isMovingRight";
     private readonly string MOVING_LEFT_ANIMATION_BOOL_NAME = "isMovingLeft";
 
+    private float _xInput;
+
     private Animator _myAnimator;
     private PlayerInputManager _playerInputManager;
-
-    private float _xInput;
 
     private void Awake()
     {
@@ -22,11 +22,11 @@ public class PlayerAnimation : MonoBehaviour
     {
         _xInput = _playerInputManager.MovementInput.x;
 
-        if (_xInput > 0)
+        if (_xInput == 1)
         {
             SetAnimationBoolVariables(true, false);
         }
-        else if (_xInput < 0)
+        else if (_xInput == -1)
         {
             SetAnimationBoolVariables(false, true);
         }
