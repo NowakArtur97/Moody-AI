@@ -700,10 +700,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b1ce9dcf5094f4488d963bcb63f3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnlockButtonGameObject: {fileID: 86916973}
-  MoodSelectionGameObject: {fileID: 341430313}
-  UnlockButton: {fileID: 86916975}
-  UnlockButtonText: {fileID: 397975304}
+  _unlockButtonGameObject: {fileID: 86916973}
+  _moodSelectionGameObject: {fileID: 341430313}
+  _unlockButton: {fileID: 86916975}
+  _unlockButtonText: {fileID: 397975304}
 --- !u!1 &86916973
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 public class WeaponUnlockButtonUI : MonoBehaviour
 {
-    [SerializeField] private GameObject UnlockButtonGameObject;
-    [SerializeField] private GameObject MoodSelectionGameObject;
-    [SerializeField] private Button UnlockButton;
-    [SerializeField] private TMP_Text UnlockButtonText;
+    [SerializeField] private GameObject _unlockButtonGameObject;
+    [SerializeField] private GameObject _moodSelectionGameObject;
+    [SerializeField] private Button _unlockButton;
+    [SerializeField] private TMP_Text _unlockButtonText;
 
     private WeaponUpgradeHandler _weaponUpgradeHandler;
     private MoneyManager _moneyManager;
@@ -22,13 +22,13 @@ public class WeaponUnlockButtonUI : MonoBehaviour
     {
         WeaponUpgradeManager currentWeaponUpgradeManager = _weaponUpgradeHandler.CurrentWeaponUpgradeManager;
         bool isUnlocked = currentWeaponUpgradeManager.IsUnlocked;
-        UnlockButtonGameObject.gameObject.SetActive(!isUnlocked);
-        MoodSelectionGameObject.SetActive(isUnlocked);
+        _unlockButtonGameObject.gameObject.SetActive(!isUnlocked);
+        _moodSelectionGameObject.SetActive(isUnlocked);
 
-        if (UnlockButtonGameObject.activeInHierarchy)
+        if (_unlockButtonGameObject.activeInHierarchy)
         {
-            UnlockButtonText.text = currentWeaponUpgradeManager.WeaponUpgradeData.unlockCost.ToString();
-            UnlockButton.interactable = _moneyManager.CurrentMoneyAmount >= currentWeaponUpgradeManager.WeaponUpgradeData.unlockCost;
+            _unlockButtonText.text = $"{currentWeaponUpgradeManager.WeaponUpgradeData.unlockCost.ToString()}$";
+            _unlockButton.interactable = _moneyManager.CurrentMoneyAmount >= currentWeaponUpgradeManager.WeaponUpgradeData.unlockCost;
         }
     }
 }
