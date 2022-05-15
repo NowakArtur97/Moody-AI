@@ -53,6 +53,7 @@ public class WeaponSystem : MonoBehaviour
 
         Weapon weapon = weaponGameObject.GetComponent<Weapon>();
         _allWeapons.Add(weapon);
+        weapon.transform.position = Vector2.zero;
 
         if (CurentWeapon == null)
         {
