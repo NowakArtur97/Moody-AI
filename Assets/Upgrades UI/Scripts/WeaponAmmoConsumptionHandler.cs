@@ -23,6 +23,8 @@ public class WeaponAmmoConsumptionHandler : MonoBehaviour
         _weaponAmmoConsumptionManagers = FindObjectsOfType<WeaponAmmoConsumptionManager>().ToList();
 
         _weaponUpgradeHandler.OnUpdateWeapon += SetupMoodsForAllEmptyManagers;
+
+        SetupMoodsForAllEmptyManagers();
     }
 
     private void OnDestroy() => _weaponUpgradeHandler.OnUpdateWeapon -= SetupMoodsForAllEmptyManagers;
