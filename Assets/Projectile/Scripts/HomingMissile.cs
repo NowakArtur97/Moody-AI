@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class HomingMissile : BaseProjectile
     [SerializeField] private string _enemyTag = "Enemy";
     [SerializeField] private float _rotationVelocity = 200.0f;
     [SerializeField] private float _randomPositionMaxRange = 35.0f;
+    [SerializeField] private float _timeToExplode = 5.0f;
 
     private Rigidbody2D _myRigidbody2D;
     private Transform _target;
@@ -30,6 +32,8 @@ public class HomingMissile : BaseProjectile
         base.OnEnable();
 
         _flyingAudioSource.Play();
+
+        StartCoroutine(ExplodeCoroutine());
     }
 
     private void FixedUpdate()
@@ -108,6 +112,15 @@ public class HomingMissile : BaseProjectile
         {
             _target = bestTarget;
         }
+    }
+
+
+
+    private IEnumerator ExplodeCoroutine()
+    {
+        yield return new WaitForSeconds(_timeToExplode);
+
+        OnTriggerEnter2D(null);
     }
 
     public Vector2 FindRandomPosition()

@@ -40,7 +40,7 @@ public abstract class BaseProjectile : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.gameObject.GetComponentInChildren<IDamagable>()?.DealDamage(WeaponDataManager.CurrentDamage);
+        collision?.gameObject.GetComponentInChildren<IDamagable>()?.DealDamage(WeaponDataManager.CurrentDamage);
 
         IsMoving = false;
 
