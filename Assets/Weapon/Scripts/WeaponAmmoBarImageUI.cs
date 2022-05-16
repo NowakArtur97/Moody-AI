@@ -29,6 +29,8 @@ public class WeaponAmmoBarImageUI : MonoBehaviour
         _weaponAmmoConsumptionManager = FindObjectsOfType<WeaponAmmoConsumptionManager>().ToList();
     }
 
+    private void Start() => SetupImage();
+
     private void OnEnable() => SetupImage();
 
     private void SetupImage()
