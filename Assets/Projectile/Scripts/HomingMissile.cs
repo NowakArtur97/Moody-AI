@@ -7,12 +7,14 @@ public class HomingMissile : BaseProjectile
 {
     [SerializeField] private string _enemyTag = "Enemy";
     [SerializeField] private float _rotationVelocity = 200.0f;
+    [SerializeField] private float _randomPositionMaxRange = 35.0f;
 
     private Rigidbody2D _myRigidbody2D;
     private Transform _target;
     private Vector3 _chaseDirection;
     private float _rotateAmount;
     private AudioSource _flyingAudioSource;
+    private bool _isChasingRandomTarget;
 
     protected override void Awake()
     {
@@ -34,13 +36,25 @@ public class HomingMissile : BaseProjectile
     {
         if (IsMoving)
         {
-            if (_target == null)
+            if (!_isChasingRandomTarget && _target == null)
             {
                 FindClosestEnemy();
+
+                if (_target == null)
+                {
+                    _isChasingRandomTarget = true;
+                }
             }
             else
             {
                 ChaseTarget();
+
+                if (_isChasingRandomTarget && GameObject.FindGameObjectsWithTag(_enemyTag).Count() > 0)
+                {
+                    _isChasingRandomTarget = false;
+
+                    FindClosestEnemy();
+                }
             }
         }
         else
@@ -59,7 +73,7 @@ public class HomingMissile : BaseProjectile
 
     private void ChaseTarget()
     {
-        _chaseDirection = (_target.position - transform.position).normalized;
+        _chaseDirection = ((_target?.position ?? FindRandomPosition()) - transform.position).normalized;
 
         _rotateAmount = Vector3.Cross(_chaseDirection, transform.up).z;
 
@@ -90,6 +104,16 @@ public class HomingMissile : BaseProjectile
             }
         }
 
-        _target = bestTarget;
+        if (bestTarget != null)
+        {
+            _target = bestTarget;
+        }
+    }
+
+    public Vector2 FindRandomPosition()
+    {
+        float randomX = Random.Range(0f, _randomPositionMaxRange);
+        float randomY = Random.Range(0f, _randomPositionMaxRange);
+        return new Vector2(randomX, randomY);
     }
 }

@@ -13,11 +13,21 @@ MonoBehaviour:
   m_Name: RocketLauncher_WeaponUpgrade
   m_EditorClassIdentifier: 
   projetileType: 2
-  startingDamage: 20
+  isUnlockedAtTheBegining: 1
+  unlockCost: 50
+  maximallyUpgradedDamage: 70
   damageUpgradeStep: 10
-  startingFiringSpeed: 0.15
+  startingDamageUpgradeCost: 10
+  damageUpgradeCostStep: 10
+  maximallyUpgradedFiringSpeed: 0.07
   firingSpeedUpgradeStep: -0.02
-  startingCost: 20
-  costUpgradeStep: -2
-  startingMovementSpeed: 20
+  startingFiringSpeedUpgradeCost: 10
+  firingSpeedUpgradeCostStep: 10
+  maximallyUpgradedAmmoConsumption: 10
+  ammoConsumptionUpgradeStep: -2
+  startingAmmoConsumptionUpgradeCost: 10
+  ammoConsumptionUpgradeCostStep: 10
+  maximallyUpgradedMovementSpeed: 30
   movementSpeedUpgradeStep: 2
+  startingMovementSpeedUpgradeCost: 10
+  movementSpeedUpgradeCostStep: 10
