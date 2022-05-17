@@ -59,21 +59,18 @@ public class WeaponUpgradeManager : MonoBehaviour
 
     public void UnlockWeapon()
     {
+        if (!_weaponUpgradeData.isUnlockedAtTheBegining && !IsUnlocked)
+        {
+            _moneyManager.DecreaseMoneyAmount(_weaponUpgradeData.unlockCost);
+        }
+
         IsUnlocked = true;
 
-        if (_weaponSystem == null)
-        {
-            _weaponSystem = FindObjectOfType<WeaponSystem>();
-        }
+        _weaponSystem = FindObjectOfType<WeaponSystem>();
 
         GameObject weaponGameObject = Instantiate(_weaponPrefab, Vector2.zero, Quaternion.identity);
         weaponGameObject.transform.parent = _weaponSystem.transform;
         _weaponSystem.AddWeapon(weaponGameObject);
-
-        if (!_weaponUpgradeData.isUnlockedAtTheBegining)
-        {
-            _moneyManager.DecreaseMoneyAmount(_weaponUpgradeData.unlockCost);
-        }
     }
 
     public void UpgradeDamage()
