@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3a0f0e1655087b748a1f260f21e2fd41
+guid: cf979fa1576351347b1f0110e9a62ecd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ammo Bars_0
+      name: Bar Handles_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 38
-        height: 10
+        width: 36
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10a009e28f8d1e84dac70393293e3649
-      internalID: -19972418
+      spriteID: 601a570a985e2a549a22cf8cd45371eb
+      internalID: 404633543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Bars_1
+      name: Bar Handles_1
       rect:
         serializedVersion: 2
-        x: 38
+        x: 36
         y: 0
-        width: 38
-        height: 10
+        width: 36
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b2d7d8954a47c940afecf5ff6d8c653
-      internalID: 1628050159
+      spriteID: 7a4e009c39408a941a69e1486fedfb52
+      internalID: -724812637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Bars_2
+      name: Bar Handles_2
       rect:
         serializedVersion: 2
-        x: 76
+        x: 72
         y: 0
-        width: 38
-        height: 10
+        width: 36
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a91e92bbb7759c4e8ba429d5b4da5ba
-      internalID: 1442318972
+      spriteID: f9f6695ee8a5c9e49a80128f51e11de2
+      internalID: -224049915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Bars_3
+      name: Bar Handles_3
       rect:
         serializedVersion: 2
-        x: 114
+        x: 108
         y: 0
-        width: 38
-        height: 10
+        width: 36
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1f89432afc6ceb4b8ed2d213689961b
-      internalID: 400643314
+      spriteID: 83b72c4304b5aa44989fa1a831a90dfe
+      internalID: 1475811822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Bars_4
+      name: Bar Handles_4
       rect:
         serializedVersion: 2
-        x: 152
+        x: 144
         y: 0
-        width: 38
-        height: 10
+        width: 36
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,20 +214,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 778b3b12c0bcd89498f37bdae89d94e7
-      internalID: 93524260
+      spriteID: 55a02bdf7f18d144089825d2f55569e7
+      internalID: 1527197897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ammo Bars_5
+      name: Bar Handles_5
       rect:
         serializedVersion: 2
-        x: 190
+        x: 180
         y: 0
-        width: 38
-        height: 10
+        width: 36
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,92 +235,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c50587df031b10f40b47414ac185ff88
-      internalID: 1276245680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ammo Bars_6
-      rect:
-        serializedVersion: 2
-        x: 228
-        y: 0
-        width: 38
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46e17f2a8dd67e84c9bddff1346d3bac
-      internalID: -2069150077
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ammo Bars_7
-      rect:
-        serializedVersion: 2
-        x: 266
-        y: 0
-        width: 38
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6a2911de194d0d4889d0f63b69b2d77
-      internalID: -338713254
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ammo Bars_8
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 0
-        width: 38
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b1a80fc885d64942bddf01855989f18
-      internalID: 634312521
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ammo Bars_9
-      rect:
-        serializedVersion: 2
-        x: 342
-        y: 0
-        width: 38
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77e044af768780b49aee01e505ec09e1
-      internalID: 2037836417
+      spriteID: 382ef48afe4a34146aa57d77ed8c8fde
+      internalID: -502248984
       vertices: []
       indices: 
       edges: []
@@ -336,16 +252,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ammo Bars_2: 1442318972
-      Ammo Bars_7: -338713254
-      Ammo Bars_0: -19972418
-      Ammo Bars_5: 1276245680
-      Ammo Bars_9: 2037836417
-      Ammo Bars_8: 634312521
-      Ammo Bars_3: 400643314
-      Ammo Bars_4: 93524260
-      Ammo Bars_6: -2069150077
-      Ammo Bars_1: 1628050159
+      Bar Handles_0: 404633543
+      Bar Handles_1: -724812637
+      Bar Handles_3: 1475811822
+      Bar Handles_5: -502248984
+      Bar Handles_2: -224049915
+      Bar Handles_4: 1527197897
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
