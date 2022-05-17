@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RocketLauncher_WeaponUpgrade
   m_EditorClassIdentifier: 
   projetileType: 2
-  isUnlockedAtTheBegining: 1
+  isUnlockedAtTheBegining: 0
   unlockCost: 50
   maximallyUpgradedDamage: 70
   damageUpgradeStep: 10
