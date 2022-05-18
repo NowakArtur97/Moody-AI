@@ -30,15 +30,17 @@ public class TowardsRandomPositionsWithinCameraMovementHandler : MonoBehaviour
         {
             FindRandomPositionInCameraBounds();
         }
+        else
+        {
+            HandleMovementVector();
+            HandleRotation();
+        }
     }
 
     private void FindRandomPositionInCameraBounds()
     {
-        _randomPosition.Set(Random.Range(0, _screenWidth), Random.Range(0, _screenHeight), _mainCamera.farClipPlane / 2);
+        _randomPosition.Set(Random.Range(0, _screenWidth), Random.Range(0, _screenHeight), 0.0f);
         _randomPosition = _mainCamera.ScreenToWorldPoint(_randomPosition);
-
-        HandleMovementVector();
-        HandleRotation();
     }
 
     private void HandleMovementVector() => _spaceMovementController.SetMovementVector((_randomPosition - transform.position).normalized);

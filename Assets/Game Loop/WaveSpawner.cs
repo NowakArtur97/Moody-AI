@@ -30,7 +30,6 @@ public class WaveSpawner : MonoBehaviour
 
         _waveManager = FindObjectOfType<WaveManager>();
         _waveManager.OnStartWave += StartSpawning;
-        _enemiesData[0].enemySpawnPoints = 3;
     }
 
     private void OnDestroy() => _waveManager.OnStartWave -= StartSpawning;
