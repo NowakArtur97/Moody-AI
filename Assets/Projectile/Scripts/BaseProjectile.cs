@@ -30,7 +30,7 @@ public abstract class BaseProjectile : MonoBehaviour
     }
 
     private void Start() => WeaponDataManager = FindObjectsOfType<WeaponDataManager>()
-            .First(wdm => wdm.ProjectileType == _projectileType && wdm.IsEnemy == _isEnemy);
+        .First(wdm => wdm.ProjectileType == _projectileType && wdm.IsEnemy == _isEnemy);
 
     protected virtual void OnEnable()
     {

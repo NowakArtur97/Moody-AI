@@ -175,10 +175,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectileType: 0
+  _isEnemy: 1
   _projectileSpawnPosition: {fileID: 3821861733975746550}
   _minSoundPitch: 0.95
   _maxSoundPitch: 1.05
-  _isEnemy: 1
   _recoil: 10
 --- !u!114 &3821861732873186493
 MonoBehaviour:
@@ -508,7 +508,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1688456169
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: -1
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -674,7 +674,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1688456169
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -893862725, guid: f0877e956d188a8499068cf5c5817694, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -866,7 +866,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1688456169
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: -1
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -1002,13 +1002,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413307bd3cbdb8343a097397aa3ca2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 40
+  _maxHealth: 40
   _enemyType: 0
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
   _isEnemy: 1
   _isPlanet: 0
-  _currentHealth: 0
 --- !u!82 &3821861733994176880
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1202,7 +1201,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1688456169
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: -1
   m_Positions:
   - {x: 0, y: 0, z: 0}
