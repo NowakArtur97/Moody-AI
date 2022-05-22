@@ -66,7 +66,7 @@ public class HealthSystem : MonoBehaviour, IDamagable
 
             EnemyObjectPoolInstance.ReleaseEnemy(transform.parent.gameObject, _enemyType);
         }
-        else
+        else if (!_isPlanet)
         {
             OnPlayerDeath?.Invoke();
         }
