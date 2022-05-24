@@ -214,15 +214,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 572695997541596525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 413307bd3cbdb8343a097397aa3ca2ec, type: 3}
+  m_Script: {fileID: 11500000, guid: d10648f877c00d44b958f40852d6517c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
-  _enemyType: 0
+  _maxHealth: 200
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
-  _isEnemy: 0
-  _isPlanet: 0
 --- !u!82 &572695997541596526
 AudioSource:
   m_ObjectHideFlags: 0
@@ -449,7 +446,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 216341609
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -972164363, guid: fef39e7e789642248b000ae93aaa1f90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -728,7 +725,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 216341609
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0

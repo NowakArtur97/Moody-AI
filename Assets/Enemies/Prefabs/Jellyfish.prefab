@@ -999,15 +999,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3821861733994176847}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 413307bd3cbdb8343a097397aa3ca2ec, type: 3}
+  m_Script: {fileID: 11500000, guid: d11125df9566f8c458b61ef6f18e470b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 40
-  _enemyType: 0
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
-  _isEnemy: 1
-  _isPlanet: 0
+  _enemyType: 0
 --- !u!82 &3821861733994176880
 AudioSource:
   m_ObjectHideFlags: 0

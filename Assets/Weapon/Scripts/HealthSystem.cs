@@ -1,11 +1,9 @@
 using System.Collections;
 using UnityEngine;
-using static EnemyObjectPool;
-using static AmmoRestorationManager;
 using System;
 
 [RequireComponent(typeof(AudioSource))]
-public class HealthSystem : MonoBehaviour, IDamagable
+public abstract class HealthSystem : MonoBehaviour, IDamagable
 {
     [SerializeField] private float _maxHealth = 40.0f;
     public float MaxHealth
@@ -13,20 +11,15 @@ public class HealthSystem : MonoBehaviour, IDamagable
         get { return _maxHealth; }
         set { _maxHealth = value; }
     }
-    [SerializeField] private EnemyType _enemyType;
     [SerializeField] float _minSoundPitch = 0.8f;
     [SerializeField] float _maxSoundPitch = 1.05f;
-    [SerializeField] bool _isEnemy = true;
-    [SerializeField] bool _isPlanet = false;
 
-    private AudioSource _myAudioSource;
+    protected AudioSource MyAudioSource { get; private set; }
     private bool _isDying;
 
     public float CurrentHealth { get; private set; }
 
-    public Action OnPlayerDeath;
-
-    private void Awake() => _myAudioSource = GetComponent<AudioSource>();
+    private void Awake() => MyAudioSource = GetComponent<AudioSource>();
 
     private void OnEnable()
     {
@@ -34,7 +27,7 @@ public class HealthSystem : MonoBehaviour, IDamagable
         CurrentHealth = _maxHealth;
     }
 
-    public void DealDamage(float damageAmount)
+    public virtual void DealDamage(float damageAmount)
     {
         CurrentHealth -= damageAmount;
 
@@ -46,41 +39,13 @@ public class HealthSystem : MonoBehaviour, IDamagable
 
             StartCoroutine(ReleaseCoroutine());
         }
-
-        HandleAmmoRestorationActions();
     }
 
     private void PlayDeathSound()
     {
-        _myAudioSource.pitch = UnityEngine.Random.Range(_minSoundPitch, _maxSoundPitch);
-        _myAudioSource.Play();
+        MyAudioSource.pitch = UnityEngine.Random.Range(_minSoundPitch, _maxSoundPitch);
+        MyAudioSource.Play();
     }
 
-    private IEnumerator ReleaseCoroutine()
-    {
-        yield return new WaitForSeconds(_myAudioSource.clip.length);
-
-        if (_isEnemy)
-        {
-            AmmoRestorationManagerInstance.RestoreAmmunition(AmmoRestorationType.DEFEATING_ENEMIES);
-
-            EnemyObjectPoolInstance.ReleaseEnemy(transform.parent.gameObject, _enemyType);
-        }
-        else if (!_isPlanet)
-        {
-            OnPlayerDeath?.Invoke();
-        }
-    }
-
-    private void HandleAmmoRestorationActions()
-    {
-        if (_isPlanet)
-        {
-            AmmoRestorationManagerInstance.RestoreAmmunition(AmmoRestorationType.DAMAGING_PLANET);
-        }
-        else if (!_isEnemy)
-        {
-            AmmoRestorationManagerInstance.RestoreAmmunition(AmmoRestorationType.TAKING_DAMAGE);
-        }
-    }
+    protected abstract IEnumerator ReleaseCoroutine();
 }
