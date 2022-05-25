@@ -1,13 +1,9 @@
-using System.Collections;
-using UnityEngine;
 using static AmmoRestorationManager;
 
 public class PlanetHealthSystem : HealthSystem
 {
-    protected override IEnumerator ReleaseCoroutine()
+    public override void DeathTrigger()
     {
-        yield return new WaitForSeconds(MyAudioSource.clip.length);
-
         // TODO: Handle destroying planet
     }
 

@@ -171,7 +171,7 @@ MonoBehaviour:
   _minSoundPitch: 2.623354e+28
   _maxSoundPitch: 0
   _timeBeforeReleasing: 8.759234e+27
-  _isDestructable: 0
+  _isDestructable: 1
 --- !u!70 &5060884676757528521
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -1,10 +1,10 @@
-using System.Collections;
 using UnityEngine;
-using System;
 
 [RequireComponent(typeof(AudioSource))]
 public abstract class HealthSystem : MonoBehaviour, IDamagable
 {
+    private readonly string EXPLOSION_TRIGGER = "explode";
+
     [SerializeField] private float _maxHealth = 40.0f;
     public float MaxHealth
     {
@@ -14,12 +14,19 @@ public abstract class HealthSystem : MonoBehaviour, IDamagable
     [SerializeField] float _minSoundPitch = 0.8f;
     [SerializeField] float _maxSoundPitch = 1.05f;
 
-    protected AudioSource MyAudioSource { get; private set; }
+    private AudioSource _myAudioSource;
+    private Animator _myAnimator;
+    private SpriteRenderer _mySpriteRenderer;
     private bool _isDying;
 
     public float CurrentHealth { get; private set; }
 
-    private void Awake() => MyAudioSource = GetComponent<AudioSource>();
+    protected virtual void Awake()
+    {
+        _myAudioSource = GetComponent<AudioSource>();
+        _myAnimator = transform.parent.GetComponentInChildren<Animator>();
+        _mySpriteRenderer = transform.parent.GetComponentInChildren<SpriteRenderer>();
+    }
 
     private void OnEnable()
     {
@@ -37,15 +44,15 @@ public abstract class HealthSystem : MonoBehaviour, IDamagable
 
             PlayDeathSound();
 
-            StartCoroutine(ReleaseCoroutine());
+            _myAnimator.SetTrigger(EXPLOSION_TRIGGER);
         }
     }
 
     private void PlayDeathSound()
     {
-        MyAudioSource.pitch = UnityEngine.Random.Range(_minSoundPitch, _maxSoundPitch);
-        MyAudioSource.Play();
+        _myAudioSource.pitch = Random.Range(_minSoundPitch, _maxSoundPitch);
+        _myAudioSource.Play();
     }
 
-    protected abstract IEnumerator ReleaseCoroutine();
+    public abstract void DeathTrigger();
 }
