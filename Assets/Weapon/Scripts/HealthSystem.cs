@@ -17,7 +17,7 @@ public abstract class HealthSystem : MonoBehaviour, IDamagable
     private AudioSource _myAudioSource;
     private Animator _myAnimator;
     private SpriteRenderer _mySpriteRenderer;
-    private bool _isDying;
+    protected bool IsDying { get; private set; }
 
     public float CurrentHealth { get; private set; }
 
@@ -30,7 +30,7 @@ public abstract class HealthSystem : MonoBehaviour, IDamagable
 
     private void OnEnable()
     {
-        _isDying = false;
+        IsDying = false;
         CurrentHealth = _maxHealth;
     }
 
@@ -38,9 +38,9 @@ public abstract class HealthSystem : MonoBehaviour, IDamagable
     {
         CurrentHealth -= damageAmount;
 
-        if (CurrentHealth <= 0 && !_isDying)
+        if (CurrentHealth <= 0 && !IsDying)
         {
-            _isDying = true;
+            IsDying = true;
 
             PlayDeathSound();
 

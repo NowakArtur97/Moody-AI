@@ -33,7 +33,6 @@ public class PlayerLifeManager : MonoBehaviour
         {
             _lastPlayerObjectHealthSystem.OnPlayerDeath -= SpawnPlayer;
         }
-        // TODO: Animation for Player Death
         Destroy(_playerGameObject);
         _playerGameObject = Instantiate(_playerPrefab, Vector2.zero, Quaternion.identity);
         _lastPlayerObjectHealthSystem = _playerGameObject.GetComponentInChildren<PlayerHealthSystem>();
