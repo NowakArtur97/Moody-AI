@@ -20,7 +20,11 @@ public class TargetTransformPositionRotationHandler : MonoBehaviour
         {
             _targetTransform = _enemyTargetTransformHandler.FindRandomTargetTransform();
         }
-        HandleRotation();
+
+        if (_targetTransform)
+        {
+            HandleRotation();
+        }
     }
 
     private void HandleRotation() => _rotationController.SetTarget(_targetTransform.position);

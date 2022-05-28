@@ -17,7 +17,7 @@ public class GettingCloserToTarget : MonoBehaviour
             _targetTransform = _enemyTargetTransformHandler.FindRandomTargetTransform();
         }
 
-        if (Vector2.Distance(transform.position, _targetTransform.position) > _distanceWhenShouldStop)
+        if (_targetTransform != null && Vector2.Distance(transform.position, _targetTransform.position) > _distanceWhenShouldStop)
         {
             transform.position = Vector2.MoveTowards(transform.position, _targetTransform.position, _movementVelocity * Time.deltaTime);
         }

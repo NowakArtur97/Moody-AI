@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using static AmmoRestorationManager;
 
@@ -5,12 +6,9 @@ public class PlanetHealthSystem : HealthSystem
 {
     private readonly string SHIELD_WRAPPER_GAME_OBJECT_NAME = "Shield Wrapper(Clone)";
 
-    public override void DeathTrigger()
-    {
-        // TODO: Reduce number of planets
-        Debug.Log("Planet destroyed");
-        Destroy(transform.parent.gameObject);
-    }
+    public Action<Transform> OnPlanetDestroyed;
+
+    public override void DeathTrigger() => OnPlanetDestroyed?.Invoke(transform.parent);
 
     public override void DealDamage(float damageAmount)
     {
