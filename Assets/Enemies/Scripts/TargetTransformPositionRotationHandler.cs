@@ -20,8 +20,7 @@ public class TargetTransformPositionRotationHandler : MonoBehaviour
         {
             _targetTransform = _enemyTargetTransformHandler.FindRandomTargetTransform();
         }
-
-        if (_targetTransform)
+        else
         {
             HandleRotation();
         }

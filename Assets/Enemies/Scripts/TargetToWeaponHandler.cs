@@ -19,8 +19,7 @@ public class TargetToWeaponHandler : MonoBehaviour
         {
             _targetTransform = _enemyTargetTransformHandler.FindRandomTargetTransform();
         }
-
-        if (_targetTransform)
+        else
         {
             HandleShootingDirection();
         }

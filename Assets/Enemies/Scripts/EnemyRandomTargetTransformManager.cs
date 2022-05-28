@@ -16,7 +16,6 @@ public class EnemyRandomTargetTransformManager : MonoBehaviour
 
     private WaveManager _waveManager;
     private List<Transform> _targetPlanets;
-    private int _numberOfWave;
 
     private void Awake()
     {
@@ -65,8 +64,6 @@ public class EnemyRandomTargetTransformManager : MonoBehaviour
     {
         planetTransform.GetComponentInChildren<PlanetHealthSystem>().OnPlanetDestroyed -= RemovePlanetToDefend;
 
-        _planetsTargetTransforms = _planetsTargetTransforms.Where(planet => planet != planetTransform).ToArray();
-
         _targetPlanets.Remove(planetTransform);
 
         Destroy(planetTransform.gameObject);
@@ -83,9 +80,8 @@ public class EnemyRandomTargetTransformManager : MonoBehaviour
 
     private void ChoosePlanetsToDefendOnStartOfWave(int numberOfWave)
     {
-        _numberOfWave = numberOfWave;
         if (_targetPlanets.Count == (numberOfWave % _numberOfWavesAfterChosingNewPlanetToDefend) + 1
-            || _targetPlanets.Count == _planetsTargetTransforms.Length)
+            || _planetsTargetTransforms.Length == 0)
         {
             return;
         }
@@ -97,14 +93,14 @@ public class EnemyRandomTargetTransformManager : MonoBehaviour
     {
         Transform newRandomTarget = ChoseNewRandomPlanetToDefend();
         _targetPlanets.Add(newRandomTarget);
+        _planetsTargetTransforms = _planetsTargetTransforms.Where(planet => planet != newRandomTarget).ToArray();
 
         SpawnShieldForNewPlanetTarget(newRandomTarget);
     }
 
     private Transform ChoseNewRandomPlanetToDefend()
     {
-        Transform[] notChosenPlanets = Array.FindAll(_planetsTargetTransforms, planet => !_targetPlanets.Contains(planet));
-        Transform newRandomTarget = notChosenPlanets[UnityEngine.Random.Range(0, _planetsTargetTransforms.Length)];
+        Transform newRandomTarget = _planetsTargetTransforms[UnityEngine.Random.Range(0, _planetsTargetTransforms.Length)];
         return newRandomTarget;
     }
 
