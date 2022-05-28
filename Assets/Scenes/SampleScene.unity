@@ -1796,7 +1796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a41ba544a9c35344a105e820eb7e621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 10000000
+  _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
 --- !u!1 &140298769
@@ -5006,7 +5006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a41ba544a9c35344a105e820eb7e621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 10000000
+  _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
 --- !u!1 &553108026
@@ -6887,7 +6887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a41ba544a9c35344a105e820eb7e621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 10000000
+  _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
 --- !u!82 &807674657
@@ -10928,7 +10928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11cf6f24dd707d54287752a7ab40e02f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingMoneyAmount: 100
+  _startingMoneyAmount: 10000
   _awardForFinishingWave: 100
 --- !u!4 &1255371285
 Transform:
@@ -14379,7 +14379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a41ba544a9c35344a105e820eb7e621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 10000000
+  _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
 --- !u!1 &1767819060
