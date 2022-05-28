@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 31ea95998402b5e4cae5a1262d4e9591
+guid: faa21127e66acfd4e9d85ee48d47ec46
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cockpit_0
+      name: Options Frame_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 274
-        height: 154
+        width: 60
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0118fe041c8d51f4b9b674b539b188a3
-      internalID: -273452899
+      spriteID: 63d04495901c2294b897579091f321f5
+      internalID: 2021847897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cockpit_1
+      name: Options Frame_1
       rect:
         serializedVersion: 2
-        x: 274
+        x: 60
         y: 0
-        width: 274
-        height: 154
+        width: 60
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,92 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd4d914a4cc65a7419a5df439d8dff4c
-      internalID: 1726583595
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cockpit_2
-      rect:
-        serializedVersion: 2
-        x: 548
-        y: 0
-        width: 274
-        height: 154
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01f1833428e2ce84d928fe11a22c7e67
-      internalID: -547145759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cockpit_3
-      rect:
-        serializedVersion: 2
-        x: 822
-        y: 0
-        width: 274
-        height: 154
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d1db180b8166b34e9c7d429f5e1ea82
-      internalID: -1244751265
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cockpit_4
-      rect:
-        serializedVersion: 2
-        x: 1096
-        y: 0
-        width: 274
-        height: 154
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6380cf262b886243bf9b5630fec86f3
-      internalID: -1538728390
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cockpit_5
-      rect:
-        serializedVersion: 2
-        x: 1370
-        y: 0
-        width: 274
-        height: 154
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d29a8f60c4d69764bb1700463520392b
-      internalID: -1494431263
+      spriteID: bd790b6e26bf35e45ac4eca47440becc
+      internalID: 44024715
       vertices: []
       indices: 
       edges: []
@@ -252,12 +168,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cockpit_0: -273452899
-      Cockpit_4: -1538728390
-      Cockpit_1: 1726583595
-      Cockpit_3: -1244751265
-      Cockpit_2: -547145759
-      Cockpit_5: -1494431263
+      Options Frame_0: 2021847897
+      Options Frame_1: 44024715
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
