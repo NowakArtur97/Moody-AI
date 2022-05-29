@@ -33,12 +33,9 @@ public class GraphicsManager : MonoBehaviour
         _resolutionsDropdown.value = lastResolutionIndex;
         _resolutionsDropdown.RefreshShownValue();
 
-        SetResolution(_availableResolutions.Length - 1);
+        SetResolution(lastResolutionIndex);
         SetFullScreen(true);
     }
-
-    private bool HasSameResolution(Resolution resolution) => resolution.width == Screen.currentResolution.width
-             && resolution.height == Screen.currentResolution.height;
 
     public void SetResolution(int resolutionIndex)
     {

@@ -3918,9 +3918,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 157515360}
-        m_TargetAssemblyTypeName: GraphicsManager, Assembly-CSharp
-        m_MethodName: SetResolution
+      - m_Target: {fileID: 533225803}
+        m_TargetAssemblyTypeName: QualityManager, Assembly-CSharp
+        m_MethodName: SetQuality
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
