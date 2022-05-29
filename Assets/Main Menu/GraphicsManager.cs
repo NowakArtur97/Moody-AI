@@ -9,10 +9,10 @@ public class GraphicsManager : MonoBehaviour
 
     private Resolution[] _availableResolutions;
 
-    private void Awake()
+    private void Start()
     {
         SetupResolutions();
-        ChoseDefaultOptions();
+        ChoseDefaultResolution();
     }
 
     private void SetupResolutions()
@@ -27,13 +27,13 @@ public class GraphicsManager : MonoBehaviour
           .ToList());
     }
 
-    private void ChoseDefaultOptions()
+    private void ChoseDefaultResolution()
     {
-        int currentResolutionIndex = Array.FindIndex(_availableResolutions, resolution => HasSameResolution(resolution));
-        _resolutionsDropdown.value = currentResolutionIndex;
+        int lastResolutionIndex = _availableResolutions.Length - 1;
+        _resolutionsDropdown.value = lastResolutionIndex;
         _resolutionsDropdown.RefreshShownValue();
 
-        SetResolution(currentResolutionIndex);
+        SetResolution(_availableResolutions.Length - 1);
         SetFullScreen(true);
     }
 

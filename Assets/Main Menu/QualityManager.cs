@@ -7,7 +7,8 @@ public class QualityManager : MonoBehaviour
 
     [SerializeField] private TMP_Dropdown _graphicsDropdown;
 
-    private void Awake() => ChoseDefaultQuality();
+    // TODO: Fix
+    //private void Start() => ChoseDefaultQuality();
 
     public void SetQuality(int qualityIndex) => QualitySettings.SetQualityLevel(qualityIndex);
 
