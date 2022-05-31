@@ -3119,7 +3119,7 @@ GameObject:
   - component: {fileID: 290935475}
   - component: {fileID: 290935474}
   m_Layer: 5
-  m_Name: Start Button
+  m_Name: Back to Game Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3190,9 +3190,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
-        m_MethodName: LoadGameplayScene
+      - m_Target: {fileID: 1364506039}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3420,6 +3420,50 @@ PrefabInstance:
       objectReference: {fileID: 1978204257}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e207bc4e7b6609c4b86541ddcfc80427, type: 3}
+--- !u!114 &309020604 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6468227222601920031, guid: e207bc4e7b6609c4b86541ddcfc80427, type: 3}
+  m_PrefabInstance: {fileID: 309020603}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b470f8777b1efe4a872e3364ffaedf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &309020605 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6468227223220162142, guid: e207bc4e7b6609c4b86541ddcfc80427, type: 3}
+  m_PrefabInstance: {fileID: 309020603}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 915f0b1bd49a99147ae3a98c28cadd54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &309020606 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6468227223381315957, guid: e207bc4e7b6609c4b86541ddcfc80427, type: 3}
+  m_PrefabInstance: {fileID: 309020603}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc84449046ff0d468ea9b15d40a2363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &309020607 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6468227224427395119, guid: e207bc4e7b6609c4b86541ddcfc80427, type: 3}
+  m_PrefabInstance: {fileID: 309020603}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 686f7a8dbbcfdd042b8bb16914359a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &313828477
 GameObject:
   m_ObjectHideFlags: 0
@@ -4531,7 +4575,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1347961784}
         m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -8983,7 +9027,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 08c48593a4288ee4e970ddfcf17bb4d1, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -12743,6 +12787,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327020226}
   m_CullTransparentMesh: 1
+--- !u!1 &1347961783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1347961785}
+  - component: {fileID: 1347961784}
+  m_Layer: 0
+  m_Name: Scene Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1347961784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347961783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4d408afed330b349b0f7343607a576f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GAMEPLAY_SCENE_INDEX: 1
+--- !u!4 &1347961785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347961783}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1354062756
 GameObject:
   m_ObjectHideFlags: 0
@@ -12827,6 +12916,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1364506038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1364506040}
+  - component: {fileID: 1364506039}
+  m_Layer: 0
+  m_Name: Pause Menu Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1364506039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364506038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5daec3111ab93cb44b12733bb6130a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameCanvas: {fileID: 123928602}
+  _menuCanvas: {fileID: 1991005852}
+--- !u!4 &1364506040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364506038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1374198625
 GameObject:
   m_ObjectHideFlags: 0
@@ -15247,7 +15382,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 309020604}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: ChangeView
         m_Mode: 1
@@ -16788,10 +16923,18 @@ PrefabInstance:
     - target: {fileID: 5639985692707795616, guid: cff8cbc1b8d876145839d5c812f280d0, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 309020606}
+    - target: {fileID: 5639985692707795616, guid: cff8cbc1b8d876145839d5c812f280d0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetResolution
       objectReference: {fileID: 0}
     - target: {fileID: 5639985692786020544, guid: cff8cbc1b8d876145839d5c812f280d0, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 309020606}
+    - target: {fileID: 5639985692786020544, guid: cff8cbc1b8d876145839d5c812f280d0, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetFullScreen
       objectReference: {fileID: 0}
     - target: {fileID: 5639985693507132089, guid: cff8cbc1b8d876145839d5c812f280d0, type: 3}
       propertyPath: m_Name
@@ -16888,10 +17031,18 @@ PrefabInstance:
     - target: {fileID: 5639985693839457816, guid: cff8cbc1b8d876145839d5c812f280d0, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 309020607}
+    - target: {fileID: 5639985693839457816, guid: cff8cbc1b8d876145839d5c812f280d0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeVolume
       objectReference: {fileID: 0}
     - target: {fileID: 5639985693930510083, guid: cff8cbc1b8d876145839d5c812f280d0, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 309020605}
+    - target: {fileID: 5639985693930510083, guid: cff8cbc1b8d876145839d5c812f280d0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetQuality
       objectReference: {fileID: 0}
     - target: {fileID: 5639985694345301505, guid: cff8cbc1b8d876145839d5c812f280d0, type: 3}
       propertyPath: m_AnchorMax.x
@@ -16916,6 +17067,10 @@ PrefabInstance:
     - target: {fileID: 5639985694695479032, guid: cff8cbc1b8d876145839d5c812f280d0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 309020604}
+    - target: {fileID: 5639985694695479032, guid: cff8cbc1b8d876145839d5c812f280d0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeView
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cff8cbc1b8d876145839d5c812f280d0, type: 3}
@@ -16980,7 +17135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1991005853
 RectTransform:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class PlayerInputManager : MonoBehaviour
     public Vector3 MouseWorldPosition { get; private set; }
     public Vector3 MouseWorldPositionWithoutZ { get; private set; }
     public int MouseScrollInput { get; private set; }
+    public bool PauseInput { get; private set; }
 
     private Camera _mainCamera;
     private Mouse _currentMouse;
@@ -29,6 +30,18 @@ public class PlayerInputManager : MonoBehaviour
         if (context.canceled)
         {
             MouseInput = false;
+        }
+    }
+
+    public void PauseGame(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            PauseInput = true;
+        }
+        if (context.canceled)
+        {
+            PauseInput = false;
         }
     }
 
