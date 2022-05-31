@@ -5,14 +5,17 @@ using UnityEngine;
 [RequireComponent(typeof(TextMeshProUGUI), typeof(Animator))]
 public class WaveNumberUI : MonoBehaviour
 {
+    private const string DISSAPEAR_TRIGGER = "dissapear";
+
     [SerializeField] float _timeBetweenRevealingLetters = 0.5f;
     [SerializeField] private TMP_Text _myText;
 
     private TextMeshProUGUI _myTextMeshPro;
     private Animator _myAnimator;
     private WaveManager _waveManager;
+    private int _numberOfWave;
 
-    private const string DISSAPEAR_TRIGGER = "dissapear";
+    public bool IsAnimating { get; private set; }
 
     private void Awake()
     {
@@ -25,11 +28,17 @@ public class WaveNumberUI : MonoBehaviour
 
     private void OnDestroy() => _waveManager.OnStartWave -= DisplayNumberOfWave;
 
-    private void DisplayNumberOfWave(int numberOfWave) => StartCoroutine(AnimateTextCoroutine(numberOfWave));
-
-    private IEnumerator AnimateTextCoroutine(int numberOfWave)
+    private void DisplayNumberOfWave(int numberOfWave)
     {
-        string text = "Wave " + numberOfWave;
+        _numberOfWave = numberOfWave;
+        StartCoroutine(AnimateTextCoroutine());
+    }
+
+    public IEnumerator AnimateTextCoroutine()
+    {
+        IsAnimating = true;
+
+        string text = "Wave " + _numberOfWave;
 
         _myText.text = text;
 
@@ -42,11 +51,15 @@ public class WaveNumberUI : MonoBehaviour
             _myTextMeshPro.maxVisibleCharacters = visibleCount;
 
             counter++;
-            yield return new WaitForSeconds(_timeBetweenRevealingLetters);
+            yield return new WaitForSecondsRealtime(_timeBetweenRevealingLetters);
         }
 
         _myAnimator.SetTrigger(DISSAPEAR_TRIGGER);
     }
 
-    public void TextDissapearedTrigger() => _myTextMeshPro.maxVisibleCharacters = 0;
+    public void TextDissapearedTrigger()
+    {
+        _myTextMeshPro.maxVisibleCharacters = 0;
+        IsAnimating = false;
+    }
 }

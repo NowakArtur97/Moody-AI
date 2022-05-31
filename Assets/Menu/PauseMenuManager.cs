@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PauseMenuManager : MonoBehaviour
@@ -9,10 +6,12 @@ public class PauseMenuManager : MonoBehaviour
     [SerializeField] private GameObject _menuCanvas;
 
     private PlayerInputManager _playerInputManager;
+    private WaveNumberUI _waveNumberUI;
 
     private void Start()
     {
         _playerInputManager = FindObjectOfType<PlayerInputManager>();
+        _waveNumberUI = FindObjectOfType<WaveNumberUI>();
     }
 
     private void Update()
@@ -29,15 +28,28 @@ public class PauseMenuManager : MonoBehaviour
 
     private void PauseGame()
     {
-        Time.timeScale = 0;
-        _gameCanvas.SetActive(false);
-        _menuCanvas.SetActive(true);
+        SetValues(true);
+
+        if (_waveNumberUI.IsAnimating)
+        {
+            StopCoroutine(_waveNumberUI.AnimateTextCoroutine());
+        }
     }
 
     public void ResumeGame()
     {
-        Time.timeScale = 1;
-        _gameCanvas.SetActive(true);
-        _menuCanvas.SetActive(false);
+        SetValues(false);
+
+        if (_waveNumberUI.IsAnimating)
+        {
+            StartCoroutine(_waveNumberUI.AnimateTextCoroutine());
+        }
+    }
+
+    private void SetValues(bool isPaused)
+    {
+        Time.timeScale = isPaused ? 0 : 1;
+        _gameCanvas.SetActive(!isPaused);
+        _menuCanvas.SetActive(isPaused);
     }
 }
