@@ -15,6 +15,8 @@ public class WaveNumberUI : MonoBehaviour
     private WaveManager _waveManager;
     private int _numberOfWave;
 
+    private int _characterCounter;
+
     public bool IsAnimating { get; private set; }
 
     private void Awake()
@@ -43,14 +45,18 @@ public class WaveNumberUI : MonoBehaviour
         _myText.text = text;
 
         int totalCharacters = text.Length;
-        int counter = 0;
 
-        while (counter <= totalCharacters)
+        if (_characterCounter >= totalCharacters)
         {
-            int visibleCount = counter % (totalCharacters + 1);
+            _characterCounter = 0;
+        }
+
+        while (_characterCounter <= totalCharacters)
+        {
+            int visibleCount = _characterCounter % (totalCharacters + 1);
             _myTextMeshPro.maxVisibleCharacters = visibleCount;
 
-            counter++;
+            _characterCounter++;
             yield return new WaitForSecondsRealtime(_timeBetweenRevealingLetters);
         }
 
