@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projetileType: 1
   startingDamage: 20
-  startingFiringSpeed: 1
+  startingFiringSpeed: 0.2
   startingAmmoConsumption: 20
-  startingMovementSpeed: 3
+  startingMovementSpeed: 8
+  startingAmmoCapacity: 200
