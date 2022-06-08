@@ -21941,7 +21941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnAmount: 5
   _jellyfishPrefab: {fileID: 3821861732929374417, guid: 2cd60855fb078e5429a325b15395c6cc, type: 3}
-  _teetherPrefab: {fileID: 7553509044135878632, guid: eebfe82f224453b4dad3e50a8ab2ff5f, type: 3}
+  _teetherPrefab: {fileID: 7553509044135878632, guid: ad8e21894bf56d6489a40cfc08e60ee8, type: 3}
   _batPrefab: {fileID: 2947253301916820876, guid: 0fa0fa0672f23344dab540e0183ee953, type: 3}
   _stingrayPrefab: {fileID: 8122089591293258863, guid: 548f7d59a9bc99544a21cd62ea1bb5ea, type: 3}
   _boomerPrefab: {fileID: 3140539819564114342, guid: 163406f10549c6d4e9634220575bd8bc, type: 3}
@@ -26212,7 +26212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemiesData:
-  - {fileID: 11400000, guid: be1b95a9d22389e4fb36d1ec5a8fc63f, type: 2}
+  - {fileID: 11400000, guid: a04aa51a291a7b04ebe02153be5be85f, type: 2}
   _startingSpawnPoints: 1
   _spawnPointsMultiplier: 0
   _spawningRadius: 30
