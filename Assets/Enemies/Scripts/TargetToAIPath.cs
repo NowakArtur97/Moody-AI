@@ -3,22 +3,22 @@ using UnityEngine;
 
 public class TargetToAIPath : MonoBehaviour
 {
-    private EnemyTargetTransformHandler _enemyTargetTransformHandler;
-    private AIDestinationSetter _aIDestinationSetter;
+    protected EnemyTargetTransformHandler EnemyTargetTransformHandler { get; private set; }
+    protected AIDestinationSetter AIDestinationSetter { get; private set; }
 
-    private void Awake()
+    protected virtual void Awake()
     {
-        _enemyTargetTransformHandler = GetComponent<EnemyTargetTransformHandler>();
-        _aIDestinationSetter = GetComponent<AIDestinationSetter>();
+        EnemyTargetTransformHandler = GetComponent<EnemyTargetTransformHandler>();
+        AIDestinationSetter = GetComponent<AIDestinationSetter>();
     }
 
     private void Update() => SetAITarget();
 
-    private void SetAITarget()
+    protected virtual void SetAITarget()
     {
-        if (_aIDestinationSetter.target == null)
+        if (AIDestinationSetter.target == null)
         {
-            _aIDestinationSetter.target = _enemyTargetTransformHandler.FindRandomTargetTransform();
+            AIDestinationSetter.target = EnemyTargetTransformHandler.FindRandomTargetTransform();
         }
     }
 }

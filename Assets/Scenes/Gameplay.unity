@@ -315,6 +315,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &15155796
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,8 +348,8 @@ Transform:
   - {fileID: 1949608130}
   - {fileID: 1003082411}
   - {fileID: 1645326735}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 9
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &15155798
 CircleCollider2D:
@@ -447,8 +448,8 @@ Transform:
   - {fileID: 947645661}
   - {fileID: 1049071048}
   - {fileID: 1163350536}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 38
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &27785511
 CircleCollider2D:
@@ -1018,8 +1019,8 @@ Transform:
   - {fileID: 91475389}
   - {fileID: 2045010945}
   - {fileID: 541298734}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 31
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &40575206
 CircleCollider2D:
@@ -1069,8 +1070,8 @@ Transform:
   - {fileID: 219140588}
   - {fileID: 1159080386}
   - {fileID: 397359594}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 21
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &47276548
 CircleCollider2D:
@@ -1734,6 +1735,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &93137539
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,6 +2020,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &111042751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2156,8 +2159,8 @@ Transform:
   - {fileID: 256548234}
   - {fileID: 1598878690}
   - {fileID: 366019827}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 12
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &112849543
 CircleCollider2D:
@@ -2866,6 +2869,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &136820617
 GameObject:
   m_ObjectHideFlags: 0
@@ -2898,8 +2902,8 @@ Transform:
   - {fileID: 2039978872}
   - {fileID: 1247555076}
   - {fileID: 921882422}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 7
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &136820619
 CircleCollider2D:
@@ -3441,6 +3445,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &179645489
 GameObject:
   m_ObjectHideFlags: 0
@@ -3521,8 +3526,8 @@ Transform:
   - {fileID: 699316047}
   - {fileID: 2100478201}
   - {fileID: 1170082265}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 14
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &186183900
 CircleCollider2D:
@@ -4050,6 +4055,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &243808077
 GameObject:
   m_ObjectHideFlags: 0
@@ -4194,6 +4200,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &252482767
 GameObject:
   m_ObjectHideFlags: 0
@@ -4398,6 +4405,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &256548233
 GameObject:
   m_ObjectHideFlags: 0
@@ -4542,6 +4550,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &258446054
 GameObject:
   m_ObjectHideFlags: 0
@@ -6661,8 +6670,8 @@ Transform:
   - {fileID: 1092838901}
   - {fileID: 551093262}
   - {fileID: 1446547172}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 16
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &425147311
 CircleCollider2D:
@@ -6963,8 +6972,8 @@ Transform:
   - {fileID: 961392801}
   - {fileID: 1671128547}
   - {fileID: 193655283}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 15
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &434597497
 CircleCollider2D:
@@ -7387,6 +7396,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &471787888
 GameObject:
   m_ObjectHideFlags: 0
@@ -7531,6 +7541,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &483180469
 GameObject:
   m_ObjectHideFlags: 0
@@ -7808,6 +7819,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &503254017
 GameObject:
   m_ObjectHideFlags: 0
@@ -8243,6 +8255,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -9063,6 +9076,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &553108026
 GameObject:
   m_ObjectHideFlags: 0
@@ -10228,6 +10242,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &616165839
 GameObject:
   m_ObjectHideFlags: 0
@@ -10260,8 +10275,8 @@ Transform:
   - {fileID: 2131657419}
   - {fileID: 1678487003}
   - {fileID: 1041566333}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 30
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &616165841
 CircleCollider2D:
@@ -10686,8 +10701,8 @@ Transform:
   - {fileID: 462293396}
   - {fileID: 2087978958}
   - {fileID: 2115982461}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 37
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &635352344
 CircleCollider2D:
@@ -10843,8 +10858,8 @@ Transform:
   - {fileID: 927075390}
   - {fileID: 1614913186}
   - {fileID: 968667249}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 5
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &642515885
 CircleCollider2D:
@@ -11617,6 +11632,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &709476536
 GameObject:
   m_ObjectHideFlags: 0
@@ -11649,8 +11665,8 @@ Transform:
   - {fileID: 753770026}
   - {fileID: 1975854658}
   - {fileID: 811934041}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 26
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &709476538
 CircleCollider2D:
@@ -11988,6 +12004,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &784325879
 GameObject:
   m_ObjectHideFlags: 0
@@ -12246,6 +12263,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &807674654
 GameObject:
   m_ObjectHideFlags: 0
@@ -12294,6 +12312,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!82 &807674657
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12635,8 +12654,8 @@ Transform:
   - {fileID: 2017774720}
   - {fileID: 590986053}
   - {fileID: 458391605}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 11
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &824189994
 CircleCollider2D:
@@ -13017,6 +13036,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &839440567
 GameObject:
   m_ObjectHideFlags: 0
@@ -13403,6 +13423,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &856306234
 GameObject:
   m_ObjectHideFlags: 0
@@ -14259,6 +14280,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &909455739
 GameObject:
   m_ObjectHideFlags: 0
@@ -14854,6 +14876,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &934432181
 GameObject:
   m_ObjectHideFlags: 0
@@ -15221,6 +15244,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &953326664
 GameObject:
   m_ObjectHideFlags: 0
@@ -15413,6 +15437,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &967055668
 GameObject:
   m_ObjectHideFlags: 0
@@ -15445,8 +15470,8 @@ Transform:
   - {fileID: 517294003}
   - {fileID: 1968214651}
   - {fileID: 1964940606}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 19
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &967055670
 CircleCollider2D:
@@ -15984,8 +16009,8 @@ Transform:
   - {fileID: 108582513}
   - {fileID: 839440568}
   - {fileID: 329626001}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 28
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1017700039
 CircleCollider2D:
@@ -16179,8 +16204,8 @@ Transform:
   - {fileID: 243808078}
   - {fileID: 1349594633}
   - {fileID: 1048330521}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 10
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1043940306
 CircleCollider2D:
@@ -16579,8 +16604,8 @@ Transform:
   - {fileID: 502242973}
   - {fileID: 28239679}
   - {fileID: 1213466373}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 17
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1052561945
 CircleCollider2D:
@@ -17478,6 +17503,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &1101118199
 GameObject:
   m_ObjectHideFlags: 0
@@ -18020,8 +18046,8 @@ Transform:
   - {fileID: 854723153}
   - {fileID: 1388805612}
   - {fileID: 584810489}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 34
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1161724506
 CircleCollider2D:
@@ -18119,8 +18145,8 @@ Transform:
   - {fileID: 164311971}
   - {fileID: 1434708636}
   - {fileID: 1046333609}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 13
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1167690851
 CircleCollider2D:
@@ -18489,8 +18515,8 @@ Transform:
   - {fileID: 2006985621}
   - {fileID: 1428294635}
   - {fileID: 1021514169}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 33
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1178422140
 CircleCollider2D:
@@ -18652,6 +18678,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &1197996967
 GameObject:
   m_ObjectHideFlags: 0
@@ -19661,42 +19688,7 @@ Transform:
   - {fileID: 1585423938}
   - {fileID: 568434809}
   - {fileID: 616274416}
-  - {fileID: 2011495562}
-  - {fileID: 642515884}
-  - {fileID: 1940674153}
-  - {fileID: 136820618}
-  - {fileID: 1909457471}
-  - {fileID: 15155797}
-  - {fileID: 1043940305}
-  - {fileID: 824189993}
-  - {fileID: 112849542}
-  - {fileID: 1167690850}
-  - {fileID: 186183899}
-  - {fileID: 434597496}
-  - {fileID: 425147310}
-  - {fileID: 1052561944}
-  - {fileID: 1682499354}
-  - {fileID: 967055669}
-  - {fileID: 1657316296}
-  - {fileID: 47276547}
-  - {fileID: 1787607980}
-  - {fileID: 1554459348}
-  - {fileID: 1869996426}
-  - {fileID: 1272977933}
-  - {fileID: 709476537}
-  - {fileID: 1277772134}
-  - {fileID: 1017700038}
-  - {fileID: 1811558921}
-  - {fileID: 616165840}
-  - {fileID: 40575205}
-  - {fileID: 2098151957}
-  - {fileID: 1178422139}
-  - {fileID: 1161724505}
-  - {fileID: 1456750068}
-  - {fileID: 1965494414}
-  - {fileID: 635352343}
-  - {fileID: 27785510}
-  - {fileID: 1444806402}
+  - {fileID: 1854161510}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19986,6 +19978,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &1269329391
 GameObject:
   m_ObjectHideFlags: 0
@@ -20237,8 +20230,8 @@ Transform:
   - {fileID: 801657678}
   - {fileID: 1863615569}
   - {fileID: 868174665}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 25
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1272977934
 CircleCollider2D:
@@ -20288,8 +20281,8 @@ Transform:
   - {fileID: 906887064}
   - {fileID: 1988525154}
   - {fileID: 37732850}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 27
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1277772135
 CircleCollider2D:
@@ -21646,6 +21639,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &1364506038
 GameObject:
   m_ObjectHideFlags: 0
@@ -22787,6 +22781,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &1434708635
 GameObject:
   m_ObjectHideFlags: 0
@@ -23013,8 +23008,8 @@ Transform:
   - {fileID: 1742484680}
   - {fileID: 558586887}
   - {fileID: 1458091564}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 39
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1444806403
 CircleCollider2D:
@@ -23188,8 +23183,8 @@ Transform:
   - {fileID: 2136203484}
   - {fileID: 1060764323}
   - {fileID: 1432626147}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 35
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1456750069
 CircleCollider2D:
@@ -23982,8 +23977,8 @@ Transform:
   - {fileID: 471787889}
   - {fileID: 1295702775}
   - {fileID: 179645490}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 23
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1554459349
 CircleCollider2D:
@@ -24768,8 +24763,8 @@ Transform:
   - {fileID: 1795165656}
   - {fileID: 418584492}
   - {fileID: 1818190785}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 20
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1657316297
 CircleCollider2D:
@@ -25689,8 +25684,8 @@ Transform:
   - {fileID: 2101099572}
   - {fileID: 1239419499}
   - {fileID: 953326665}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 18
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1682499355
 CircleCollider2D:
@@ -25986,6 +25981,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &1742484679
 GameObject:
   m_ObjectHideFlags: 0
@@ -26130,6 +26126,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &1767819060
 GameObject:
   m_ObjectHideFlags: 0
@@ -26251,8 +26248,8 @@ Transform:
   - {fileID: 253290794}
   - {fileID: 1680263605}
   - {fileID: 2144358867}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 22
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1787607981
 CircleCollider2D:
@@ -26685,6 +26682,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &1810357339
 GameObject:
   m_ObjectHideFlags: 0
@@ -26801,8 +26799,8 @@ Transform:
   - {fileID: 2530379}
   - {fileID: 196433701}
   - {fileID: 845765071}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 29
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1811558922
 CircleCollider2D:
@@ -27305,6 +27303,73 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1854161509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1854161510}
+  m_Layer: 0
+  m_Name: Obstacles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1854161510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854161509}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2011495562}
+  - {fileID: 642515884}
+  - {fileID: 1940674153}
+  - {fileID: 136820618}
+  - {fileID: 1909457471}
+  - {fileID: 15155797}
+  - {fileID: 1043940305}
+  - {fileID: 824189993}
+  - {fileID: 112849542}
+  - {fileID: 1167690850}
+  - {fileID: 186183899}
+  - {fileID: 434597496}
+  - {fileID: 425147310}
+  - {fileID: 1052561944}
+  - {fileID: 1682499354}
+  - {fileID: 967055669}
+  - {fileID: 1657316296}
+  - {fileID: 47276547}
+  - {fileID: 1787607980}
+  - {fileID: 1554459348}
+  - {fileID: 1869996426}
+  - {fileID: 1272977933}
+  - {fileID: 709476537}
+  - {fileID: 1277772134}
+  - {fileID: 1017700038}
+  - {fileID: 1811558921}
+  - {fileID: 616165840}
+  - {fileID: 40575205}
+  - {fileID: 2098151957}
+  - {fileID: 1178422139}
+  - {fileID: 1161724505}
+  - {fileID: 1456750068}
+  - {fileID: 1965494414}
+  - {fileID: 635352343}
+  - {fileID: 27785510}
+  - {fileID: 1444806402}
+  m_Father: {fileID: 1250492181}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1863615568
 GameObject:
   m_ObjectHideFlags: 0
@@ -27455,8 +27520,8 @@ Transform:
   - {fileID: 604942207}
   - {fileID: 1228001071}
   - {fileID: 38599988}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 24
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1869996427
 CircleCollider2D:
@@ -27926,8 +27991,8 @@ Transform:
   - {fileID: 1268718844}
   - {fileID: 440196574}
   - {fileID: 1872039432}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 8
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1909457472
 CircleCollider2D:
@@ -28148,8 +28213,8 @@ Transform:
   - {fileID: 1182935759}
   - {fileID: 59463148}
   - {fileID: 671894240}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 6
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1940674154
 CircleCollider2D:
@@ -28311,6 +28376,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &1964940605
 GameObject:
   m_ObjectHideFlags: 0
@@ -28391,8 +28457,8 @@ Transform:
   - {fileID: 1433858460}
   - {fileID: 694144852}
   - {fileID: 1023976}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 36
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1965494415
 CircleCollider2D:
@@ -29829,6 +29895,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &2011495561
 GameObject:
   m_ObjectHideFlags: 0
@@ -29861,8 +29928,8 @@ Transform:
   - {fileID: 838070344}
   - {fileID: 385299777}
   - {fileID: 2058291235}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 4
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &2011495563
 CircleCollider2D:
@@ -30164,6 +30231,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &2039710059
 GameObject:
   m_ObjectHideFlags: 0
@@ -30443,6 +30511,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &2045010944
 GameObject:
   m_ObjectHideFlags: 0
@@ -30958,8 +31027,8 @@ Transform:
   - {fileID: 1363523038}
   - {fileID: 667928124}
   - {fileID: 1660415189}
-  m_Father: {fileID: 1250492181}
-  m_RootOrder: 32
+  m_Father: {fileID: 1854161510}
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &2098151958
 CircleCollider2D:
@@ -31239,6 +31308,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &2106302082
 GameObject:
   m_ObjectHideFlags: 0
@@ -31729,6 +31799,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &2136203483
 GameObject:
   m_ObjectHideFlags: 0
@@ -31873,6 +31944,7 @@ MonoBehaviour:
   _maxHealth: 1000
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!1 &2144358866
 GameObject:
   m_ObjectHideFlags: 0

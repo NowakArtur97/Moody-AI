@@ -362,7 +362,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.93675536, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.41584802
 --- !u!82 &4117220607362516870
@@ -662,6 +662,7 @@ MonoBehaviour:
   _maxHealth: 40
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
   _enemyType: 5
 --- !u!82 &4117220607610624243
 AudioSource:
@@ -1259,7 +1260,7 @@ GameObject:
   - component: {fileID: 8411009055314306753}
   - component: {fileID: 4117220609159550769}
   - component: {fileID: 4117220609159550768}
-  - component: {fileID: 3966896943601851402}
+  - component: {fileID: 6404881999749917376}
   - component: {fileID: 4117220609159550767}
   - component: {fileID: 7516714587340533480}
   - component: {fileID: 5341827388651627273}
@@ -1329,7 +1330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyTargetTransformHandler: {fileID: 8411009055314306753}
---- !u!114 &3966896943601851402
+--- !u!114 &6404881999749917376
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1338,9 +1339,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4117220609159550770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a27a4da236d4e574d8845c25d21f704a, type: 3}
+  m_Script: {fileID: 11500000, guid: bdcf31a4de470724aa6fe6dd8fc7f8b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _distanceToIgnorePlanet: 1.4
+  _distanceToAgainAttackPlanet: 0.1
+  _randomTargetRadius: 4
+  _movementSpeed: 6
 --- !u!61 &4117220609159550767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1425,7 +1430,7 @@ MonoBehaviour:
   radius: 0.51
   height: 2
   canMove: 1
-  maxSpeed: 10
+  maxSpeed: 6
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
