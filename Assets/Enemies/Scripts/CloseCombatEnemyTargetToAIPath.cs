@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class CloseCombatEnemyTargetToAIPath : TargetToAIPath
 {
-    [SerializeField] private float _distanceToIgnorePlanet = 1.4f;
+    [SerializeField] private float _distanceToIgnorePlanet = 1.5f;
     [SerializeField] private float _distanceToAgainAttackPlanet = 0.1f;
     [SerializeField] private float _randomTargetRadius = 4f;
     [SerializeField] private float _movementSpeed = 6f;
 
     private AIPath _aiPath;
+    private RotationController _rotationController;
+
     private bool _isMovingTowardsRandomTarget;
     private Vector2 _randomPosition;
 
@@ -17,6 +19,7 @@ public class CloseCombatEnemyTargetToAIPath : TargetToAIPath
         base.Awake();
 
         _aiPath = GetComponent<AIPath>();
+        _rotationController = GetComponent<RotationController>();
 
         _isMovingTowardsRandomTarget = false;
     }
@@ -52,6 +55,15 @@ public class CloseCombatEnemyTargetToAIPath : TargetToAIPath
             _aiPath.canMove = true;
 
             AIDestinationSetter.target = EnemyTargetTransformHandler.FindRandomTargetTransform();
+        }
+
+        if (_isMovingTowardsRandomTarget)
+        {
+            _rotationController.SetTarget(_randomPosition);
+        }
+        else
+        {
+            _rotationController.SetTarget(AIDestinationSetter.target.position);
         }
     }
 
