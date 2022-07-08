@@ -26,43 +26,41 @@ public class CloseCombatEnemyTargetToAIPath : TargetToAIPath
 
     protected override void SetAITarget()
     {
-        if (!_isMovingTowardsRandomTarget && AIDestinationSetter.target == null)
-        {
-            _aiPath.canMove = true;
-
-            AIDestinationSetter.target = EnemyTargetTransformHandler.FindRandomTargetTransform();
-        }
-        else if (!_isMovingTowardsRandomTarget
-            && Vector2.Distance(transform.position, AIDestinationSetter.target.position) < _distanceToIgnorePlanet)
-        {
-            _isMovingTowardsRandomTarget = true;
-
-            _aiPath.canMove = false;
-
-            _randomPosition = FindRandomPointInRadius();
-        }
-        else if (_isMovingTowardsRandomTarget
-             && Vector2.Distance(transform.position, _randomPosition) > _distanceToAgainAttackPlanet)
-        {
-            transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), _randomPosition,
-                _movementSpeed * Time.deltaTime);
-        }
-        else if (_isMovingTowardsRandomTarget
-            && Vector2.Distance(transform.position, _randomPosition) < _distanceToAgainAttackPlanet)
-        {
-            _isMovingTowardsRandomTarget = false;
-
-            _aiPath.canMove = true;
-
-            AIDestinationSetter.target = EnemyTargetTransformHandler.FindRandomTargetTransform();
-        }
-
         if (_isMovingTowardsRandomTarget)
         {
+            if (Vector2.Distance(transform.position, _randomPosition) > _distanceToAgainAttackPlanet)
+            {
+                transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), _randomPosition,
+                    _movementSpeed * Time.deltaTime);
+            }
+            else if (Vector2.Distance(transform.position, _randomPosition) < _distanceToAgainAttackPlanet)
+            {
+                _isMovingTowardsRandomTarget = false;
+
+                _aiPath.canMove = true;
+
+                AIDestinationSetter.target = EnemyTargetTransformHandler.FindRandomTargetTransform();
+            }
+
             _rotationController.SetTarget(_randomPosition);
         }
         else
         {
+            if (AIDestinationSetter.target == null)
+            {
+                _aiPath.canMove = true;
+
+                AIDestinationSetter.target = EnemyTargetTransformHandler.FindRandomTargetTransform();
+            }
+            else if (Vector2.Distance(transform.position, AIDestinationSetter.target.position) < _distanceToIgnorePlanet)
+            {
+                _isMovingTowardsRandomTarget = true;
+
+                _aiPath.canMove = false;
+
+                _randomPosition = FindRandomPointInRadius();
+            }
+
             _rotationController.SetTarget(AIDestinationSetter.target.position);
         }
     }
