@@ -5,11 +5,12 @@ using static AmmoRestorationManager;
 public class EnemyHealthSystem : HealthSystem
 {
     [SerializeField] private EnemyType _enemyType;
+    [SerializeField] private GameObject _gameObjectToRelease;
 
     public override void DeathTrigger()
     {
         AmmoRestorationManagerInstance.RestoreAmmunition(AmmoRestorationType.DEFEATING_ENEMIES);
 
-        EnemyObjectPoolInstance.ReleaseEnemy(transform.parent.gameObject, _enemyType);
+        EnemyObjectPoolInstance.ReleaseEnemy(_gameObjectToRelease ?? transform.parent.gameObject, _enemyType);
     }
 }

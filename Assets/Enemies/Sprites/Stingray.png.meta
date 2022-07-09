@@ -121,8 +121,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 26
-        height: 44
+        width: 44
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,10 +140,10 @@ TextureImporter:
       name: Stingray_1
       rect:
         serializedVersion: 2
-        x: 26
+        x: 44
         y: 0
-        width: 26
-        height: 44
+        width: 44
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,10 +161,10 @@ TextureImporter:
       name: Stingray_2
       rect:
         serializedVersion: 2
-        x: 52
+        x: 88
         y: 0
-        width: 26
-        height: 44
+        width: 44
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: Stingray_3
       rect:
         serializedVersion: 2
-        x: 78
+        x: 132
         y: 0
-        width: 26
-        height: 44
+        width: 44
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,10 +203,10 @@ TextureImporter:
       name: Stingray_4
       rect:
         serializedVersion: 2
-        x: 104
+        x: 176
         y: 0
-        width: 26
-        height: 44
+        width: 44
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,10 +224,10 @@ TextureImporter:
       name: Stingray_5
       rect:
         serializedVersion: 2
-        x: 130
+        x: 220
         y: 0
-        width: 26
-        height: 44
+        width: 44
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,10 +245,10 @@ TextureImporter:
       name: Stingray_6
       rect:
         serializedVersion: 2
-        x: 156
+        x: 264
         y: 0
-        width: 26
-        height: 44
+        width: 44
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,10 +266,10 @@ TextureImporter:
       name: Stingray_7
       rect:
         serializedVersion: 2
-        x: 182
+        x: 308
         y: 0
-        width: 26
-        height: 44
+        width: 44
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -287,10 +287,10 @@ TextureImporter:
       name: Stingray_8
       rect:
         serializedVersion: 2
-        x: 208
+        x: 352
         y: 0
-        width: 26
-        height: 44
+        width: 44
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,10 +308,10 @@ TextureImporter:
       name: Stingray_9
       rect:
         serializedVersion: 2
-        x: 234
+        x: 396
         y: 0
-        width: 26
-        height: 44
+        width: 44
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,10 +329,10 @@ TextureImporter:
       name: Stingray_10
       rect:
         serializedVersion: 2
-        x: 260
+        x: 440
         y: 0
-        width: 26
-        height: 44
+        width: 44
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -350,10 +350,10 @@ TextureImporter:
       name: Stingray_11
       rect:
         serializedVersion: 2
-        x: 286
+        x: 484
         y: 0
-        width: 26
-        height: 44
+        width: 44
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
