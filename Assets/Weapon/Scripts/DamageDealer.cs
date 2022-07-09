@@ -32,7 +32,6 @@ public class DamageDealer : MonoBehaviour
     {
         if (_canAttack && _toDamage.Count > 0)
         {
-            Debug.Log(3);
             _myAnimatior.SetTrigger(DAMAGE_TRIGGER);
         }
     }
@@ -46,11 +45,9 @@ public class DamageDealer : MonoBehaviour
         _toDamage.ForEach(damagable => damagable.DealDamage(_damageAmount));
 
         PlayDamageSounds();
-        Debug.Log(4);
 
         yield return new WaitForSeconds(_offsetBetweenDealingDamage);
 
-        Debug.Log(5);
         _canAttack = true;
     }
 
@@ -63,8 +60,7 @@ public class DamageDealer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         IDamagable toDamage = collision.GetComponentInChildren<IDamagable>();
-        Debug.Log(1);
-        Debug.Log(collision.gameObject.name);
+
         if (toDamage != null)
         {
             _toDamage.Add(toDamage);

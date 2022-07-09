@@ -37,7 +37,6 @@ public abstract class HealthSystem : MonoBehaviour, IDamagable
     public virtual void DealDamage(float damageAmount)
     {
         CurrentHealth -= damageAmount;
-        Debug.Log(11);
 
         if (CurrentHealth <= 0 && !IsDying)
         {
