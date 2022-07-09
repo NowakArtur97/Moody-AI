@@ -299,9 +299,9 @@ GameObject:
   - component: {fileID: 3821861732929374421}
   - component: {fileID: 1883743808626040941}
   - component: {fileID: 3821861732929374425}
-  - component: {fileID: 3658482714084033009}
   - component: {fileID: 3596147662833660327}
   - component: {fileID: 883117841892973144}
+  - component: {fileID: 1813576539898786925}
   - component: {fileID: 3821861732929374422}
   - component: {fileID: 7151821914479896832}
   - component: {fileID: 5167724443296972204}
@@ -358,18 +358,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageAmount: 10
---- !u!114 &3658482714084033009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3821861732929374417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a27a4da236d4e574d8845c25d21f704a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3596147662833660327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,6 +384,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyTargetTransformHandler: {fileID: 1883743808626040941}
+--- !u!114 &1813576539898786925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3821861732929374417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 216a30a9f0b2f0a4eb0ebebc001f61e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!70 &3821861732929374422
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1103,6 +1103,7 @@ MonoBehaviour:
   _maxHealth: 40
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
   _enemyType: 0
 --- !u!82 &3821861733994176880
 AudioSource:

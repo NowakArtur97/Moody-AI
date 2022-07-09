@@ -267,6 +267,7 @@ MonoBehaviour:
   _maxHealth: 40
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
   _enemyType: 3
 --- !u!82 &8122089591362620966
 AudioSource:

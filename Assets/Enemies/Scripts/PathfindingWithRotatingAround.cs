@@ -4,6 +4,7 @@ using UnityEngine;
 public class PathfindingWithRotatingAround : MonoBehaviour
 {
     [SerializeField] private float _rotatingVelocity = 100.0f;
+    [SerializeField] private float _shouldStartRotatingDistance = 3.0f;
 
     private EnemyTargetTransformHandler _enemyTargetTransformHandler;
     private AIPath _aiPath;
@@ -46,7 +47,7 @@ public class PathfindingWithRotatingAround : MonoBehaviour
 
     private void CheckIfDistanceReached()
     {
-        if (!_shouldRotateAround && Vector2.Distance(transform.position, _targetTransform.position) <= _aiPath.endReachedDistance)
+        if (!_shouldRotateAround && Vector2.Distance(transform.position, _targetTransform.position) <= _shouldStartRotatingDistance)
         {
             OnPathCompleted();
         }

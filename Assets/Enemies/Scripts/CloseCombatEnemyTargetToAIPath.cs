@@ -10,6 +10,7 @@ public class CloseCombatEnemyTargetToAIPath : TargetToAIPath
 
     private AIPath _aiPath;
     private RotationController _rotationController;
+    private EnemyTargetTransformHandler _enemyTargetTransformHandler;
 
     private bool _isMovingTowardsRandomTarget;
     private Vector2 _randomPosition;
@@ -20,6 +21,7 @@ public class CloseCombatEnemyTargetToAIPath : TargetToAIPath
 
         _aiPath = GetComponent<AIPath>();
         _rotationController = GetComponent<RotationController>();
+        _enemyTargetTransformHandler = GetComponent<EnemyTargetTransformHandler>();
 
         _isMovingTowardsRandomTarget = false;
     }
@@ -39,7 +41,7 @@ public class CloseCombatEnemyTargetToAIPath : TargetToAIPath
 
                 _aiPath.canMove = true;
 
-                AIDestinationSetter.target = EnemyTargetTransformHandler.FindRandomTargetTransform();
+                AIDestinationSetter.target = _enemyTargetTransformHandler.FindRandomTargetTransform();
             }
 
             _rotationController.SetTarget(_randomPosition);
@@ -50,7 +52,7 @@ public class CloseCombatEnemyTargetToAIPath : TargetToAIPath
             {
                 _aiPath.canMove = true;
 
-                AIDestinationSetter.target = EnemyTargetTransformHandler.FindRandomTargetTransform();
+                AIDestinationSetter.target = _enemyTargetTransformHandler.FindRandomTargetTransform();
             }
             else if (Vector2.Distance(transform.position, AIDestinationSetter.target.position) < _distanceToIgnorePlanet)
             {
