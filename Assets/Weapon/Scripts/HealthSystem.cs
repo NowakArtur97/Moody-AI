@@ -17,6 +17,8 @@ public abstract class HealthSystem : MonoBehaviour, IDamagable
     private AudioSource _myAudioSource;
     private Animator _myAnimator;
     private SpriteRenderer _mySpriteRenderer;
+    private int _defaultLayer;
+
     protected bool IsDying { get; private set; }
 
     public float CurrentHealth;
@@ -26,12 +28,16 @@ public abstract class HealthSystem : MonoBehaviour, IDamagable
         _myAudioSource = GetComponent<AudioSource>();
         _myAnimator = transform.parent.GetComponentInChildren<Animator>();
         _mySpriteRenderer = transform.parent.GetComponentInChildren<SpriteRenderer>();
+
+        _defaultLayer = transform.parent.gameObject.layer;
     }
 
     private void OnEnable()
     {
         IsDying = false;
         CurrentHealth = _maxHealth;
+
+        transform.parent.gameObject.layer = _defaultLayer;
     }
 
     public virtual void DealDamage(float damageAmount)
@@ -40,6 +46,8 @@ public abstract class HealthSystem : MonoBehaviour, IDamagable
 
         if (CurrentHealth <= 0 && !IsDying)
         {
+            transform.parent.gameObject.layer = LayerMask.NameToLayer("Empty");
+
             IsDying = true;
 
             PlayDeathSound();

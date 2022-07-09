@@ -16005,7 +16005,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1009960275}
   - component: {fileID: 1009960276}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Pathfinder Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16152,7 +16152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1035898972}
   - component: {fileID: 1035898973}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Pathfinder Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23728,7 +23728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1511441994}
   - component: {fileID: 1511441995}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Pathfinder Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24209,7 +24209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1564128246}
   - component: {fileID: 1564128247}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Pathfinder Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26297,7 +26297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemiesData:
-  - {fileID: 11400000, guid: be1b95a9d22389e4fb36d1ec5a8fc63f, type: 2}
+  - {fileID: 11400000, guid: a04aa51a291a7b04ebe02153be5be85f, type: 2}
   _startingSpawnPoints: 1
   _spawnPointsMultiplier: 0
   _spawningRadius: 30
