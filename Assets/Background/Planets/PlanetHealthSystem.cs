@@ -14,6 +14,8 @@ public class PlanetHealthSystem : HealthSystem
     {
         base.DealDamage(damageAmount);
 
+        Debug.Log(10);
+
         if (IsDying)
         {
             DestroyShield();
