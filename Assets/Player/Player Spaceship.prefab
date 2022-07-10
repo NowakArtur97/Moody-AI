@@ -236,6 +236,7 @@ MonoBehaviour:
   _maxHealth: 200
   _minSoundPitch: 0.8
   _maxSoundPitch: 1.05
+  CurrentHealth: 0
 --- !u!82 &572695997541596526
 AudioSource:
   m_ObjectHideFlags: 0
@@ -475,7 +476,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 216341609
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -972164363, guid: fef39e7e789642248b000ae93aaa1f90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -583,6 +584,7 @@ GameObject:
   - component: {fileID: 6015620954371614680}
   - component: {fileID: 572695998574228444}
   - component: {fileID: 572695998574228443}
+  - component: {fileID: 2148643772242240194}
   - component: {fileID: 8307153382904637207}
   - component: {fileID: 2798206927729429925}
   m_Layer: 6
@@ -714,6 +716,22 @@ CircleCollider2D:
   m_Offset: {x: -0.10454321, y: 0}
   serializedVersion: 2
   m_Radius: 0.3954568
+--- !u!58 &2148643772242240194
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572695998574228435}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.10454321, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.3954568
 --- !u!199 &8307153382904637207
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -754,7 +772,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 216341609
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
