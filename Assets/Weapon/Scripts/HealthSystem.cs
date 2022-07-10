@@ -4,6 +4,7 @@ using UnityEngine;
 public abstract class HealthSystem : MonoBehaviour, IDamagable
 {
     private readonly string EXPLOSION_TRIGGER = "explode";
+    private readonly string EMPTY_LAYER = "Empty";
 
     [SerializeField] private float _maxHealth = 40.0f;
     public float MaxHealth
@@ -46,7 +47,7 @@ public abstract class HealthSystem : MonoBehaviour, IDamagable
 
         if (CurrentHealth <= 0 && !IsDying)
         {
-            transform.parent.gameObject.layer = LayerMask.NameToLayer("Empty");
+            transform.parent.gameObject.layer = LayerMask.NameToLayer(EMPTY_LAYER);
 
             IsDying = true;
 
