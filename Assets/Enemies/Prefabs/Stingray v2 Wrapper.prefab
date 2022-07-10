@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 759896773528789266}
   - component: {fileID: 5190134770859817357}
   - component: {fileID: 3116527425594374426}
+  - component: {fileID: 3458850283326071368}
   - component: {fileID: 2065540046396715729}
   - component: {fileID: 6103192734218591889}
   - component: {fileID: 7534830476207794396}
@@ -103,6 +104,20 @@ MonoBehaviour:
   _timeToCheckIfPositionChanged: 0.1
   _timeToMoveBack: 0.4
   _movementSpeed: 2
+--- !u!114 &3458850283326071368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5245717358645049000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f75657e35347b934bafcc19a2abe47e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyToSpawnData: {fileID: 11400000, guid: ab75bd1638ca8f74a87225d3c3312f2a, type: 2}
+  _timeBetweenSpawning: 3
 --- !u!50 &2065540046396715729
 Rigidbody2D:
   serializedVersion: 4
@@ -309,7 +324,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1688456169
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 427067463, guid: d9fc74ec0a79ccc4485485625a005d97, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

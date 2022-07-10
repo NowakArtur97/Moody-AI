@@ -19,7 +19,7 @@ public abstract class HealthSystem : MonoBehaviour, IDamagable
     private SpriteRenderer _mySpriteRenderer;
     private int _defaultLayer;
 
-    protected bool IsDying { get; private set; }
+    public bool IsDying { get; private set; }
 
     public float CurrentHealth;
 

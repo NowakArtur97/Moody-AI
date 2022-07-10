@@ -77,6 +77,9 @@ public class WaveSpawner : MonoBehaviour
     private void SpawnEnemy(D_WaveEnemy chosenEnemyData) => _spawnedEnemies.Add(
         EnemyObjectPoolInstance.InstantiateEnemy(chosenEnemyData.enemyType, GetRandomPositionInRadius()));
 
+    public void SpawnEnemy(D_WaveEnemy chosenEnemyData, Vector2 spawnPosition) => _spawnedEnemies.Add(
+     EnemyObjectPoolInstance.InstantiateEnemy(chosenEnemyData.enemyType, spawnPosition));
+
     private Vector2 GetRandomPositionInRadius()
     {
         float randomAngle = UnityEngine.Random.value * 360;
