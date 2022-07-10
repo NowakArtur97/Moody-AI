@@ -470,6 +470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4117220607481911070}
+  - component: {fileID: 7062613218239761012}
   m_Layer: 7
   m_Name: Body Parts
   m_TagString: Untagged
@@ -496,6 +497,18 @@ Transform:
   m_Father: {fileID: 4117220607242390801}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7062613218239761012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4117220607481911265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc77f6361aa86e46bf96ce2da470eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4117220607606572382
 GameObject:
   m_ObjectHideFlags: 0
