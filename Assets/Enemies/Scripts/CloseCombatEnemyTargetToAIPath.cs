@@ -26,6 +26,8 @@ public class CloseCombatEnemyTargetToAIPath : TargetToAIPath
         _isMovingTowardsRandomTarget = false;
     }
 
+    private void OnEnable() => _isMovingTowardsRandomTarget = false;
+
     protected override void SetAITarget()
     {
         if (_isMovingTowardsRandomTarget)

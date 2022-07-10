@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2feafd62d868cc44abffea884949c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageAmount: 10
+  _damageAmount: 0
 --- !u!114 &3116527425594374426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +100,9 @@ MonoBehaviour:
   _yPosition: 11
   _distanceWhenShouldFindNewPosition: 3
   _randomTargetGameObject: {fileID: 1157754500778135311}
+  _timeToCheckIfPositionChanged: 0.1
+  _timeToMoveBack: 0.4
+  _movementSpeed: 2
 --- !u!50 &2065540046396715729
 Rigidbody2D:
   serializedVersion: 4
@@ -134,8 +137,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.007489533, y: -8.928218e-10}
-  m_Size: {x: 0.91130996, y: 0.5037566}
+  m_Offset: {x: -0.0013015852, y: 0.013397427}
+  m_Size: {x: 0.84069085, y: 0.43338007}
   m_Direction: 1
 --- !u!114 &7534830476207794396
 MonoBehaviour:
@@ -389,7 +392,7 @@ MonoBehaviour:
   _maxSoundPitch: 1.05
   CurrentHealth: 0
   _enemyType: 3
-  _gameObjectToRelease: {fileID: 0}
+  _gameObjectToRelease: {fileID: 8122089591293258863}
 --- !u!82 &2790769244540544088
 AudioSource:
   m_ObjectHideFlags: 0
