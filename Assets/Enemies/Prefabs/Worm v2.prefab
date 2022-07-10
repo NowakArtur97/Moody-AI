@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4853934628841878404}
   - component: {fileID: 4042842997085563544}
-  - component: {fileID: 1554187234944175723}
+  - component: {fileID: 6050424913560706217}
   - component: {fileID: 2716382868678838487}
   - component: {fileID: 2319286794778634613}
   m_Layer: 7
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f6a3f05c8c6534b9275df12ab5de68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationSpeed: 500
---- !u!114 &1554187234944175723
+  _rotationSpeed: 250
+--- !u!114 &6050424913560706217
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,10 +57,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 836008747127494746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d7dc30a95417eb49b684c93782d9b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyTargetTransformHandler: {fileID: 8411009055314306753}
+  _targetTransform: {fileID: 1724380477962351887}
 --- !u!212 &2716382868678838487
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -100,7 +100,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1688456169
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -814171757, guid: 156e51aa4e7e195448c76e5e4658d29e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -143,7 +143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1724380477962351887}
   - component: {fileID: 2701893732644610377}
-  - component: {fileID: 4466930636096047874}
+  - component: {fileID: 4514116815245533868}
   - component: {fileID: 8431529455996260382}
   - component: {fileID: 7567778951337224293}
   m_Layer: 7
@@ -180,8 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f6a3f05c8c6534b9275df12ab5de68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationSpeed: 500
---- !u!114 &4466930636096047874
+  _rotationSpeed: 250
+--- !u!114 &4514116815245533868
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,10 +190,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3094876608568653990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d7dc30a95417eb49b684c93782d9b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyTargetTransformHandler: {fileID: 8411009055314306753}
+  _targetTransform: {fileID: 4117220608061165839}
 --- !u!212 &8431529455996260382
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -233,7 +233,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1688456169
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -814171757, guid: 156e51aa4e7e195448c76e5e4658d29e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -594,7 +594,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1688456169
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -1778852942, guid: b6b2756c41f8fc74b9849738343acad3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -677,6 +677,7 @@ MonoBehaviour:
   _maxSoundPitch: 1.05
   CurrentHealth: 0
   _enemyType: 5
+  _gameObjectToRelease: {fileID: 0}
 --- !u!82 &4117220607610624243
 AudioSource:
   m_ObjectHideFlags: 0
@@ -783,7 +784,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4117220608061165839}
   - component: {fileID: 4117220608061165834}
-  - component: {fileID: 4117220608061165837}
+  - component: {fileID: 693187676667466315}
   - component: {fileID: 4117220608061165836}
   - component: {fileID: 7441579630888307377}
   m_Layer: 7
@@ -820,8 +821,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f6a3f05c8c6534b9275df12ab5de68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationSpeed: 500
---- !u!114 &4117220608061165837
+  _rotationSpeed: 250
+--- !u!114 &693187676667466315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -830,10 +831,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4117220608061165838}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d7dc30a95417eb49b684c93782d9b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyTargetTransformHandler: {fileID: 8411009055314306753}
+  _targetTransform: {fileID: 4117220609159550766}
 --- !u!212 &4117220608061165836
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -873,7 +874,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1688456169
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -814171757, guid: 156e51aa4e7e195448c76e5e4658d29e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1007,7 +1008,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1688456169
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: -1
   m_Positions: []
   m_Parameters:
@@ -1138,7 +1139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4117220609000899590}
   - component: {fileID: 4117220609000899589}
-  - component: {fileID: 4117220609000899588}
+  - component: {fileID: 1490152858046746778}
   - component: {fileID: 4117220609000899591}
   - component: {fileID: 7060175656992537738}
   m_Layer: 7
@@ -1175,8 +1176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f6a3f05c8c6534b9275df12ab5de68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationSpeed: 500
---- !u!114 &4117220609000899588
+  _rotationSpeed: 250
+--- !u!114 &1490152858046746778
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1185,10 +1186,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4117220609000899593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b597113ce1eff349b4cdebf9149e7c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d7dc30a95417eb49b684c93782d9b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyTargetTransformHandler: {fileID: 8411009055314306753}
+  _targetTransform: {fileID: 4853934628841878404}
 --- !u!212 &4117220609000899591
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1228,7 +1229,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1688456169
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1316185233, guid: 39a39c3bc37e724468e6c5f78ad1625e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

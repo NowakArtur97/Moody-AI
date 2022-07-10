@@ -26297,7 +26297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemiesData:
-  - {fileID: 11400000, guid: a332421292aaafb41b1064ec54648c71, type: 2}
+  - {fileID: 11400000, guid: c875b5ad0ad174b4584ed650480b8816, type: 2}
   _startingSpawnPoints: 1
   _spawnPointsMultiplier: 0
   _spawningRadius: 30
