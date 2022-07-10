@@ -22004,7 +22004,7 @@ MonoBehaviour:
   _teetherPrefab: {fileID: 7553509044135878632, guid: ad8e21894bf56d6489a40cfc08e60ee8, type: 3}
   _batPrefab: {fileID: 2947253301916820876, guid: 0fa0fa0672f23344dab540e0183ee953, type: 3}
   _stingrayPrefab: {fileID: 8122089591293258863, guid: 93533e0a0cf77ac46b7d02ab9b34508e, type: 3}
-  _boomerPrefab: {fileID: 3140539819564114342, guid: 163406f10549c6d4e9634220575bd8bc, type: 3}
+  _boomerPrefab: {fileID: 3140539819564114342, guid: 58891d5543d7a114fba0f5313b8081e3, type: 3}
   _wormPrefab: {fileID: 4117220609159550770, guid: 6ea10d6205c81d54086bc0b2c7a85780, type: 3}
 --- !u!1 &1396861764
 GameObject:
@@ -26297,8 +26297,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemiesData:
-  - {fileID: 11400000, guid: a332421292aaafb41b1064ec54648c71, type: 2}
-  _startingSpawnPoints: 15
+  - {fileID: 11400000, guid: ab75bd1638ca8f74a87225d3c3312f2a, type: 2}
+  _startingSpawnPoints: 1
   _spawnPointsMultiplier: 0
   _spawningRadius: 30
   _timeBetweenSpawningEnemies: 1
