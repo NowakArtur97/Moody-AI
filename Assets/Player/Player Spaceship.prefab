@@ -628,6 +628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 250
+  _rotationMode: 0
 --- !u!114 &572695998574228441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -699,7 +700,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &572695998574228443
 CircleCollider2D:
   m_ObjectHideFlags: 0

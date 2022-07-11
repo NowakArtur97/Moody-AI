@@ -8,9 +8,14 @@ public class RotationController : MonoBehaviour
     private Vector3 _position;
 
     [SerializeField] private float _rotationSpeed = 250.0f;
+    [SerializeField] private RotationMode _rotationMode = RotationMode.TOWARDS;
+    public RotationMode Rotationmode
+    {
+        get { return _rotationMode; }
+        set { _rotationMode = value; }
+    }
 
     public enum RotationMode { TOWARDS, PERPEDICULAR }
-    private RotationMode _rotationMode = RotationMode.TOWARDS;
 
     private void Update()
     {
