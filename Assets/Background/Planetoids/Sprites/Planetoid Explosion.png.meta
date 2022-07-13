@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b96557129aafcfc4dbc93f34601ddfcc
+guid: e52da232435fa0d44a918f78fcba52b5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Planetoids_0
+      name: Planetoid Explosion_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 120
+        height: 132
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c83a8aca0288dc843866440179af3280
-      internalID: 1461485140
+      spriteID: 1cde7d84f6d6d2c4ca26073ebbefb239
+      internalID: 231882661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Planetoids_1
+      name: Planetoid Explosion_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 120
         y: 0
-        width: 64
-        height: 64
+        width: 120
+        height: 132
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +151,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c785704cda11f44c8f63f3896997738
-      internalID: 324086963
+      spriteID: dafa508ba8c2e7145b81d3ff40d29d58
+      internalID: 1493910446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Planetoids_2
+      name: Planetoid Explosion_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 240
         y: 0
-        width: 64
-        height: 64
+        width: 120
+        height: 132
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e749db3e546944245a8bcb25ea2eef92
-      internalID: -769773612
+      spriteID: 2ae381e59684f7f4781b811241e740dd
+      internalID: -141385628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Planetoids_3
+      name: Planetoid Explosion_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 360
         y: 0
-        width: 64
-        height: 64
+        width: 120
+        height: 132
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,8 +193,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94239a3931af62747a5d4384d245c249
-      internalID: -809169128
+      spriteID: 1319f5336b8d8194b9b873998099983f
+      internalID: 1277997772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planetoid Explosion_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 120
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 940e7fcd51bd86f49ae3925429f0b576
+      internalID: 344832359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planetoid Explosion_5
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 120
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26899345bd58850469ec4da032cce2ba
+      internalID: -168039204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planetoid Explosion_6
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 120
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e1edae099a6f6489b7e6b715139a0c
+      internalID: -1428609048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planetoid Explosion_7
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0
+        width: 120
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e9f63a3c9077545b6f00664e82b92b
+      internalID: -1595991970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planetoid Explosion_8
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 120
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1810ce13be077574e805c7de14db1e51
+      internalID: 471859169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Planetoid Explosion_9
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 120
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7ec4ac7c9b06d40abe7bf6e4a17184
+      internalID: 1565629307
       vertices: []
       indices: 
       edges: []
@@ -210,10 +336,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Planetoids_3: -809169128
-      Planetoids_2: -769773612
-      Planetoids_1: 324086963
-      Planetoids_0: 1461485140
+      Planetoid Explosion_4: 344832359
+      Planetoid Explosion_8: 471859169
+      Planetoid Explosion_9: 1565629307
+      Planetoid Explosion_0: 231882661
+      Planetoid Explosion_3: 1277997772
+      Planetoid Explosion_1: 1493910446
+      Planetoid Explosion_7: -1595991970
+      Planetoid Explosion_2: -141385628
+      Planetoid Explosion_5: -168039204
+      Planetoid Explosion_6: -1428609048
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
