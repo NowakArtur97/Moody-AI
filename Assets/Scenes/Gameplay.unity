@@ -16903,8 +16903,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1854161510}
+  - component: {fileID: 1854161511}
   m_Layer: 0
-  m_Name: Obstacles
+  m_Name: Planetoid Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16925,6 +16926,27 @@ Transform:
   m_Father: {fileID: 1250492181}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1854161511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854161509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0f34fa32e7c4c4a9b917beb37dff3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minRadius: 8
+  _maxRadius: 13
+  _numberOfPlanetoids: 100
+  _origin: {x: 1, y: 1}
+  _planetoids:
+  - {fileID: 9072313830642495088, guid: 1ed3a3bfbdd55724db799470ec457925, type: 3}
+  - {fileID: 5793633293520352221, guid: 0887b73f2be0a0a4a8ce730a02e3082e, type: 3}
+  - {fileID: 6041431008883767696, guid: 7739dfddf9ee7d34e8b9f08d936a1fa4, type: 3}
+  - {fileID: 4372556290660296405, guid: acdd83386ccd0b940b67c657a22b4b4c, type: 3}
 --- !u!1 &1873183452
 GameObject:
   m_ObjectHideFlags: 0
