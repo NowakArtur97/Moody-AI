@@ -16940,7 +16940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _minRadius: 8
   _maxRadius: 13
-  _numberOfPlanetoids: 100
+  _numberOfPlanetoids: 1000
   _origin: {x: 1, y: 1}
   _planetoids:
   - {fileID: 9072313830642495088, guid: 1ed3a3bfbdd55724db799470ec457925, type: 3}
