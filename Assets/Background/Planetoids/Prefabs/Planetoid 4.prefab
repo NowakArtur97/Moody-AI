@@ -176,6 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4372556290660296406}
   - component: {fileID: -6913289701561295454}
+  - component: {fileID: -3754814645859864099}
   - component: {fileID: 4372556290660296407}
   m_Layer: 11
   m_Name: Planetoid 4
@@ -219,6 +220,19 @@ MonoBehaviour:
   _layersToCheck:
     serializedVersion: 2
     m_Bits: 2048
+--- !u!114 &-3754814645859864099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4372556290660296405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2feafd62d868cc44abffea884949c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damageAmount: 15
 --- !u!58 &4372556290660296407
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -232,9 +246,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0036792755, y: 0.04783848}
+  m_Offset: {x: 0.008193195, y: 0.030877888}
   serializedVersion: 2
-  m_Radius: 0.41667843
+  m_Radius: 0.5201381
 --- !u!1 &4372556291568168556
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,9 +294,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0036792755, y: 0.04783848}
+  m_Offset: {x: 0.008193195, y: 0.03087789}
   serializedVersion: 2
-  m_Radius: 0.415
+  m_Radius: 0.5101381
 --- !u!1 &4372556291670488580
 GameObject:
   m_ObjectHideFlags: 0
