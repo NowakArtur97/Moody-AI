@@ -65,7 +65,10 @@ public class CloseCombatEnemyTargetToAIPath : TargetToAIPath
                 _randomPosition = FindRandomPointInRadius();
             }
 
-            _rotationController.SetTarget(AIDestinationSetter.target.position);
+            if (AIDestinationSetter.target != null)
+            {
+                _rotationController.SetTarget(AIDestinationSetter.target.position);
+            }
         }
     }
 

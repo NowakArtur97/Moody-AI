@@ -38,7 +38,7 @@ public abstract class HealthSystem : MonoBehaviour, IDamagable
         IsDying = false;
         CurrentHealth = _maxHealth;
 
-        transform.parent.gameObject.layer = _defaultLayer;
+        ChangeLayerRecursively(transform.parent.gameObject, _defaultLayer);
     }
 
     public virtual void DealDamage(float damageAmount)
@@ -47,13 +47,33 @@ public abstract class HealthSystem : MonoBehaviour, IDamagable
 
         if (CurrentHealth <= 0 && !IsDying)
         {
-            transform.parent.gameObject.layer = LayerMask.NameToLayer(EMPTY_LAYER);
+            ChangeLayerRecursively(transform.parent.gameObject, LayerMask.NameToLayer(EMPTY_LAYER));
 
             IsDying = true;
 
             PlayDeathSound();
 
             _myAnimator.SetTrigger(EXPLOSION_TRIGGER);
+        }
+    }
+
+    private void ChangeLayerRecursively(GameObject gameObjectToChange, LayerMask layer)
+    {
+        if (null == gameObjectToChange)
+        {
+            return;
+        }
+
+        gameObjectToChange.layer = layer;
+
+        foreach (Transform child in gameObjectToChange.transform)
+        {
+            if (null == child)
+            {
+                continue;
+            }
+
+            ChangeLayerRecursively(child.gameObject, layer);
         }
     }
 

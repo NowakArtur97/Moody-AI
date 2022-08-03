@@ -16,7 +16,9 @@ public class PlanetoidSpawner : MonoBehaviour
         {
             Vector2 pointToSpawnAt = RandomPointInAnnulus();
 
-            Instantiate(ChoseRandomPlanetoid(), pointToSpawnAt, Quaternion.identity);
+            GameObject planetoid = Instantiate(ChoseRandomPlanetoid(), pointToSpawnAt, Quaternion.identity);
+
+            planetoid.transform.parent = gameObject.transform;
         }
     }
 
