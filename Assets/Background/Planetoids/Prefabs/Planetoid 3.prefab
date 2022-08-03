@@ -368,8 +368,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6041431008883767711}
-  - component: {fileID: -6227876181738232024}
+  - component: {fileID: 4159923513065416320}
   - component: {fileID: -8567378032776446815}
+  - component: {fileID: -7728107480790480657}
   - component: {fileID: 6041431008883767710}
   m_Layer: 11
   m_Name: Planetoid 3
@@ -397,7 +398,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-6227876181738232024
+--- !u!114 &4159923513065416320
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -406,7 +407,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6041431008883767696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0dd248d35b5a844f9f6641b6b0403eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 1448467d2b29a504988536965609c4b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _checkRadius: 1.5
@@ -426,6 +427,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damageAmount: 15
+--- !u!114 &-7728107480790480657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6041431008883767696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2869725b8a617745a361e46dcb56594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotationSpeed: 10
 --- !u!58 &6041431008883767710
 CircleCollider2D:
   m_ObjectHideFlags: 0

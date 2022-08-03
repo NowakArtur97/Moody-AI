@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class PlanetoidOverlapCheck : MonoBehaviour
+public class OverlapCheck : MonoBehaviour
 {
     [SerializeField] private float _checkRadius = 1.5f;
     [SerializeField] private LayerMask _layersToCheck;
@@ -11,11 +11,6 @@ public class PlanetoidOverlapCheck : MonoBehaviour
     {
         List<Collider2D> colliderCheck = FindAllOverlappingObjects();
 
-        if (colliderCheck.Count == 1)
-        {
-            Debug.Log(colliderCheck[0].gameObject.name);
-
-        }
         if (colliderCheck.Count > 0)
         {
             Destroy(gameObject);
